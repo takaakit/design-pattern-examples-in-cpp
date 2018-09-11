@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="FrameDisplay.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="UnderlineDisplay.cpp" />
+    <ClCompile Include="framework\Display.cpp">
+      <Filter>framework</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Manager.cpp">
+      <Filter>framework</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FrameDisplay.h" />
+    <ClInclude Include="UnderlineDisplay.h" />
+    <ClInclude Include="framework\Display.h">
+      <Filter>framework</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Manager.h">
+      <Filter>framework</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="framework">
+      <UniqueIdentifier>{8474984c-3f8f-4ebe-bbe4-69ddbf323cbe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+*.asta.lock
+*.user
+*.exe
+.project
+.cproject
+Release/
+Debug/
+.vs/
+.settings/
+.idea/
+cmake-build-debug/

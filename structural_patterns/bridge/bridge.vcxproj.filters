@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Display.cpp" />
+    <ClCompile Include="DisplayImpl.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MultiLineDisplay.cpp" />
+    <ClCompile Include="TextDisplayImpl.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Display.h" />
+    <ClInclude Include="DisplayImpl.h" />
+    <ClInclude Include="MultiLineDisplay.h" />
+    <ClInclude Include="TextDisplayImpl.h" />
+  </ItemGroup>
+</Project>

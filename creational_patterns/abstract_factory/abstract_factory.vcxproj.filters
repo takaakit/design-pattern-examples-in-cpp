@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="factory\Data.cpp">
+      <Filter>factory</Filter>
+    </ClCompile>
+    <ClCompile Include="factory\Factory.cpp">
+      <Filter>factory</Filter>
+    </ClCompile>
+    <ClCompile Include="factory\Item.cpp">
+      <Filter>factory</Filter>
+    </ClCompile>
+    <ClCompile Include="factory\Link.cpp">
+      <Filter>factory</Filter>
+    </ClCompile>
+    <ClCompile Include="factory\Page.cpp">
+      <Filter>factory</Filter>
+    </ClCompile>
+    <ClCompile Include="list_factory\ListData.cpp">
+      <Filter>list_factory</Filter>
+    </ClCompile>
+    <ClCompile Include="list_factory\ListFactory.cpp">
+      <Filter>list_factory</Filter>
+    </ClCompile>
+    <ClCompile Include="list_factory\ListLink.cpp">
+      <Filter>list_factory</Filter>
+    </ClCompile>
+    <ClCompile Include="list_factory\ListPage.cpp">
+      <Filter>list_factory</Filter>
+    </ClCompile>
+    <ClCompile Include="table_factory\TableData.cpp">
+      <Filter>table_factory</Filter>
+    </ClCompile>
+    <ClCompile Include="table_factory\TableFactory.cpp">
+      <Filter>table_factory</Filter>
+    </ClCompile>
+    <ClCompile Include="table_factory\TableLink.cpp">
+      <Filter>table_factory</Filter>
+    </ClCompile>
+    <ClCompile Include="table_factory\TablePage.cpp">
+      <Filter>table_factory</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="factory">
+      <UniqueIdentifier>{72815425-1036-4149-85ee-933381e6e84e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="list_factory">
+      <UniqueIdentifier>{e1b06aef-72a8-4858-a01a-53e7df06a8bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="table_factory">
+      <UniqueIdentifier>{a2aa4a23-7024-44d4-b2c0-348a5203fe30}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="factory\Data.h">
+      <Filter>factory</Filter>
+    </ClInclude>
+    <ClInclude Include="factory\Factory.h">
+      <Filter>factory</Filter>
+    </ClInclude>
+    <ClInclude Include="factory\Item.h">
+      <Filter>factory</Filter>
+    </ClInclude>
+    <ClInclude Include="factory\Link.h">
+      <Filter>factory</Filter>
+    </ClInclude>
+    <ClInclude Include="factory\Page.h">
+      <Filter>factory</Filter>
+    </ClInclude>
+    <ClInclude Include="list_factory\ListData.h">
+      <Filter>list_factory</Filter>
+    </ClInclude>
+    <ClInclude Include="list_factory\ListFactory.h">
+      <Filter>list_factory</Filter>
+    </ClInclude>
+    <ClInclude Include="list_factory\ListLink.h">
+      <Filter>list_factory</Filter>
+    </ClInclude>
+    <ClInclude Include="list_factory\ListPage.h">
+      <Filter>list_factory</Filter>
+    </ClInclude>
+    <ClInclude Include="table_factory\TableData.h">
+      <Filter>table_factory</Filter>
+    </ClInclude>
+    <ClInclude Include="table_factory\TableFactory.h">
+      <Filter>table_factory</Filter>
+    </ClInclude>
+    <ClInclude Include="table_factory\TableLink.h">
+      <Filter>table_factory</Filter>
+    </ClInclude>
+    <ClInclude Include="table_factory\TablePage.h">
+      <Filter>table_factory</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Directory.cpp" />
+    <ClCompile Include="Element.cpp" />
+    <ClCompile Include="File.cpp" />
+    <ClCompile Include="FileSystemElement.cpp" />
+    <ClCompile Include="ListVisitor.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Visitor.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Directory.h" />
+    <ClInclude Include="Element.h" />
+    <ClInclude Include="File.h" />
+    <ClInclude Include="FileSystemElement.h" />
+    <ClInclude Include="ListVisitor.h" />
+    <ClInclude Include="Visitor.h" />
+  </ItemGroup>
+</Project>

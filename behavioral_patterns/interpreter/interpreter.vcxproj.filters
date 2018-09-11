@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Action.cpp" />
+    <ClCompile Include="Command.cpp" />
+    <ClCompile Include="CommandList.cpp" />
+    <ClCompile Include="Context.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Node.cpp" />
+    <ClCompile Include="Program.cpp" />
+    <ClCompile Include="Repeat.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Action.h" />
+    <ClInclude Include="Command.h" />
+    <ClInclude Include="CommandList.h" />
+    <ClInclude Include="Context.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="Program.h" />
+    <ClInclude Include="Repeat.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="program.txt" />
+  </ItemGroup>
+</Project>

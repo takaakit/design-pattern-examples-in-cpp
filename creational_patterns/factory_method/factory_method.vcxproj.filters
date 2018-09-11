@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="framework\Factory.cpp">
+      <Filter>framework</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Product.cpp">
+      <Filter>framework</Filter>
+    </ClCompile>
+    <ClCompile Include="id_card\CreditCard.cpp">
+      <Filter>id_card</Filter>
+    </ClCompile>
+    <ClCompile Include="id_card\CreditCardFactory.cpp">
+      <Filter>id_card</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="framework">
+      <UniqueIdentifier>{14081397-5f2c-40b1-bc0f-f8d7c9562ca8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="id_card">
+      <UniqueIdentifier>{23c366e6-0411-4827-a2df-650fb9cba830}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework\Factory.h">
+      <Filter>framework</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\Product.h">
+      <Filter>framework</Filter>
+    </ClInclude>
+    <ClInclude Include="id_card\CreditCard.h">
+      <Filter>id_card</Filter>
+    </ClInclude>
+    <ClInclude Include="id_card\CreditCardFactory.h">
+      <Filter>id_card</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

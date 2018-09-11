@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="LazySupporter.cpp" />
+    <ClCompile Include="LimitedSupporter.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MoodySupporter.cpp" />
+    <ClCompile Include="SpecialSupporter.cpp" />
+    <ClCompile Include="Supporter.cpp" />
+    <ClCompile Include="Trouble.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LazySupporter.h" />
+    <ClInclude Include="LimitedSupporter.h" />
+    <ClInclude Include="MoodySupporter.h" />
+    <ClInclude Include="SpecialSupporter.h" />
+    <ClInclude Include="Supporter.h" />
+    <ClInclude Include="Trouble.h" />
+  </ItemGroup>
+</Project>

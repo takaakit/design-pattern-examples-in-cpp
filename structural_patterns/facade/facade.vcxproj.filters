@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Text Include="addressbook.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DataLibrary.cpp" />
+    <ClCompile Include="HtmlWriter.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="PageCreator.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DataLibrary.h" />
+    <ClInclude Include="HtmlWriter.h" />
+    <ClInclude Include="PageCreator.h" />
+  </ItemGroup>
+</Project>

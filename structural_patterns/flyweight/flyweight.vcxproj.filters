@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Text Include="big-.txt" />
+    <Text Include="big0.txt" />
+    <Text Include="big1.txt" />
+    <Text Include="big2.txt" />
+    <Text Include="big3.txt" />
+    <Text Include="big4.txt" />
+    <Text Include="big5.txt" />
+    <Text Include="big6.txt" />
+    <Text Include="big7.txt" />
+    <Text Include="big8.txt" />
+    <Text Include="big9.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LargeSizeChar.cpp" />
+    <ClCompile Include="LargeSizeCharFactory.cpp" />
+    <ClCompile Include="LargeSizeString.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LargeSizeChar.h" />
+    <ClInclude Include="LargeSizeCharFactory.h" />
+    <ClInclude Include="LargeSizeString.h" />
+  </ItemGroup>
+</Project>
