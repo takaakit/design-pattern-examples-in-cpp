@@ -106,7 +106,7 @@ Form^ AppMain::InitializeComponent()
 	main_form->ResumeLayout(false);
 	
 	history = unique_ptr<HistoryCommand>(new HistoryCommand());
-	canvas = unique_ptr<PaintingCanvas>(new PaintingCanvas(picture_box, history.get()));
+	canvas = unique_ptr<PaintingCanvas>(new PaintingCanvas(picture_box));
 
 	return main_form;
 	// ˄

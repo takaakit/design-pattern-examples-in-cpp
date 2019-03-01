@@ -9,8 +9,6 @@
 #include <msclr/gcroot.h>
 #include "behavioral_patterns/command/PaintingTarget.h"
 
-class HistoryCommand;
-
 using namespace System::Windows::Forms;
 
 // ˄
@@ -28,12 +26,9 @@ private:
 	// Radius of the painting point
 	const double point_radius;
 
-	// Painting history
-	const HistoryCommand* history;
-
 public:
 
-	PaintingCanvas(msclr::gcroot<PictureBox^> picture_box, HistoryCommand* history);
+	PaintingCanvas(msclr::gcroot<PictureBox^> picture_box);
 
 	~PaintingCanvas();
 

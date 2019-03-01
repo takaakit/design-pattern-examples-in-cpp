@@ -1,15 +1,13 @@
 // ˅
-#include "behavioral_patterns/command/HistoryCommand.h"
 #include "behavioral_patterns/command/PaintingCanvas.h"
 
 using namespace System::Drawing;
 
 // ˄
 
-PaintingCanvas::PaintingCanvas(msclr::gcroot<PictureBox^> picture_box, HistoryCommand* history)
+PaintingCanvas::PaintingCanvas(msclr::gcroot<PictureBox^> picture_box)
 	: picture_box(picture_box)
 	, point_radius(6.0)
-	, history(history)
 	// ˅
 	
 	// ˄
