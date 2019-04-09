@@ -7,6 +7,7 @@
 
 // ˅
 #include <string>
+#include <memory>
 
 class State;
 
