@@ -1,4 +1,4 @@
-[<img src="./screenshots/DiagramMap.svg">](http://htmlpreview.github.io/?https://github.com/takaakit/design-pattern-examples-in-cpp/blob/master/screenshots/DiagramMap.html)
+[<img src="./screenshots/DiagramMap.svg">](http://htmlpreview.github.io/?https://github.com/takaakit/design-pattern-examples-in-cpp/blob/master/screenshots/DiagramMap.html){:target="_blank"}
 Click to open **Diagram Map** created by [M PLUS plug-in](https://sites.google.com/view/m-plus-plugin)
 
 <br/>
