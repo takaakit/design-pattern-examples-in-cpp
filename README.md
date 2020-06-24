@@ -1,4 +1,4 @@
-<iframe width="800" height="600" src="screenshots/DiagramMap.html" frameborder="1"></iframe><br/>
+<embed width="800" height="600" src="screenshots/DiagramMap.html" /><br/>
 
 **Diagram Map** created by [M PLUS plug-in](https://sites.google.com/view/m-plus-plugin)
 
