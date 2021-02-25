@@ -3,12 +3,12 @@
 Design Pattern Examples in C++
 ===
 
-Model and code examples of design patterns for C++.  
-You can utilize this examples as follows.
+Model and code examples of GoF Design Patterns for C++.  
+This project is available for the following objectives:  
 
-* You try Model-Driven Development (MDD) using Astah and M PLUS plug-in.
-* You understand the mapping between UML model and C++ code.
-* You understand the design pattern examples in C++.  
+* To try Model-Driven Development (MDD) using Astah and M PLUS plug-in.
+* To understand the mapping between UML model and C++ code.
+* To understand GoF Design Pattern examples in C++.  
   etc.
 
 > UML model example:
@@ -128,7 +128,7 @@ Usage
 -----
 * Select model elements on the model browser of Astah, and press the "Generate code" button to generate.  
 * The generated code has "User Code Area". The "User Code Area" is the area enclosed by "˅" and "˄". Handwritten code written in the "User Code Area" remains after a re-generation.
-* You can run the program from "main.cpp" for each design pattern.
+* You can run the program from "main.cpp" for each Design Pattern.
 * For detailed usage of the tools, please see [Astah Manual](http://astah.net/manual) and [M PLUS plug-in Tips](https://sites.google.com/view/m-plus-plugin/tips).
 
 ![](screenshots/Usage.gif "Usage")
@@ -140,6 +140,6 @@ References
 
 Licence
 -------
-This project is licensed under the Creative Commons Zero (CC0) license. The model and code are completely free to be used.
+This project is licensed under the Creative Commons Zero (CC0) license. The model and code are completely free to use.
 
 [![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png "CC0")](http://creativecommons.org/publicdomain/zero/1.0/deed)
