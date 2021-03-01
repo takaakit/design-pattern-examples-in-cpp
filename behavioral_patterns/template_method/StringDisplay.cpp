@@ -6,9 +6,9 @@ using namespace std;
 
 // ˄
 
-StringDisplay::StringDisplay(const string& string_)
-	: string_(string_)
-	, width(static_cast<int>(string_.length()))
+StringDisplay::StringDisplay(const string& string_value)
+	: string_value(string_value)
+	, width(static_cast<int>(string_value.length()))
 	// ˅
 	
 	// ˄
@@ -28,21 +28,21 @@ StringDisplay::~StringDisplay()
 void StringDisplay::open()
 {
 	// ˅
-	writeLine();							// Write a line
+	writeLine();								// Write a line
 	// ˄
 }
 
 void StringDisplay::write()
 {
 	// ˅
-	cout << "|" << string_ << "|" << endl;	// Display the character with "|"
+	cout << "|" << string_value << "|" << endl;	// Display the character with "|"
 	// ˄
 }
 
 void StringDisplay::close()
 {
 	// ˅
-	writeLine();							// Write a line
+	writeLine();								// Write a line
 	// ˄
 }
 

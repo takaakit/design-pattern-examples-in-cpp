@@ -30,11 +30,11 @@ DigitObserver::~DigitObserver()
 	// ˄
 }
 
-void DigitObserver::update(const Number* number)
+void DigitObserver::update(Number* number)
 {
 	// ˅
-	cout << "Digit    : " << number->value << endl;
-
+	cout << "Digit    : " << number->getValue() << endl;
+	
 #ifdef _MSC_VER
     Sleep(100);
 #else

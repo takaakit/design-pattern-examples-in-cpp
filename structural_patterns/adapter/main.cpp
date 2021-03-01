@@ -12,7 +12,7 @@ or display it as follows.
 */
 
 int main(int argc, char* argv[]) {
-	unique_ptr<Print> print = unique_ptr<Print>(new PrintMessageDisplay("Nice to meet you"));
+	unique_ptr<Print> print(new PrintMessageDisplay("Nice to meet you"));
 	print->printWeak();
 	print->printStrong();
 

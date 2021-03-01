@@ -49,10 +49,8 @@ void HTMLBuilder::createItems(vector<string> items)
 {
 	// ˅
 	writer << "<ul>" << endl;			// Write items
-	vector<string>::const_iterator it = items.begin();
-	while (it != items.end()) {
-		writer << "<li>" << (*it) << "</li>" << endl;
-		++it;
+	for (string item : items) {
+		writer << "<li>" << item << "</li>" << endl;
 	}
 	writer << "</ul>" << endl;
 	// ˄

@@ -138,19 +138,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Hand.cpp" />
+    <ClCompile Include="HandSignal.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Strategy.cpp" />
-    <ClCompile Include="StrategyA.cpp" />
-    <ClCompile Include="StrategyB.cpp" />
+    <ClCompile Include="MirrorStrategy.cpp" />
+    <ClCompile Include="RandomStrategy.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Hand.h" />
+    <ClInclude Include="GameResultType.h" />
+    <ClInclude Include="HandSignal.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Strategy.h" />
-    <ClInclude Include="StrategyA.h" />
-    <ClInclude Include="StrategyB.h" />
+    <ClInclude Include="MirrorStrategy.h" />
+    <ClInclude Include="RandomStrategy.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

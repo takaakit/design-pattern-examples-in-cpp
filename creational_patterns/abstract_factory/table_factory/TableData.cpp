@@ -32,10 +32,8 @@ string TableData::toHTML()
 	buffer << "<td><table width=\"100%\" border=\"2\">" << endl;
 	buffer << "<tr><td bgcolor=\"#00CC00\" align=\"center\" colspan=\"" << to_string(items.size()) << "\"><b>" << name << "</b></td></tr>" << endl;
 	buffer << "<tr>" << endl;
-	vector<shared_ptr<Item>>::const_iterator it = items.begin();
-	while (it != items.end()) {
-		buffer << (*it)->toHTML();
-		++it;
+	for (Item* item : items) {
+		buffer << item->toHTML();
 	}
 	buffer << "</tr>" << endl;
 	buffer << "</table></td>" << endl;

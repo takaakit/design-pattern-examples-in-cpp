@@ -1,5 +1,5 @@
 // ˅
-#include "behavioral_patterns/strategy/Hand.h"
+#include "behavioral_patterns/strategy/HandSignal.h"
 #include "behavioral_patterns/strategy/Strategy.h"
 
 // ˄

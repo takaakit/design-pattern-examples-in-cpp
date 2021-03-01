@@ -6,8 +6,9 @@
 // ˄
 
 Directory::Directory(const string& name)
+	: name(name)
 	// ˅
-	: FileSystemElement(name)
+	
 	// ˄
 {
 	// ˅
@@ -22,23 +23,28 @@ Directory::~Directory()
 	// ˄
 }
 
-int Directory::getSize()
-{
-	// ˅
-	int size = 0;
-	vector<FileSystemElement*>::const_iterator it = elements.begin();
-	while (it != elements.end()) {
-		size += (*it)->getSize();
-		++it;
-	}
-	return size;
-	// ˄
-}
-
 void Directory::accept(Visitor* visitor)
 {
 	// ˅
 	visitor->visit(this);
+	// ˄
+}
+
+string Directory::getName()
+{
+	// ˅
+	return name;
+	// ˄
+}
+
+int Directory::getSize()
+{
+	// ˅
+	int size = 0;
+	for (FileSystemElement* element : elements) {
+		size += element->getSize();
+	}
+	return size;
 	// ˄
 }
 
@@ -50,17 +56,17 @@ FileSystemElement* Directory::add(FileSystemElement* element)
 	// ˄
 }
 
-vector<FileSystemElement*>::const_iterator Directory::iterator()
+vector<FileSystemElement*>::const_iterator Directory::getBeginIterator()
 {
 	// ˅
 	return elements.begin();
 	// ˄
 }
 
-bool Directory::hasNext(vector<FileSystemElement*>::const_iterator it)
+vector<FileSystemElement*>::const_iterator Directory::getEndIterator()
 {
 	// ˅
-	return it != elements.end();
+	return elements.end();
 	// ˄
 }
 

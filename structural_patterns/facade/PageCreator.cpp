@@ -49,7 +49,7 @@ PageCreator::~PageCreator()
 void PageCreator::createSimpleHomepage(const string& mail_address, const string& html_file_name)
 {
 	// ˅
-	// Extract the current directory path.
+	// Get the current directory path
 	char current_directory_path[255];
 #ifdef _MSC_VER
 	GetCurrentDirectory(255, current_directory_path);
@@ -66,6 +66,7 @@ void PageCreator::createSimpleHomepage(const string& mail_address, const string&
 	writer.mailto(mail_address, user_name);
 	writer.close();
 	cout << html_file_name << " is created for " << mail_address << " (" << user_name << ")" << endl;
+	cout << "Output file: " << current_directory_path << "/" << html_file_name << endl;
 	// ˄
 }
 

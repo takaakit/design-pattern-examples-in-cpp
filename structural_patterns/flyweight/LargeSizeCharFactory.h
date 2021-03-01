@@ -23,7 +23,7 @@ class LargeSizeCharFactory
 
 private:
 
-	map<string, shared_ptr<LargeSizeChar>> pool_chars;
+	map<string, LargeSizeChar*> pool_chars;
 
 	static LargeSizeCharFactory* instance;
 
@@ -40,7 +40,7 @@ private:
 public:
 
 	// Create an instance of the large size character.
-	shared_ptr<LargeSizeChar> getLargeSizeChar(const char char_name);
+	LargeSizeChar* getLargeSizeChar(const char char_name);
 
 	// ˅
 public:

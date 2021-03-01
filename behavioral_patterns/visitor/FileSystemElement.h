@@ -21,13 +21,13 @@ class FileSystemElement : public Element
 
 public:
 
-	const string name;
-
-	FileSystemElement(const string& name);
+	FileSystemElement();
 
 	virtual ~FileSystemElement();
 
-	virtual int getSize();
+	virtual string getName() = 0;
+
+	virtual int getSize() = 0;
 
 	string toString();
 

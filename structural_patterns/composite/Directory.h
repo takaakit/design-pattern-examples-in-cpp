@@ -22,6 +22,8 @@ class Directory : public FileSystemElement
 
 private:
 
+	const string name;
+
 	vector<FileSystemElement*> elements;
 
 public:
@@ -29,6 +31,10 @@ public:
 	Directory(const string& name);
 
 	~Directory();
+
+	string getName();
+
+	int getSize();
 
 	// Print this element with the "upper_path".
 	void print(const string& upper_path);

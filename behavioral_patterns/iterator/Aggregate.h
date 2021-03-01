@@ -24,7 +24,7 @@ public:
 
 	virtual ~Aggregate();
 
-	virtual shared_ptr<Iterator> iterator() = 0;
+	virtual Iterator* iterator() = 0;
 
 	// ˅
 public:

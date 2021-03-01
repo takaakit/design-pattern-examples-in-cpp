@@ -23,11 +23,9 @@ class BookShelf : public Aggregate
 	
 	// ˄
 
-public:
+private:
 
 	int number_of_books;
-
-private:
 
 	vector<Book*> books;
 
@@ -37,11 +35,13 @@ public:
 
 	~BookShelf();
 
-	shared_ptr<Iterator> iterator();
+	Iterator* iterator();
 
 	Book* getAt(const int index);
 
 	void add(Book* book);
+
+	int getNumberOfBooks();
 
 	// ˅
 public:

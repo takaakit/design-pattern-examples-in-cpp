@@ -24,10 +24,10 @@ UnderlineDisplay::~UnderlineDisplay()
 	// ˄
 }
 
-shared_ptr<Display> UnderlineDisplay::createClone()
+Display* UnderlineDisplay::createClone()
 {
 	// ˅
-	return shared_ptr<Display>(new UnderlineDisplay(underline_char));
+	return new UnderlineDisplay(underline_char);
 	// ˄
 }
 

@@ -18,11 +18,11 @@ class CharDisplay : public AbstractDisplay
 
 private:
 
-	const char char_;
+	const char char_value;
 
 public:
 
-	CharDisplay(const char char_);
+	CharDisplay(const char char_value);
 
 	~CharDisplay();
 

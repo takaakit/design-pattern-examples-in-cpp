@@ -83,6 +83,7 @@ void AppSafe::changeState(shared_ptr<State> state)
 void AppSafe::callSecurityGuardsRoom(const string& msg)
 {
 	// ˅
+	rich_text_message->HideSelection = false;		// Setting to automatically scroll to the bottom
 	rich_text_message->AppendText(gcnew String(("call! " + msg + "\n").c_str()));
 	// ˄
 }
@@ -90,6 +91,7 @@ void AppSafe::callSecurityGuardsRoom(const string& msg)
 void AppSafe::recordSecurityLog(const string& msg)
 {
 	// ˅
+	rich_text_message->HideSelection = false;		// Setting to automatically scroll to the bottom
 	rich_text_message->AppendText(gcnew String(("record ... " + msg + "\n").c_str()));
 	// ˄
 }
@@ -119,7 +121,7 @@ Form^ AppSafe::InitializeComponent()
 	rich_text_message = gcnew RichTextBox();
 	rich_text_message->Location = Point(12, 45);
 	rich_text_message->Name = L"rich_text_message";
-	rich_text_message->Size = System::Drawing::Size(994, 252);
+	rich_text_message->Size = System::Drawing::Size(555, 252);
 	rich_text_message->TabIndex = 2;
 	rich_text_message->Text = L"";
 
@@ -134,39 +136,39 @@ Form^ AppSafe::InitializeComponent()
 
 	// button_use
 	Button^ button_use = gcnew Button();
-	button_use->Location = Point(12, 303);
+	button_use->Location = Point(10, 300);
 	button_use->Name = L"button_use";
-	button_use->Size = System::Drawing::Size(244, 33);
+	button_use->Size = System::Drawing::Size(140, 30);
 	button_use->TabIndex = 3;
-	button_use->Text = L"Use a safe";
+	button_use->Text = L"Use";
 	button_use->UseVisualStyleBackColor = true;
 	button_use->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::useSate);		// Safe use button pressed
 
 	// button_alarm
 	Button^ button_alarm = gcnew Button();
-	button_alarm->Location = Point(262, 303);
+	button_alarm->Location = Point(150, 300);
 	button_alarm->Name = L"button_alarm";
-	button_alarm->Size = System::Drawing::Size(244, 33);
+	button_alarm->Size = System::Drawing::Size(140, 30);
 	button_alarm->TabIndex = 4;
-	button_alarm->Text = L"Sound an emergency bell";
+	button_alarm->Text = L"Alarm";
 	button_alarm->UseVisualStyleBackColor = true;
 	button_alarm->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::soundBell);	// Emergency bell button pressed
 
 	// button_phone
 	Button^ button_phone = gcnew Button();
-	button_phone->Location = Point(512, 303);
+	button_phone->Location = Point(290, 300);
 	button_phone->Name = L"button_phone";
-	button_phone->Size = System::Drawing::Size(244, 33);
+	button_phone->Size = System::Drawing::Size(140, 30);
 	button_phone->TabIndex = 5;
-	button_phone->Text = L"Make a call";
+	button_phone->Text = L"Phone";
 	button_phone->UseVisualStyleBackColor = true;
 	button_phone->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::call);		// Normal call button pressed
 
 	// button_exit
 	Button^ button_exit = gcnew Button();
-	button_exit->Location = Point(762, 303);
+	button_exit->Location = Point(430, 300);
 	button_exit->Name = L"button_exit";
-	button_exit->Size = System::Drawing::Size(244, 33);
+	button_exit->Size = System::Drawing::Size(140, 30);
 	button_exit->TabIndex = 6;
 	button_exit->Text = L"Exit";
 	button_exit->UseVisualStyleBackColor = true;
@@ -177,7 +179,7 @@ Form^ AppSafe::InitializeComponent()
 	main_form->SuspendLayout();
 	main_form->AutoScaleDimensions = SizeF(10, 18);
 	main_form->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-	main_form->ClientSize = System::Drawing::Size(1019, 348);
+	main_form->ClientSize = System::Drawing::Size(580, 340);
 	main_form->Controls->Add(button_exit);
 	main_form->Controls->Add(button_phone);
 	main_form->Controls->Add(button_alarm);

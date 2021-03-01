@@ -13,7 +13,7 @@ using namespace std;
 
 // ˄
 
-// Analyze the syntax
+// Hold data which will be interpreted.
 class Context
 {
 	// ˅

@@ -3,8 +3,7 @@
 
 // ˄
 
-FileSystemElement::FileSystemElement(const string& name)
-	: name(name)
+FileSystemElement::FileSystemElement()
 	// ˅
 	
 	// ˄
@@ -21,17 +20,10 @@ FileSystemElement::~FileSystemElement()
 	// ˄
 }
 
-int FileSystemElement::getSize()
-{
-	// ˅
-	return 0;
-	// ˄
-}
-
 string FileSystemElement::toString()
 {
 	// ˅
-	return name + " (" + to_string(getSize()) + ")";
+	return getName() + " (" + to_string(getSize()) + ")";
 	// ˄
 }
 

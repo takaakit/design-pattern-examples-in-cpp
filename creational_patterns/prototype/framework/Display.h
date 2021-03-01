@@ -25,7 +25,7 @@ public:
 
 	virtual ~Display();
 
-	virtual shared_ptr<Display> createClone() = 0;
+	virtual Display* createClone() = 0;
 
 	virtual void show(const string& message) = 0;
 

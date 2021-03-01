@@ -25,6 +25,8 @@ class Directory : public FileSystemElement
 
 private:
 
+	const string name;
+
 	// Collection of elements
 	vector<FileSystemElement*> elements;
 
@@ -34,18 +36,23 @@ public:
 
 	~Directory();
 
-	int getSize();
-
 	// Accept a visitor
 	void accept(Visitor* visitor);
+
+	// Directory name
+	string getName();
+
+	// Directory size
+	int getSize();
 
 	// Add an entry
 	FileSystemElement* add(FileSystemElement* element);
 
-	// Create a iterator
-	vector<FileSystemElement*>::const_iterator iterator();
+	// Get the begin iterator
+	vector<FileSystemElement*>::const_iterator getBeginIterator();
 
-	bool hasNext(vector<FileSystemElement*>::const_iterator it);
+	// Get the end iterator
+	vector<FileSystemElement*>::const_iterator getEndIterator();
 
 	// ˅
 public:

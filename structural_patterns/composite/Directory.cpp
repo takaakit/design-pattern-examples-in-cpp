@@ -8,8 +8,9 @@ using namespace std;
 // ˄
 
 Directory::Directory(const string& name)
+	: name(name)
 	// ˅
-	: FileSystemElement(name, 0)
+	
 	// ˄
 {
 	// ˅
@@ -24,14 +25,30 @@ Directory::~Directory()
 	// ˄
 }
 
+string Directory::getName()
+{
+	// ˅
+	return name;
+	// ˄
+}
+
+int Directory::getSize()
+{
+	// ˅
+	int size = 0;
+	for (FileSystemElement* element : elements) {
+		size += element->getSize();
+	}
+	return size;
+	// ˄
+}
+
 void Directory::print(const string& upper_path)
 {
 	// ˅
-	cout << upper_path << "/" << toString() << endl;
-	vector<FileSystemElement*>::const_iterator it = elements.begin();
-	while (it != elements.end()) {
-		(*it)->print(upper_path + "/" + name);
-		++it;
+	cout << upper_path << "/" << this->toString() << endl;
+	for (FileSystemElement* element : elements) {
+		element->print(upper_path + "/" + name);
 	}
 	// ˄
 }

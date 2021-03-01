@@ -23,6 +23,8 @@ class File : public FileSystemElement
 
 private:
 
+	const string name;
+
 	const int size;
 
 public:
@@ -31,9 +33,13 @@ public:
 
 	~File();
 
-	int getSize();
-
 	void accept(Visitor* visitor);
+
+	// File name
+	string getName();
+
+	// File size
+	int getSize();
 
 	// ˅
 public:

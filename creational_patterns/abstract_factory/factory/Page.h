@@ -28,7 +28,7 @@ protected:
 
 	const string author;
 
-	vector<shared_ptr<Item>> contents;
+	vector<Item*> contents;
 
 public:
 
@@ -38,7 +38,7 @@ public:
 
 	virtual string toHTML() = 0;
 
-	void add(shared_ptr<Item> item);
+	void add(Item* item);
 
 	void output();
 

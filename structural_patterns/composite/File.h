@@ -19,11 +19,21 @@ class File : public FileSystemElement
 	
 	// ˄
 
+private:
+
+	const string name;
+
+	const int size;
+
 public:
 
 	File(const string& name, const int size);
 
 	~File();
+
+	string getName();
+
+	int getSize();
 
 	// Print this element with the "upper_path".
 	void print(const string& upper_path);

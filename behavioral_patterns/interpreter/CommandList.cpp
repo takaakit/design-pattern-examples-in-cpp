@@ -34,9 +34,9 @@ void CommandList::parse(Context* context)
 			break;
 		}
 		else {
-			shared_ptr<Command> command_node = shared_ptr<Command>(new Command());
-			command_node->parse(context);
-			nodes.push_back(command_node);
+			shared_ptr<Node> a_node = shared_ptr<Node>(new Command());
+			a_node->parse(context);
+			nodes.push_back(a_node);
 		}
 	}
 	// ˄
@@ -45,7 +45,7 @@ void CommandList::parse(Context* context)
 string CommandList::toString()
 {
 	// ˅
-	string ret = "";
+	string ret = "[";
 	vector<shared_ptr<Node>>::const_iterator it = nodes.begin();
 	while (it != nodes.end()) {
 		ret += (*it)->toString();
@@ -54,6 +54,7 @@ string CommandList::toString()
 			ret += ", ";
 		}
 	}
+	ret += "]";
 	return ret;
 	// ˄
 }

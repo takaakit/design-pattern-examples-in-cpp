@@ -20,7 +20,7 @@ int main() {
 	unique_ptr<Book> book5 = unique_ptr<Book>(new Book("A Pattern Language: Towns, Buildings, Construction"));
 	book_shelf->add(book5.get());
 
-	shared_ptr<Iterator> it = book_shelf->iterator();
+	shared_ptr<Iterator> it = shared_ptr<Iterator>(book_shelf->iterator());
 	while (it->hasNext() == true) {
 		Book* book = static_cast<Book*>(it->next());
 		cout << book->title << endl;

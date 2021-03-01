@@ -52,7 +52,7 @@ map<string, string> DataLibrary::getProperties(const string& data_library_name)
 		}
 	}
 	else {
-		cerr << "file read error." << endl;
+		cerr << "Failed to read file: " << data_library_name << endl;
 	}
 
 	return ret;

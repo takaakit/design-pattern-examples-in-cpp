@@ -5,7 +5,6 @@
 // ˄
 
 Number::Number()
-	: value(0)
 	// ˅
 	
 	// ˄
@@ -16,13 +15,6 @@ Number::Number()
 }
 
 Number::~Number()
-{
-	// ˅
-	
-	// ˄
-}
-
-void Number::generate()
 {
 	// ˅
 	
@@ -52,10 +44,8 @@ void Number::deleteObserver(const Observer* observer)
 void Number::notifyObservers()
 {
 	// ˅
-	vector<Observer*>::const_iterator it = observers.begin();
-	while (it != observers.end()) {
-		(*it)->update(this);
-		++it;
+	for (Observer* observer : observers) {
+		observer->update(this);
 	}
 	// ˄
 }

@@ -18,17 +18,15 @@ class FileSystemElement
 	
 	// ˄
 
-protected:
-
-	const string name;
-
-	const int size;
-
 public:
 
-	FileSystemElement(const string& name, const int size);
+	FileSystemElement();
 
 	virtual ~FileSystemElement();
+
+	virtual string getName() = 0;
+
+	virtual int getSize() = 0;
 
 	// Print this element with the "upper_path".
 	virtual void print(const string& upper_path) = 0;

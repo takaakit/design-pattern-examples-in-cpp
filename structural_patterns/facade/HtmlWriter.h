@@ -35,13 +35,15 @@ public:
 	// Write a paragraph
 	void paragraph(const string& message);
 
-	// Write a link
-	void anchor(const string& url, const string& text);
-
 	// Write a mail address
 	void mailto(const string& mail_address, const string& user_name);
 
 	void close();
+
+private:
+
+	// Write a link
+	void anchor(const string& url, const string& text);
 
 	// ˅
 public:

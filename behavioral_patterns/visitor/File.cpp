@@ -6,9 +6,10 @@
 // ˄
 
 File::File(const string& name, const int size)
-	: size(size)
+	: name(name)
+	, size(size)
 	// ˅
-	, FileSystemElement(name)
+	
 	// ˄
 {
 	// ˅
@@ -23,17 +24,24 @@ File::~File()
 	// ˄
 }
 
-int File::getSize()
-{
-	// ˅
-	return size;
-	// ˄
-}
-
 void File::accept(Visitor* visitor)
 {
 	// ˅
 	visitor->visit(this);
+	// ˄
+}
+
+string File::getName()
+{
+	// ˅
+	return name;
+	// ˄
+}
+
+int File::getSize()
+{
+	// ˅
+	return size;
 	// ˄
 }
 

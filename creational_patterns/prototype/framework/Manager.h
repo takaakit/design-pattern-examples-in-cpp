@@ -34,7 +34,7 @@ public:
 
 	void registerDisplay(const string& display_name, Display* display);
 
-	shared_ptr<Display> getDisplay(const string& display_name);
+	Display* getDisplay(const string& display_name);
 
 	// ˅
 public:

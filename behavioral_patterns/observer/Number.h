@@ -21,10 +21,6 @@ class Number
 	
 	// ˄
 
-public:
-
-	int value;
-
 private:
 
 	vector<Observer*> observers;
@@ -35,7 +31,9 @@ public:
 
 	virtual ~Number();
 
-	virtual void generate();
+	virtual void generate() = 0;
+
+	virtual int getValue() = 0;
 
 	void addObserver(Observer* observer);
 

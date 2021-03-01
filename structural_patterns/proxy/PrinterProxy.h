@@ -27,7 +27,7 @@ private:
 	string current_name;
 
 	// A printer that actually prints
-	unique_ptr<RealPrinter> real;
+	RealPrinter* real;
 
 public:
 
@@ -40,11 +40,6 @@ public:
 	void setPrinterName(const string& value);
 
 	void output(const string& content);
-
-private:
-
-	// Create an actual printer
-	void createPrinter();
 
 	// ˅
 public:

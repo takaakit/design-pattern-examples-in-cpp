@@ -29,7 +29,7 @@ public:
 
 	~FrameDisplay();
 
-	shared_ptr<Display> createClone();
+	Display* createClone();
 
 	void show(const string& message);
 

@@ -26,10 +26,8 @@ HistoryCommand::~HistoryCommand()
 void HistoryCommand::execute()
 {
 	// ˅
-	vector<shared_ptr<Command>>::const_iterator it = past_commands.begin();
-	while (it != past_commands.end()) {
-		(*it)->execute();
-		++it;
+	for (shared_ptr<Command> past_command : past_commands) {
+		past_command->execute();
 	}
 	// ˄
 }

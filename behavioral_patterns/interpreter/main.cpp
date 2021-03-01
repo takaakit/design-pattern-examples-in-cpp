@@ -34,7 +34,7 @@ After  : [program [[repeat 4 [forward, right]]]]
 */
 
 int main() {
-	// Extract the current directory path.
+	// Get the current directory path.
 	char current_directory_path[255];
 #ifdef _MSC_VER
 	GetCurrentDirectory(255, current_directory_path);
@@ -44,18 +44,19 @@ int main() {
 	
 	stringstream buf;
 	string line;
-	ifstream ifs(string(current_directory_path) + "/program.txt");
+	const string file_path = string(current_directory_path) + "/program.txt";
+	ifstream ifs(file_path);
 	if (ifs.fail() == false) {
 		while (getline(ifs, line)) {
-			cout << "TEXT > \"" << line << "\"" << endl;
+			cout << "Before parsing : " << line << endl;
 			unique_ptr<Node> node = unique_ptr<Node>(new Program());
 			unique_ptr<Context> context = unique_ptr<Context>(new Context(line));
 			node->parse(context.get());
-			cout << "NODE > " << node->toString() << endl;
+			cout << "After parsing  : " << node->toString() << endl;
 		}
 	}
 	else {
-		cerr << "file read error." << endl;
+		cerr << "Failed to read file: " << file_path << endl;
 	}
 
 	return 0;

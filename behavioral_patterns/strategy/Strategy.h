@@ -6,7 +6,9 @@
 #define BEHAVIORAL_PATTERNS_STRATEGY_STRATEGY_H_
 
 // ˅
-class Hand;
+#include "behavioral_patterns/strategy/GameResultType.h"
+
+class HandSignal;
 
 // ˄
 
@@ -20,9 +22,11 @@ public:
 
 	virtual ~Strategy();
 
-	virtual shared_ptr<Hand> nextHand() = 0;
+	// Show a hand signal.
+	virtual HandSignal* showHandSignal() = 0;
 
-	virtual void learn(const bool win) = 0;
+	// Notify a game result.
+	virtual void notifyGameResult(GameResultType result, HandSignal* ownHand, HandSignal* opponentsHand) = 0;
 
 	// ˅
 public:

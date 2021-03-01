@@ -65,7 +65,7 @@ bool Supporter::handle(const Trouble* trouble) const
 void Supporter::supported(const Trouble* trouble) const
 {
 	// ˅
-	cout << trouble->toString() << " was handled by " << name << endl;
+	cout << trouble->toString() << " was handled by " << name  << "." << endl;
 	// ˄
 }
 

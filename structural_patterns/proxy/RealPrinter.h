@@ -19,13 +19,17 @@ class RealPrinter : public Printer
 	
 	// ˄
 
-public:
+private:
 
 	string printer_name;
+
+public:
 
 	RealPrinter(const string& name);
 
 	~RealPrinter();
+
+	void setPrinterName(string name);
 
 	// Display a content with the name
 	void output(const string& content);

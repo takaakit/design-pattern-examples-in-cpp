@@ -4,6 +4,16 @@
 
 // ˄
 
+Factory::Factory()
+	// ˅
+	
+	// ˄
+{
+	// ˅
+	
+	// ˄
+}
+
 Factory::~Factory()
 {
 	// ˅
@@ -11,12 +21,10 @@ Factory::~Factory()
 	// ˄
 }
 
-shared_ptr<Product> Factory::create(const string& owner)
+Product* Factory::create(const string& owner)
 {
 	// ˅
-	shared_ptr<Product> product = createProduct(owner);
-	registerProduct(product);
-	return product;
+	return createProduct(owner);
 	// ˄
 }
 

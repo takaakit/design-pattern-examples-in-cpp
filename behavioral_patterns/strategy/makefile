@@ -1,11 +1,11 @@
 CFLAGS = -I. -I../.. -std=c++11
 
 SRC = \
-	Hand.cpp \
+	HandSignal.cpp \
 	Player.cpp \
 	Strategy.cpp \
-	StrategyA.cpp \
-	StrategyB.cpp \
+	MirrorStrategy.cpp \
+	RandomStrategy.cpp \
 	main.cpp
 
 PROG = strategy.exe

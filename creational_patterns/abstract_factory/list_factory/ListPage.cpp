@@ -31,10 +31,8 @@ string ListPage::toHTML()
 	buffer << "<html><head><title>" << title << "</title></head>" << endl;
 	buffer << "<body><h1>" << title << "</h1>" << endl;
 	buffer << "<ul>" << endl;
-	vector<shared_ptr<Item>>::const_iterator it = contents.begin();
-	while (it != contents.end()) {
-		buffer << (*it)->toHTML();
-		++it;
+	for (Item* content : contents) {
+		buffer << content->toHTML();
 	}
 	buffer << "</ul>" << endl;
 	buffer << "<hr><address>" << author << "</address>";

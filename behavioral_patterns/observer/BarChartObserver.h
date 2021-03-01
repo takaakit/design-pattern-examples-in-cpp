@@ -23,7 +23,7 @@ public:
 
 	~BarChartObserver();
 
-	void update(const Number* number);
+	void update(Number* number);
 
 	// ˅
 public:

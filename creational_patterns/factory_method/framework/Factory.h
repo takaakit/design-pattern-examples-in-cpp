@@ -23,15 +23,15 @@ class Factory
 
 public:
 
+	Factory();
+
 	virtual ~Factory();
 
-	shared_ptr<Product> create(const string& owner);
+	Product* create(const string& owner);
 
 protected:
 
-	virtual shared_ptr<Product> createProduct(const string& owner) = 0;
-
-	virtual void registerProduct(shared_ptr<Product> product) = 0;
+	virtual Product* createProduct(const string& owner) = 0;
 
 	// ˅
 public:

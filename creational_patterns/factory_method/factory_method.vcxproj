@@ -138,17 +138,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="credit_card\CreditCard.cpp" />
+    <ClCompile Include="credit_card\CreditCardFactory.cpp" />
     <ClCompile Include="framework\Factory.cpp" />
     <ClCompile Include="framework\Product.cpp" />
-    <ClCompile Include="id_card\CreditCard.cpp" />
-    <ClCompile Include="id_card\CreditCardFactory.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="credit_card\CreditCard.h" />
+    <ClInclude Include="credit_card\CreditCardFactory.h" />
     <ClInclude Include="framework\Factory.h" />
     <ClInclude Include="framework\Product.h" />
-    <ClInclude Include="id_card\CreditCard.h" />
-    <ClInclude Include="id_card\CreditCardFactory.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -8,9 +8,10 @@
 // ˅
 #include <string>
 #include <memory>
+#include "behavioral_patterns/strategy/GameResultType.h"
 
 class Strategy;
-class Hand;
+class HandSignal;
 
 using namespace std;
 
@@ -38,17 +39,11 @@ public:
 
 	Player(const string& name, Strategy* strategy);
 
-	// Calculate a hand from the strategy.
-	shared_ptr<Hand> nextHand();
+	// Show a hand signal from the strategy.
+	HandSignal* showHandSignal();
 
-	// Won a game.
-	void won();
-
-	// Lost a game.
-	void lost();
-
-	// Drew a game.
-	void drew();
+	// Notify a game result.
+	void notifyGameResult(GameResultType result, HandSignal* ownHand, HandSignal* opponentsHand);
 
 	string toString();
 

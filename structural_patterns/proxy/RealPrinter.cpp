@@ -30,11 +30,20 @@ RealPrinter::~RealPrinter()
 	// ˄
 }
 
+void RealPrinter::setPrinterName(string name)
+{
+	// ˅
+	printer_name = name;
+	// ˄
+}
+
 void RealPrinter::output(const string& content)
 {
 	// ˅
-	cout << "=== " << printer_name << " ===" << endl;
-	cout << content << endl;
+	cout << "==========" << endl
+		<< content << endl
+		<< "Printed by " << printer_name << endl
+		<< "==========" << endl;
 	// ˄
 }
 

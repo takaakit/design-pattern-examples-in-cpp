@@ -12,16 +12,14 @@ using namespace std;
 int main() {
 	unique_ptr<LazySupporter> emily = unique_ptr<LazySupporter>(new LazySupporter("Emily"));
 	unique_ptr<MoodySupporter> william = unique_ptr<MoodySupporter>(new MoodySupporter("William"));
-	unique_ptr<SpecialSupporter> amelia = unique_ptr<SpecialSupporter>(new SpecialSupporter("Amelia", 153));
-	unique_ptr<SpecialSupporter> michael = unique_ptr<SpecialSupporter>(new SpecialSupporter("Michael", 340));
-	unique_ptr<LimitedSupporter> joseph = unique_ptr<LimitedSupporter>(new LimitedSupporter("Joseph", 250));
-	unique_ptr<LimitedSupporter> lily = unique_ptr<LimitedSupporter>(new LimitedSupporter("Lily", 350));
+	unique_ptr<SpecialSupporter> amelia = unique_ptr<SpecialSupporter>(new SpecialSupporter("Amelia", 6));
+	unique_ptr<LimitedSupporter> joseph = unique_ptr<LimitedSupporter>(new LimitedSupporter("Joseph", 5));
 
 	//Make a chain.
-	emily->setNext(william.get())->setNext(amelia.get())->setNext(michael.get())->setNext(joseph.get())->setNext(lily.get());
+	emily->setNext(william.get())->setNext(amelia.get())->setNext(joseph.get());
 
 	// Various troubles occurred.
-	for (int i = 0; i < 500; i += 17) {
+	for (int i = 0; i < 10; i++) {
 		unique_ptr<Trouble> trouble = unique_ptr<Trouble>(new Trouble(i));
 		emily->support(trouble.get());
 	}

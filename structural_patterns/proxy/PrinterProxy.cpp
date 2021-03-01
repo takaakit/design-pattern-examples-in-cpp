@@ -19,7 +19,9 @@ PrinterProxy::PrinterProxy(const string& name)
 PrinterProxy::~PrinterProxy()
 {
 	// ˅
-	
+	if (real != nullptr) {
+		delete real;
+	}
 	// ˄
 }
 
@@ -34,7 +36,7 @@ void PrinterProxy::setPrinterName(const string& value)
 {
 	// ˅
 	if (real != nullptr) {
-		real->printer_name = value;
+		real->setPrinterName(value);
 	}
 	current_name = value;
 	// ˄
@@ -43,19 +45,10 @@ void PrinterProxy::setPrinterName(const string& value)
 void PrinterProxy::output(const string& content)
 {
 	// ˅
-	createPrinter();
-	if (real != nullptr) {
-		real->output(content);
-	}
-	// ˄
-}
-
-void PrinterProxy::createPrinter()
-{
-	// ˅
 	if (real == nullptr) {
-		real.reset(new RealPrinter(current_name));
+		real = new RealPrinter(current_name);
 	}
+	real->output(content);
 	// ˄
 }
 

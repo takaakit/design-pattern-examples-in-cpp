@@ -28,7 +28,7 @@ void Manager::registerDisplay(const string& display_name, Display* display)
 	// ˄
 }
 
-shared_ptr<Display> Manager::getDisplay(const string& display_name)
+Display* Manager::getDisplay(const string& display_name)
 {
 	// ˅
 	Display* d = displays.at(display_name);

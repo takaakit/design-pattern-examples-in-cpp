@@ -1,4 +1,5 @@
 // ˅
+#include <string>
 #include "behavioral_patterns/interpreter/Repeat.h"
 #include "behavioral_patterns/interpreter/Context.h"
 #include "behavioral_patterns/interpreter/CommandList.h"
@@ -28,17 +29,21 @@ void Repeat::parse(Context* context)
 {
 	// ˅
 	context->slideToken("repeat");
+
 	number = context->getNumber();
-	context->nextToken();
-	command_list.reset(new CommandList());
-	command_list->parse(context);
+	context->slideToken(to_string(number));
+	
+	CommandList* a_command_list = new CommandList();
+	a_command_list->parse(context);
+
+	command_list.reset(a_command_list);		// Hold the parsed command list
 	// ˄
 }
 
 string Repeat::toString()
 {
 	// ˅
-	return "[repeat " + to_string(number) + " " + command_list->toString() + "]";
+	return "repeat " + to_string(number) + " " + command_list->toString();
 	// ˄
 }
 

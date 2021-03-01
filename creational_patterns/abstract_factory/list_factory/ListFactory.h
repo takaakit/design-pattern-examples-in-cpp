@@ -29,11 +29,11 @@ public:
 
 	~ListFactory();
 
-	shared_ptr<Page> createPage(const string& title, const string& author);
+	Page* createPage(const string& title, const string& author);
 
-	shared_ptr<Link> createLink(const string& name, const string& url);
+	Link* createLink(const string& name, const string& url);
 
-	shared_ptr<Data> createData(const string& name);
+	Data* createData(const string& name);
 
 	// ˅
 public:

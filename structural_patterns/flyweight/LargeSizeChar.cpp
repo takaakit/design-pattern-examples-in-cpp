@@ -17,14 +17,13 @@ using namespace std;
 // ˄
 
 LargeSizeChar::LargeSizeChar(const char char_name)
-	: char_name(char_name)
-	, display_data("")
+	: display_data("")
 	// ˅
 	
 	// ˄
 {
 	// ˅
-	// Extract the current directory path.
+	// Get the current directory path.
 	char current_directory_path[255];
 #ifdef _MSC_VER
 	GetCurrentDirectory(255, current_directory_path);
@@ -36,7 +35,7 @@ LargeSizeChar::LargeSizeChar(const char char_name)
 	string line;
 	ifstream ifs(string(current_directory_path) + "/big" + char_name + ".txt");
 	if (ifs.fail() == true) {
-		display_data = char_name + "?";
+		display_data = string(1, char_name) + "?";
 	}
 	else {
 		while (getline(ifs, line)) {
@@ -57,7 +56,7 @@ LargeSizeChar::~LargeSizeChar()
 void LargeSizeChar::display()
 {
 	// ˅
-	cout << display_data;
+	cout << display_data << endl;
 	// ˄
 }
 

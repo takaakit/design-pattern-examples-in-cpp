@@ -7,7 +7,7 @@ using namespace System::Drawing;
 
 PaintingCanvas::PaintingCanvas(msclr::gcroot<PictureBox^> picture_box)
 	: picture_box(picture_box)
-	, point_radius(6.0)
+	, point_radius(10.0)
 	// ˅
 	
 	// ˄
@@ -35,7 +35,11 @@ void PaintingCanvas::paint(const double painting_pos_x, const double painting_po
 		bit_map = gcnew Bitmap(picture_box->Image);
 	}
 	Graphics^ grp_pic_box = Graphics::FromImage(bit_map);
-	grp_pic_box->FillEllipse(Brushes::Green, static_cast<int>(painting_pos_x), static_cast<int>(painting_pos_y), 12, 12);
+	grp_pic_box->FillEllipse(Brushes::LightGreen,
+								static_cast<int>(painting_pos_x - this->point_radius),
+								static_cast<int>(painting_pos_y - this->point_radius),
+								this->point_radius * 2,
+								this->point_radius * 2);
 	picture_box->Image = nullptr;
 	picture_box->Image = bit_map;
 	// ˄

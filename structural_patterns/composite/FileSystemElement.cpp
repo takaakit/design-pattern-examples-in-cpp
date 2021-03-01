@@ -3,9 +3,7 @@
 
 // ˄
 
-FileSystemElement::FileSystemElement(const string& name, const int size)
-	: name(name)
-	, size(size)
+FileSystemElement::FileSystemElement()
 	// ˅
 	
 	// ˄
@@ -25,7 +23,7 @@ FileSystemElement::~FileSystemElement()
 string FileSystemElement::toString()
 {
 	// ˅
-	return name + " (" + to_string(size) + ")";
+	return getName() + " (" + to_string(getSize()) + ")";
 	// ˄
 }
 

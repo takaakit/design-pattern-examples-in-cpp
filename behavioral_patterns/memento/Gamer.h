@@ -25,38 +25,23 @@ class Gamer
 
 private:
 
-	// Dessert name table
-	vector<string> desserts_name;
-
-public:
-
 	// Gamer's money
 	int money;
-
-private:
-
-	// Acquired desserts 
-	vector<string> desserts;
 
 public:
 
 	Gamer(const int money);
 
-private:
-
-	// Get a dessert
-	string getDessert();
-
-public:
-
 	// Get current status
-	shared_ptr<Memento> createMemento();
+	Memento* createMemento();
 
 	// Undo status
-	void restoreMemento(const shared_ptr<Memento> memento);
+	void setMemento(Memento* memento);
 
 	// Play a game
 	void play();
+
+	int getMoney();
 
 	string toString();
 

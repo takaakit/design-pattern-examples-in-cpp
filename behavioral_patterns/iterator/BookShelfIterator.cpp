@@ -27,7 +27,7 @@ BookShelfIterator::~BookShelfIterator()
 bool BookShelfIterator::hasNext()
 {
 	// ˅
-	return index < book_shelf->number_of_books;
+	return index < book_shelf->getNumberOfBooks();
 	// ˄
 }
 

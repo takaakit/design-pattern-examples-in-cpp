@@ -30,21 +30,19 @@ ListVisitor::~ListVisitor()
 void ListVisitor::visit(File* file)
 {
 	// ˅
-	cout << current_directory << "/" << (file->toString()) << endl;
+	cout << current_directory << "/" << file->toString() << endl;
 	// ˄
 }
 
 void ListVisitor::visit(Directory* directory)
 {
 	// ˅
-	cout << current_directory << "/" << (directory->toString()) << endl;
+	cout << current_directory << "/" << directory->toString() << endl;
 	const string visited_directory = current_directory;
-	current_directory = current_directory + "/" + directory->name;
-	vector<FileSystemElement*>::const_iterator it = directory->iterator();
-	while (directory->hasNext(it) == true) {
-		FileSystemElement* element = (*it);
+	current_directory = current_directory + "/" + directory->getName();
+	for (vector<FileSystemElement*>::const_iterator it = directory->getBeginIterator(); it != directory->getEndIterator(); it++) {
+		FileSystemElement* element = *it;
 		element->accept(this);
-		++it;
 	}
 	current_directory = visited_directory;
 	// ˄

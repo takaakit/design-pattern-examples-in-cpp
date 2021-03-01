@@ -24,7 +24,7 @@ class LargeSizeString
 
 private:
 
-	vector<shared_ptr<LargeSizeChar>> large_size_chars;
+	vector<LargeSizeChar*> large_size_chars;
 
 public:
 

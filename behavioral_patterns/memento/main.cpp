@@ -20,31 +20,31 @@ Dice game collecting fruits.
 
 int main() {
 	unique_ptr<Gamer> gamer = unique_ptr<Gamer>(new Gamer(100));// The initial money is 100
-	shared_ptr<Memento> memento = gamer->createMemento();		// Save the initial state
+	shared_ptr<Memento> memento(gamer->createMemento());		// Save the initial state
 
-	for (int i = 0; i < 100; ++i) {
-		cout << "==== " << i << endl;							// Display count
-		cout << "Current state: " << gamer->toString() << endl;	// Display the current state of the gamer
+	for (int i = 0; i < 10; ++i) {
+		cout << "==== Turn " << i + 1 << endl;					// Display count
 
 		gamer->play();											// Play a game
 
 		// Determine the behavior of the Memento
-		if (gamer->money > memento->money) {
-			cout << "(Save the current state because money has increased.)" << endl;
-			memento = gamer->createMemento();
+		if (gamer->getMoney() > memento->getMoney()) {
+			cout << "(Gamers' money is the highest ever, so record the current state.)" << endl;
+			memento.reset(gamer->createMemento());
 		}
-		else if (gamer->money < memento->money / 2) {
-			cout << "(Go back to the previous state because money has decreased.)" << endl;
-			gamer->restoreMemento(memento);
+		else if (gamer->getMoney() < memento->getMoney() / 2) {
+			cout << "(Gamer's money is less than half of the highest amount, so return to the recorded state.)" << endl;
+			gamer->setMemento(memento.get());
+			cout << "Gamer's money returns to " << gamer->getMoney() << "." << endl;
 		}
+
+		cout << endl;
 
 #ifdef _MSC_VER
 		Sleep(1000);
 #else
         sleep(1);
 #endif
-
-		cout << endl;
 	}
 
 	return 0;

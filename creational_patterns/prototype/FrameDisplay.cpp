@@ -24,10 +24,10 @@ FrameDisplay::~FrameDisplay()
 	// ˄
 }
 
-shared_ptr<Display> FrameDisplay::createClone()
+Display* FrameDisplay::createClone()
 {
 	// ˅
-	return shared_ptr<Display>(new FrameDisplay(border_char));
+	return new FrameDisplay(border_char);
 	// ˄
 }
 

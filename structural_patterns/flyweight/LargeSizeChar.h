@@ -20,8 +20,6 @@ class LargeSizeChar
 
 private:
 
-	const char char_name;
-
 	// Display data of the large size character
 	string display_data;
 

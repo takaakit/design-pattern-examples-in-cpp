@@ -27,15 +27,14 @@ public:
 
 	virtual ~Factory();
 
-	virtual shared_ptr<Page> createPage(const string& title, const string& author) = 0;
+	virtual Page* createPage(const string& title, const string& author) = 0;
 
-	virtual shared_ptr<Link> createLink(const string& name, const string& url) = 0;
+	virtual Link* createLink(const string& name, const string& url) = 0;
 
-	virtual shared_ptr<Data> createData(const string& name) = 0;
+	virtual Data* createData(const string& name) = 0;
 
 	// ˅
 public:
-	static shared_ptr<Factory> getFactory(const string& class_name);
 	
 protected:
 	

@@ -29,10 +29,8 @@ string ListData::toHTML()
 	// ˅
 	stringstream buffer;
 	buffer << "<li>" << name << "<ul>" << endl;
-	vector<shared_ptr<Item>>::const_iterator it = items.begin();
-	while (it != items.end()) {
-		buffer << (*it)->toHTML();
-		++it;
+	for (Item* item : items) {
+		buffer << item->toHTML();
 	}
 	buffer << "</ul></li>" << endl;
 	return buffer.str();

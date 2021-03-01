@@ -14,10 +14,10 @@ Memento::Memento(int money)
 	// ˄
 }
 
-void Memento::addDessert(string dessert)
+int Memento::getMoney()
 {
 	// ˅
-	desserts.push_back(dessert);
+	return money;
 	// ˄
 }
 

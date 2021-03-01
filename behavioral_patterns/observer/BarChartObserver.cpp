@@ -30,15 +30,15 @@ BarChartObserver::~BarChartObserver()
 	// ˄
 }
 
-void BarChartObserver::update(const Number* number)
+void BarChartObserver::update(Number* number)
 {
 	// ˅
 	cout << "Bar chart: ";
-	for (int i = 0; i < number->value; ++i) {
+	for (int i = 0; i < number->getValue(); ++i) {
 		cout << "*";
 	}
 	cout << endl;
-
+	
 #ifdef _MSC_VER
     Sleep(100);
 #else

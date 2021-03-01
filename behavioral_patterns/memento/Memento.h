@@ -19,18 +19,16 @@ class Memento
 	
 	// ˄
 
-public:
+private:
 
 	// Money
 	int money;
 
-	// Desserts
-	vector<string> desserts;
+public:
 
 	Memento(int money);
 
-	// Add a dessert
-	void addDessert(string dessert);
+	int getMoney();
 
 	// ˅
 public:

@@ -23,7 +23,7 @@ class Data : public Item
 
 protected:
 
-	vector<shared_ptr<Item>> items;
+	vector<Item*> items;
 
 public:
 
@@ -31,7 +31,7 @@ public:
 
 	virtual ~Data();
 
-	void add(shared_ptr<Item> item);
+	void add(Item* item);
 
 	// ˅
 public:

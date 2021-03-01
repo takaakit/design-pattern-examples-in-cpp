@@ -19,35 +19,31 @@ Player::Player(const string& name, Strategy* strategy)
 	// ˄
 }
 
-shared_ptr<Hand> Player::nextHand()
+HandSignal* Player::showHandSignal()
 {
 	// ˅
-	return strategy->nextHand();
+	return strategy->showHandSignal();
 	// ˄
 }
 
-void Player::won()
+void Player::notifyGameResult(GameResultType result, HandSignal* ownHand, HandSignal* opponentsHand)
 {
 	// ˅
-	strategy->learn(true);
-	++win_count;
-	++game_count;
-	// ˄
-}
-
-void Player::lost()
-{
-	// ˅
-	strategy->learn(false);
-	++loss_count;
-	++game_count;
-	// ˄
-}
-
-void Player::drew()
-{
-	// ˅
-	++game_count;
+	switch (result) {
+	case Win:
+		win_count++;
+		game_count++;
+		break;
+	case Loss:
+		loss_count++;
+		game_count++;
+		break;
+	case Draw:
+		game_count++;
+		break;
+	}
+	
+	strategy->notifyGameResult(result, ownHand, opponentsHand);
 	// ˄
 }
 

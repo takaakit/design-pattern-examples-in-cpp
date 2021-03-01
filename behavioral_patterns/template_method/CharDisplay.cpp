@@ -6,8 +6,8 @@ using namespace std;
 
 // ˄
 
-CharDisplay::CharDisplay(const char char_)
-	: char_(char_)
+CharDisplay::CharDisplay(const char char_value)
+	: char_value(char_value)
 	// ˅
 	
 	// ˄
@@ -34,7 +34,7 @@ void CharDisplay::open()
 void CharDisplay::write()
 {
 	// ˅
-	cout << char_;			// Display the character.
+	cout << char_value;		// Display the character.
 	// ˄
 }
 

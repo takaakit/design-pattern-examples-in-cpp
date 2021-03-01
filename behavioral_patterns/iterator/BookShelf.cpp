@@ -25,10 +25,10 @@ BookShelf::~BookShelf()
 	// ˄
 }
 
-shared_ptr<Iterator> BookShelf::iterator()
+Iterator* BookShelf::iterator()
 {
 	// ˅
-	return shared_ptr<Iterator>(new BookShelfIterator(this));
+	return new BookShelfIterator(this);
 	// ˄
 }
 
@@ -44,6 +44,13 @@ void BookShelf::add(Book* book)
 	// ˅
 	books.insert(books.begin() + number_of_books, book);
 	++number_of_books;
+	// ˄
+}
+
+int BookShelf::getNumberOfBooks()
+{
+	// ˅
+	return number_of_books;
 	// ˄
 }
 

@@ -20,7 +20,7 @@ public:
 
 	virtual ~Observer();
 
-	virtual void update(const Number* number) = 0;
+	virtual void update(Number* number) = 0;
 
 	// ˅
 public:

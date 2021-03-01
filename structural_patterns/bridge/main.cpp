@@ -9,16 +9,14 @@ using namespace std;
 // Display only one line or display the specified number of lines.
 
 int main(int argc, char* argv[]) {
-	unique_ptr<DisplayImpl> display_impl1 = unique_ptr<DisplayImpl>(new TextDisplayImpl("Japan"));
-    unique_ptr<Display> d1 = unique_ptr<Display>(new Display(display_impl1.get()));
-	unique_ptr<DisplayImpl> display_impl2 = unique_ptr<DisplayImpl>(new TextDisplayImpl("The United States of America"));
-	unique_ptr<MultiLineDisplay> d2 = unique_ptr<MultiLineDisplay>(new MultiLineDisplay(display_impl2.get()));
-	unique_ptr<DisplayImpl> display_impl3 = unique_ptr<DisplayImpl>(new TextDisplayImpl("Brazil"));
-	unique_ptr<MultiLineDisplay> d3 = unique_ptr<MultiLineDisplay>(new MultiLineDisplay(display_impl3.get()));
-    d1->output();
+	unique_ptr<DisplayImpl> display_impl1(new TextDisplayImpl("Japan"));
+    unique_ptr<Display> d1(new Display(display_impl1.get()));
+	d1->output();
+
+	unique_ptr<DisplayImpl> display_impl2(new TextDisplayImpl("The United States of America"));
+	unique_ptr<MultiLineDisplay> d2(new MultiLineDisplay(display_impl2.get()));
     d2->output();
-    d3->output();
-    d3->outputMultiple(3);
+    d2->outputMultiple(3);
 
 	return 0;
 }

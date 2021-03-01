@@ -1,9 +1,10 @@
 #include <iostream>
 #include <memory>
-#include "behavioral_patterns/strategy/Hand.h"
+#include "behavioral_patterns/strategy/HandSignal.h"
+#include "behavioral_patterns/strategy/GameResultType.h"
 #include "behavioral_patterns/strategy/Player.h"
-#include "behavioral_patterns/strategy/StrategyA.h"
-#include "behavioral_patterns/strategy/StrategyB.h"
+#include "behavioral_patterns/strategy/MirrorStrategy.h"
+#include "behavioral_patterns/strategy/RandomStrategy.h"
 
 using namespace std;
 
@@ -16,41 +17,37 @@ There are two strategies below.
 */
 
 int main(int argc, char* argv[]) {
-	if (argc != 3) {
-		cout << "Usage: strategy.exe RandomSeedNumber1 RandomSeedNumber2" << endl;
-		cout << "Ex.  : strategy.exe 314 15" << endl;
-	}
-	else {
-		int random_seed1 = stoi(argv[1]);
-		int random_seed2 = stoi(argv[2]);
-		unique_ptr<StrategyA> strategy_a = unique_ptr<StrategyA>(new StrategyA(random_seed1));
-		unique_ptr<Player> player1 = unique_ptr<Player>(new Player("Emily", strategy_a.get()));
-		unique_ptr<StrategyB> strategy_b = unique_ptr<StrategyB>(new StrategyB(random_seed2));
-		unique_ptr<Player> player2 = unique_ptr<Player>(new Player("James", strategy_b.get()));
+	unique_ptr<MirrorStrategy> mirror_strategy(new MirrorStrategy());
+	unique_ptr<Player> player1(new Player("Emily", mirror_strategy.get()));
+	unique_ptr<RandomStrategy> random_strategy(new RandomStrategy());
+	unique_ptr<Player> player2(new Player("James", random_strategy.get()));
 
-		for (int i = 0; i < 100; ++i) {
-			shared_ptr<Hand> next_hand1 = player1->nextHand();
-			shared_ptr<Hand> next_hand2 = player2->nextHand();
-			if (next_hand1->isStrongerThan(next_hand2) == true) {
-				cout << "Winner: " << player1->toString() << endl;
-				player1->won();
-				player2->lost();
-			}
-			else if (next_hand2->isStrongerThan(next_hand1) == true) {
-				cout << "Winner: " << player2->toString() << endl;
-				player1->lost();
-				player2->won();
-			}
-			else {
-				cout << "Draw..." << endl;
-				player1->drew();
-				player2->drew();
-			}
+	for (int i = 0; i < 100; ++i) {
+		HandSignal* hand_of_player1 = player1->showHandSignal();
+		HandSignal* hand_of_player2 = player2->showHandSignal();
+		GameResultType resultOfPlayer1 = GameResultType::Draw;
+		GameResultType resultOfPlayer2 = GameResultType::Draw;
+		if (hand_of_player1->isStrongerThan(hand_of_player2) == true) {
+			cout << "Winner: " << player1->toString() << endl;
+			resultOfPlayer1 = GameResultType::Win;
+			resultOfPlayer2 = GameResultType::Loss;
 		}
-		cout << "RESULT:" << endl
-			<< player1->toString() << endl
-			<< player2->toString() << endl;
+		else if (hand_of_player2->isStrongerThan(hand_of_player1) == true) {
+			cout << "Winner: " << player2->toString() << endl;
+			resultOfPlayer1 = GameResultType::Loss;
+			resultOfPlayer2 = GameResultType::Win;
+		}
+		else {
+			cout << "Draw..." << endl;
+			resultOfPlayer1 = GameResultType::Draw;
+			resultOfPlayer2 = GameResultType::Draw;
+		}
+		player1->notifyGameResult(resultOfPlayer1, hand_of_player1, hand_of_player2);
+		player2->notifyGameResult(resultOfPlayer2, hand_of_player2, hand_of_player1);
 	}
+	cout << "RESULT:" << endl
+		<< player1->toString() << endl
+		<< player2->toString() << endl;
 
 	return 0;
 }

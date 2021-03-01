@@ -21,14 +21,14 @@ class StringDisplay : public AbstractDisplay
 
 private:
 
-	const string string_;
+	const string string_value;
 
 	// String width
 	const int width;
 
 public:
 
-	StringDisplay(const string& string_);
+	StringDisplay(const string& string_value);
 
 	~StringDisplay();
 

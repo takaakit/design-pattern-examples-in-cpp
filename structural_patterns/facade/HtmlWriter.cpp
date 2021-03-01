@@ -15,7 +15,7 @@ HtmlWriter::HtmlWriter(const string& file_name)
 	// ˅
 	writer.open(file_name);
 	if (writer.fail() == true) {
-		cerr << "file write error." << endl;
+		cerr << "Failed to create file: " << file_name << endl;
 	}
 	// ˄
 }
@@ -44,13 +44,6 @@ void HtmlWriter::paragraph(const string& message)
 	// ˄
 }
 
-void HtmlWriter::anchor(const string& url, const string& text)
-{
-	// ˅
-	paragraph("<a href=\"" + url + "\">" + text + "</a>");
-	// ˄
-}
-
 void HtmlWriter::mailto(const string& mail_address, const string& user_name)
 {
 	// ˅
@@ -64,6 +57,13 @@ void HtmlWriter::close()
 	writer << "</body>";
 	writer << "</html>" << endl;
 	writer.close();
+	// ˄
+}
+
+void HtmlWriter::anchor(const string& url, const string& text)
+{
+	// ˅
+	paragraph("<a href=\"" + url + "\">" + text + "</a>");
 	// ˄
 }
 

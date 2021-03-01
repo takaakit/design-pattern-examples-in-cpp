@@ -47,10 +47,8 @@ void PlainTextBuilder::createSection(const string& section)
 void PlainTextBuilder::createItems(vector<string> items)
 {
 	// ˅
-	vector<string>::const_iterator it = items.begin();
-	while (it != items.end()) {
-		buffer << "  - " << (*it) << endl;					// Items
-		++it;
+	for (string item : items) {
+		buffer << "  - " << item << endl;					// Items
 	}
 	buffer << endl;											// Blank line
 	// ˄

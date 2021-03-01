@@ -7,8 +7,10 @@ using namespace std;
 // ˄
 
 File::File(const string& name, const int size)
+	: name(name)
+	, size(size)
 	// ˅
-    : FileSystemElement(name, size)
+    
 	// ˄
 {
 	// ˅
@@ -20,6 +22,20 @@ File::~File()
 {
 	// ˅
 	
+	// ˄
+}
+
+string File::getName()
+{
+	// ˅
+	return name;
+	// ˄
+}
+
+int File::getSize()
+{
+	// ˅
+	return size;
 	// ˄
 }
 

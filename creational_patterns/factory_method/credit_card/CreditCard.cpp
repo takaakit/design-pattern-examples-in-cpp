@@ -1,6 +1,6 @@
 // ˅
 #include <iostream>
-#include "creational_patterns/factory_method/id_card/CreditCard.h"
+#include "creational_patterns/factory_method/credit_card/CreditCard.h"
 
 using namespace std;
 

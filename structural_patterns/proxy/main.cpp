@@ -8,11 +8,14 @@ using namespace std;
 // In order to spend time creating a printer, call a heavy task when creating a printer instance.
 
 int main(int argc, char* argv[]) {
-    unique_ptr<PrinterProxy> printer_proxy = unique_ptr<PrinterProxy>(new PrinterProxy("Emily's printer"));
-    cout << "The current printer is " << printer_proxy->getPrinterName() << "." << endl;
-    printer_proxy->setPrinterName("William's printer");
-    cout << "The current printer is " << printer_proxy->getPrinterName() << "." << endl;
-    printer_proxy->output("Nice to meet you.");
+    unique_ptr<PrinterProxy> p(new PrinterProxy("PRINTER-A"));
+    cout << "The current printer is " << p->getPrinterName() << "." << endl;
+    p->setPrinterName("PRINTER-B");
+    cout << "The current printer is " << p->getPrinterName() << "." << endl;
+
+    cout << "Print start." << endl;
+    p->output("Nice to meet you.");
+    cout << "Print exit." << endl;
 
 	return 0;
 }

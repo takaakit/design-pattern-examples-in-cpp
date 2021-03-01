@@ -23,24 +23,24 @@ ListFactory::~ListFactory()
 	// ˄
 }
 
-shared_ptr<Page> ListFactory::createPage(const string& title, const string& author)
+Page* ListFactory::createPage(const string& title, const string& author)
 {
 	// ˅
-	return shared_ptr<Page>(new ListPage(title, author));
+	return new ListPage(title, author);
 	// ˄
 }
 
-shared_ptr<Link> ListFactory::createLink(const string& name, const string& url)
+Link* ListFactory::createLink(const string& name, const string& url)
 {
 	// ˅
-	return shared_ptr<Link>(new ListLink(name, url));
+	return new ListLink(name, url);
 	// ˄
 }
 
-shared_ptr<Data> ListFactory::createData(const string& name)
+Data* ListFactory::createData(const string& name)
 {
 	// ˅
-	return shared_ptr<Data>(new ListData(name));
+	return new ListData(name);
 	// ˄
 }
 

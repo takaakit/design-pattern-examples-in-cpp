@@ -2,8 +2,8 @@
 
 // ˄
 
-#ifndef CREATIONAL_PATTERNS_FACTORY_METHOD_ID_CARD_CREDITCARD_H_
-#define CREATIONAL_PATTERNS_FACTORY_METHOD_ID_CARD_CREDITCARD_H_
+#ifndef CREATIONAL_PATTERNS_FACTORY_METHOD_CREDIT_CARD_CREDITCARD_H_
+#define CREATIONAL_PATTERNS_FACTORY_METHOD_CREDIT_CARD_CREDITCARD_H_
 
 // ˅
 #include <string>
@@ -21,7 +21,7 @@ class CreditCard : public Product
 
 public:
 
-	string owner;
+	const string owner;
 
 	CreditCard(const string& owner);
 
@@ -45,7 +45,7 @@ private:
 
 // ˄
 
-#endif	// CREATIONAL_PATTERNS_FACTORY_METHOD_ID_CARD_CREDITCARD_H_
+#endif	// CREATIONAL_PATTERNS_FACTORY_METHOD_CREDIT_CARD_CREDITCARD_H_
 
 // ˅
 

@@ -16,15 +16,11 @@ Data::Data(const string& name)
 Data::~Data()
 {
 	// ˅
-	vector<shared_ptr<Item>>::const_iterator it = items.begin();
-	while (it != items.end()) {
-		++it;
-	}
 	items.clear();
 	// ˄
 }
 
-void Data::add(shared_ptr<Item> item)
+void Data::add(Item* item)
 {
 	// ˅
 	items.push_back(item);

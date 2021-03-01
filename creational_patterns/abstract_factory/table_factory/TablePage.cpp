@@ -31,10 +31,8 @@ string TablePage::toHTML()
 	buffer << "<html><head><title>" << title << "</title></head><body>" << endl;
 	buffer << "<h1>" << title << "</h1>" << endl;
 	buffer << "<table width=\"80%\" border=\"3\">" << endl;
-	vector<shared_ptr<Item>>::const_iterator it = contents.begin();
-	while (it != contents.end()) {
-		buffer << "<tr>" << (*it)->toHTML() << "</tr>" << endl;
-		++it;
+	for (Item* content : contents) {
+		buffer << "<tr>" << content->toHTML() << "</tr>" << endl;
 	}
 	buffer << "</table>" << endl;
 	buffer << "<hr><address>" << author << "</address>" << endl;
