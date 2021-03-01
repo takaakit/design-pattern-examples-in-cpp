@@ -66,7 +66,7 @@ Form^ AppMain::InitializeComponent()
 	undo_button->Name = L"undo_button";
 	undo_button->Size = Size(150, 40);
 	undo_button->TabIndex = 1;
-	undo_button->Text = L"undo";
+	undo_button->Text = L"Undo";
 	undo_button->UseVisualStyleBackColor = true;
 	undo_button->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::clickUndoButton);
 
@@ -76,7 +76,7 @@ Form^ AppMain::InitializeComponent()
 	clear_button->Name = L"clear_button";
 	clear_button->Size = Size(150, 40);
 	clear_button->TabIndex = 2;
-	clear_button->Text = L"clear";
+	clear_button->Text = L"Clear";
 	clear_button->UseVisualStyleBackColor = true;
 	clear_button->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::clickClearButton);
 
