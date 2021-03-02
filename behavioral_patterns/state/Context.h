@@ -29,7 +29,7 @@ public:
 	virtual void setTime(const int hour) = 0;
 
 	// Change state
-	virtual void changeState(shared_ptr<State> state) = 0;
+	virtual void changeState(State* state) = 0;
 
 	// Call a security guard room
 	virtual void callSecurityGuardsRoom(const string& msg) = 0;

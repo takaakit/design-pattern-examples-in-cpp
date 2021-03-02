@@ -34,10 +34,10 @@ public:
 private:
 
 	// Hands of rock-scissors-paper
-	static const vector<HandSignal*> handSignals;
+	static vector<HandSignal*> handSignals;
 
 	// Characters of the hands
-	static const vector<string> name;
+	static vector<string> name;
 
 	// Values of rock, scissors and paper.
 	const int value;

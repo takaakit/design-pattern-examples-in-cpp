@@ -22,7 +22,7 @@ class Command : public Node
 
 private:
 
-	unique_ptr<Node> node;
+	Node* node;
 
 public:
 

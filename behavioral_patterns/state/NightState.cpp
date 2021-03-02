@@ -26,7 +26,7 @@ void NightState::setTime(Context* context, const int hour)
 {
 	// ˅
 	if (9 <= hour && hour < 17) {
-		context->changeState(shared_ptr<State>(new DaytimeState()));
+		context->changeState(new DaytimeState());
 	}
 	// ˄
 }

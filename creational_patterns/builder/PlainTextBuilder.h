@@ -30,9 +30,6 @@ public:
 
 	~PlainTextBuilder();
 
-	// String to output
-	string result();
-
 	// Make a title of plain text
 	void createTitle(const string& title);
 
@@ -43,6 +40,9 @@ public:
 	void createItems(vector<string> items);
 
 	void close();
+
+	// String to output
+	string getContent();
 
 	// ˅
 public:

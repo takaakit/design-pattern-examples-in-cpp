@@ -12,7 +12,7 @@ ColleagueButton::ColleagueButton(msclr::gcroot<Button^> button, Mediator* mediat
 	// ˄
 {
 	// ˅
-	CLIWrapper^ cli_wrapper = gcnew CLIWrapper(this);
+	CLIWrapper^ cli_wrapper = gcnew CLIWrapper(mediator);
 	button->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::colleagueChanged);
 	// ˄
 }

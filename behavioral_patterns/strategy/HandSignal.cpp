@@ -1,10 +1,10 @@
 // ˅
 #include "behavioral_patterns/strategy/HandSignal.h"
 
-const vector<HandSignal*> HandSignal::handSignals = { new HandSignal(HandSignal::ROCK), new HandSignal(HandSignal::SCISSORS), new HandSignal(HandSignal::PAPER) };
-const vector<string> HandSignal::name = { "Rock", "Scissors", "Paper" };
-
 // ˄
+
+vector<HandSignal*> HandSignal::handSignals = { new HandSignal(HandSignal::ROCK), new HandSignal(HandSignal::SCISSORS), new HandSignal(HandSignal::PAPER) };;
+vector<string> HandSignal::name = { "Rock", "Scissors", "Paper" };
 
 HandSignal* HandSignal::getHand(const int hand_value)
 {

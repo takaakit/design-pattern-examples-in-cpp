@@ -34,17 +34,17 @@ private:
 
 	msclr::gcroot<Form^> main_form;
 
-	unique_ptr<ColleagueRadioButton> colleague_radio_user;
+	ColleagueRadioButton* radio_user;
 
-	unique_ptr<ColleagueRadioButton> colleague_radio_guest;
+	ColleagueRadioButton* radio_guest;
 
-	unique_ptr<ColleagueTextField> colleague_text_username;
+	ColleagueTextField* text_username;
 
-	unique_ptr<ColleagueTextField> colleague_text_password;
+	ColleagueTextField* text_password;
 
-	unique_ptr<ColleagueButton> colleague_button_ok;
+	ColleagueButton* button_ok;
 
-	unique_ptr<ColleagueButton> colleague_button_cancel;
+	ColleagueButton* button_cancel;
 
 public:
 

@@ -21,7 +21,9 @@ Repeat::Repeat()
 Repeat::~Repeat()
 {
 	// ˅
-	
+	if (command_list != nullptr) {
+		delete command_list;
+	}
 	// ˄
 }
 
@@ -36,7 +38,7 @@ void Repeat::parse(Context* context)
 	CommandList* a_command_list = new CommandList();
 	a_command_list->parse(context);
 
-	command_list.reset(a_command_list);		// Hold the parsed command list
+	command_list = a_command_list;		// Hold the parsed command list
 	// ˄
 }
 

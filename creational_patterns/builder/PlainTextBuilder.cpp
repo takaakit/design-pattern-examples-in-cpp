@@ -20,13 +20,6 @@ PlainTextBuilder::~PlainTextBuilder()
 	// ˄
 }
 
-string PlainTextBuilder::result()
-{
-	// ˅
-	return buffer.str();
-	// ˄
-}
-
 void PlainTextBuilder::createTitle(const string& title)
 {
 	// ˅
@@ -58,6 +51,13 @@ void PlainTextBuilder::close()
 {
 	// ˅
 	buffer << "--------------------------------" << endl;	// Decoration line
+	// ˄
+}
+
+string PlainTextBuilder::getContent()
+{
+	// ˅
+	return buffer.str();
 	// ˄
 }
 

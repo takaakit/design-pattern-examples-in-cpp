@@ -19,9 +19,11 @@ class Colleague
 	
 	// ˄
 
-public:
+protected:
 
 	Mediator* mediator;
+
+public:
 
 	Colleague(Mediator* mediator);
 
@@ -46,14 +48,14 @@ private:
 public ref class CLIWrapper
 {
 public:
-	CLIWrapper(Colleague* native_colleague) : native_colleague(native_colleague) {}
+	CLIWrapper(Mediator* mediator) : mediator(mediator) {}
 	~CLIWrapper() {}
 	void colleagueChanged(Object^ sender, EventArgs^ e) {
-		native_colleague->mediator->colleagueChanged(sender, e);
+		mediator->colleagueChanged(sender, e);
 	}
 
 private:
-	Colleague * native_colleague;	// Pointer to the class of unmanaged code
+	Mediator* mediator;	// Pointer to the class of unmanaged code
 };
 
 // ˄

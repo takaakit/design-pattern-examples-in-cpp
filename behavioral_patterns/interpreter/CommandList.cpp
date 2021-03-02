@@ -18,7 +18,10 @@ CommandList::CommandList()
 CommandList::~CommandList()
 {
 	// ˅
-	
+	for (Node* node : nodes) {
+		delete node;
+	}
+	nodes.clear();
 	// ˄
 }
 
@@ -34,7 +37,7 @@ void CommandList::parse(Context* context)
 			break;
 		}
 		else {
-			shared_ptr<Node> a_node = shared_ptr<Node>(new Command());
+			Node* a_node = new Command();
 			a_node->parse(context);
 			nodes.push_back(a_node);
 		}
@@ -46,7 +49,7 @@ string CommandList::toString()
 {
 	// ˅
 	string ret = "[";
-	vector<shared_ptr<Node>>::const_iterator it = nodes.begin();
+	vector<Node*>::const_iterator it = nodes.begin();
 	while (it != nodes.end()) {
 		ret += (*it)->toString();
 		++it;

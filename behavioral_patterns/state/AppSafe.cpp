@@ -13,13 +13,13 @@ public:
 	CLIWrapper(AppSafe* native_app_safe) : native_app_safe(native_app_safe) {}
 	~CLIWrapper() {}
 	Void useSate(Object^ sender, EventArgs^ e) {
-		native_app_safe->state->useSafe(native_app_safe);
+		native_app_safe->getState()->useSafe(native_app_safe);
 	}
 	Void soundBell(Object^ sender, EventArgs^ e) {
-		native_app_safe->state->soundBell(native_app_safe);
+		native_app_safe->getState()->soundBell(native_app_safe);
 	}
 	Void call(Object^ sender, EventArgs^ e) {
-		native_app_safe->state->call(native_app_safe);
+		native_app_safe->getState()->call(native_app_safe);
 	}
 	Void exit(Object^ sender, EventArgs^ e) {
 		Application::Exit();
@@ -29,14 +29,14 @@ public:
 	}
 
 private:
-	AppSafe * native_app_safe;	// Pointer to the class of unmanaged code
+	AppSafe* native_app_safe;	// Pointer to the class of unmanaged code
 };
 
 // ˄
 
 AppSafe::AppSafe()
 	: current_time(0)
-	, state(unique_ptr<State>(new DaytimeState()))
+	, state(new DaytimeState())
 	// ˅
 	
 	// ˄
@@ -72,7 +72,7 @@ void AppSafe::setTime(const int hour)
 	// ˄
 }
 
-void AppSafe::changeState(shared_ptr<State> state)
+void AppSafe::changeState(State* state)
 {
 	// ˅
 	cout << "The state changed from " << this->state->toString() << " to " << state->toString() << "." << endl;
@@ -104,6 +104,13 @@ void AppSafe::countUpTime()
 		current_time = 0;
 	}
 	this->setTime(current_time);	// Set the time
+	// ˄
+}
+
+State* AppSafe::getState()
+{
+	// ˅
+	return state;
 	// ˄
 }
 

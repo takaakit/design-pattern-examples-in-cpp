@@ -25,14 +25,14 @@ int main(int argc, char* argv[]) {
 		unique_ptr<PlainTextBuilder> plain_text_builder(new PlainTextBuilder());
 		unique_ptr<Director> director(new Director(plain_text_builder.get()));
 		director->build();
-		string content = plain_text_builder->result();
+		string content = plain_text_builder->getContent();
 		cout << content << endl;
 	}
 	else if (input_value == "html") {
 		unique_ptr<HTMLBuilder> html_builder(new HTMLBuilder());
 		unique_ptr<Director> director(new Director(html_builder.get()));
 		director->build();
-		string file_name = html_builder->result();
+		string file_name = html_builder->getFileName();
 		cout << file_name << " has been created." << endl;
 
 		// Get the current directory path

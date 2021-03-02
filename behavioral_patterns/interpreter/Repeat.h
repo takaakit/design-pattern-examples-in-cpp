@@ -25,7 +25,7 @@ private:
 
 	int number;
 
-	unique_ptr<Node> command_list;
+	Node* command_list;
 
 public:
 

@@ -12,7 +12,7 @@ ColleagueRadioButton::ColleagueRadioButton(msclr::gcroot<RadioButton^> radio_but
 	// ˄
 {
 	// ˅
-	CLIWrapper^ cli_wrapper = gcnew CLIWrapper(this);
+	CLIWrapper^ cli_wrapper = gcnew CLIWrapper(mediator);
 	radio_button->CheckedChanged += gcnew EventHandler(cli_wrapper, &CLIWrapper::colleagueChanged);
 	// ˄
 }

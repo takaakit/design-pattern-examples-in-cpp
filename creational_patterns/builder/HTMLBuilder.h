@@ -33,9 +33,6 @@ public:
 
 	~HTMLBuilder();
 
-	// Get the file name
-	string result();
-
 	// Make a title of HTML file
 	void createTitle(const string& title);
 
@@ -46,6 +43,9 @@ public:
 	void createItems(vector<string> items);
 
 	void close();
+
+	// Get the file name
+	string getFileName();
 
 	// ˅
 public:

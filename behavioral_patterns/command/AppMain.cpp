@@ -22,7 +22,12 @@ AppMain::AppMain()
 AppMain::~AppMain()
 {
 	// ˅
-	
+	if (history != nullptr) {
+		delete history;
+	}
+	if (canvas != nullptr) {
+		delete canvas;
+	}
 	// ˄
 }
 
@@ -47,7 +52,7 @@ void AppMain::moveMouseOnTheCanvas(Object^ sender, MouseEventArgs^ e)
 {
 	// ˅
 	if (e->Button == MouseButtons::Left) {
-		shared_ptr<PaintingCommand> painting_command = shared_ptr<PaintingCommand>(new PaintingCommand(canvas.get(), e->X, e->Y));
+		PaintingCommand* painting_command = new PaintingCommand(canvas, e->X, e->Y);
 		history->add(painting_command);
 		painting_command->execute();
 	}
@@ -105,8 +110,8 @@ Form^ AppMain::InitializeComponent()
 	(cli::safe_cast<ISupportInitialize^>(picture_box))->EndInit();
 	main_form->ResumeLayout(false);
 	
-	history = unique_ptr<HistoryCommand>(new HistoryCommand());
-	canvas = unique_ptr<PaintingCanvas>(new PaintingCanvas(picture_box));
+	history = new HistoryCommand();
+	canvas = new PaintingCanvas(picture_box);
 
 	return main_form;
 	// ˄

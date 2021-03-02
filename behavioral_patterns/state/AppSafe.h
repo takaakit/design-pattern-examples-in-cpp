@@ -39,10 +39,10 @@ private:
 
 	int current_time;
 
-public:
-
 	// Current state
-	shared_ptr<State> state;
+	State* state;
+
+public:
 
 	AppSafe();
 
@@ -52,7 +52,7 @@ public:
 	void setTime(const int hour);
 
 	// Change state
-	void changeState(shared_ptr<State> state);
+	void changeState(State* state);
 
 	// Call a security guard room
 	void callSecurityGuardsRoom(const string& msg);
@@ -61,6 +61,8 @@ public:
 	void recordSecurityLog(const string& msg);
 
 	void countUpTime();
+
+	State* getState();
 
 private:
 

@@ -22,13 +22,15 @@ private:
 
 	static Singleton* instance;
 
-	Singleton();
-
-	~Singleton();
-
 public:
 
 	static Singleton* getInstance();
+
+private:
+
+	Singleton();
+
+	~Singleton();
 
 	// ˅
 public:

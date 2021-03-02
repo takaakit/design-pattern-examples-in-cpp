@@ -30,9 +30,9 @@ class AppMain
 private:
 
 	// Painting history
-	unique_ptr<HistoryCommand> history;
+	HistoryCommand* history;
 
-	unique_ptr<PaintingCanvas> canvas;
+	PaintingCanvas* canvas;
 
 public:
 

@@ -23,7 +23,7 @@ class CommandList : public Node
 
 private:
 
-	vector<shared_ptr<Node>> nodes;
+	vector<Node*> nodes;
 
 public:
 

@@ -8,6 +8,6 @@ using namespace std;
 [STAThread]
 int main()
 {
-	unique_ptr<AppSafe> app_safe = unique_ptr<AppSafe>(new AppSafe());
+	unique_ptr<AppSafe> app_safe(new AppSafe());
 	return 0;
 }

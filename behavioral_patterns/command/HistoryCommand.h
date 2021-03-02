@@ -24,7 +24,7 @@ class HistoryCommand : public Command
 private:
 
 	// A set of past commands
-	vector<shared_ptr<Command>> past_commands;
+	vector<Command*> past_commands;
 
 public:
 
@@ -34,7 +34,7 @@ public:
 
 	void execute();
 
-	void add(shared_ptr<Command> cmd);
+	void add(Command* cmd);
 
 	// Delete the last command
 	void undo();

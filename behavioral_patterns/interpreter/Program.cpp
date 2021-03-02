@@ -19,7 +19,9 @@ Program::Program()
 Program::~Program()
 {
 	// ˅
-	
+	if (command_list != nullptr) {
+		delete command_list;
+	}
 	// ˄
 }
 
@@ -27,7 +29,7 @@ void Program::parse(Context* context)
 {
 	// ˅
 	context->slideToken("program");
-	command_list.reset(new CommandList());
+	command_list = new CommandList();
 	command_list->parse(context);
 	// ˄
 }

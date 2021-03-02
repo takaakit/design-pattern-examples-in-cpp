@@ -20,9 +20,9 @@ protected:
 
 	Display* display;
 
-public:
-
 	Frame(Display* display);
+
+public:
 
 	virtual ~Frame();
 

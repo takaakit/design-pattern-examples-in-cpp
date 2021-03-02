@@ -21,13 +21,6 @@ HTMLBuilder::~HTMLBuilder()
 	// ˄
 }
 
-string HTMLBuilder::result()
-{
-	// ˅
-	return file_name;
-	// ˄
-}
-
 void HTMLBuilder::createTitle(const string& title)
 {
 	// ˅
@@ -61,6 +54,13 @@ void HTMLBuilder::close()
 	// ˅
 	writer << "</body></html>" << endl;
 	writer.close();						// Close file
+	// ˄
+}
+
+string HTMLBuilder::getFileName()
+{
+	// ˅
+	return file_name;
 	// ˄
 }
 

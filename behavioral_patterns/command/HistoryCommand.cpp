@@ -19,20 +19,20 @@ HistoryCommand::HistoryCommand()
 HistoryCommand::~HistoryCommand()
 {
 	// ˅
-	
+	clear();
 	// ˄
 }
 
 void HistoryCommand::execute()
 {
 	// ˅
-	for (shared_ptr<Command> past_command : past_commands) {
+	for (Command* past_command : past_commands) {
 		past_command->execute();
 	}
 	// ˄
 }
 
-void HistoryCommand::add(shared_ptr<Command> cmd)
+void HistoryCommand::add(Command* cmd)
 {
 	// ˅
 	past_commands.push_back(cmd);
@@ -43,7 +43,9 @@ void HistoryCommand::undo()
 {
 	// ˅
 	if (past_commands.size() > 0) {
+		Command* last_command = past_commands.back();
 		past_commands.pop_back();
+		delete last_command;
 	}
 	// ˄
 }
@@ -51,6 +53,9 @@ void HistoryCommand::undo()
 void HistoryCommand::clear()
 {
 	// ˅
+	for (Command* past_command : past_commands) {
+		delete past_command;
+	}
 	past_commands.clear();
 	// ˄
 }

@@ -20,7 +20,9 @@ Command::Command()
 Command::~Command()
 {
 	// ˅
-	
+	if (node != nullptr) {
+		delete node;
+	}
 	// ˄
 }
 
@@ -28,10 +30,10 @@ void Command::parse(Context* context)
 {
 	// ˅
 	if (context->getToken() == "repeat") {
-		node.reset(new Repeat());
+		node = new Repeat();
 	}
 	else {
-		node.reset(new Action());
+		node = new Action();
 	}
 	node->parse(context);
 	// ˄
