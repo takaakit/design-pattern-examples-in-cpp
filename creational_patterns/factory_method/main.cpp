@@ -5,7 +5,9 @@
 
 using namespace std;
 
-// Factory to make ID cards.
+/*
+The subject is a factory to make credit cards. The abstract class("Factory") defines how to create an credit card, but the actual credit card is created by the concrete class("CreditCardFactory"). "createProduct()" is called a Factory Method, and it is responsible for manufacturing an object.
+ */
 
 int main(int argc, char* argv[]) {
 	unique_ptr<CreditCardFactory> factory(new CreditCardFactory());

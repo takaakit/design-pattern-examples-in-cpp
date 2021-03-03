@@ -11,12 +11,12 @@
 using namespace std;
 
 /*
-Dice game collecting fruits.
-
+A dice game in which money increases and decreases:
 * A gamer shakes a dice and the number determine the next state.
-* Gamer's money increases or decreases depending on the number. The gamer sometimes gets desserts.
-* The game is over if the gamer's money runs out.
-*/
+* If the number of dice is even, gamer's money doubles, and if it is odd, gamer's money is halved.
+* If the gamer's money is less than half of the highest amount, it returns to the highest amount.
+* The game is repeated.
+ */
 
 int main() {
 	unique_ptr<Gamer> gamer = unique_ptr<Gamer>(new Gamer(100));// The initial money is 100

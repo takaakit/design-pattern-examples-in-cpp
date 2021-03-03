@@ -6,7 +6,41 @@
 
 using namespace std;
 
-// First, create instances for displaying large size characters, then display large size character string using that instances.
+/*
+Display a string consisting of large characters (numbers and hyphen only). Large character objects are not created until they are needed. And the created objects are reused.
+
+Example Output
+-----
+Please enter digits (ex. 1212123): 123
+              
+     ####     
+      ###     
+      ###     
+      ###     
+      ###     
+      ###     
+    #######   
+              
+
+              
+   ########   
+         ###  
+         ###  
+   ########   
+  #           
+  #           
+  ##########  
+              
+
+              
+   ########   
+         ###  
+         ###  
+   ########   
+         ###  
+  #      ###  
+   ########
+ */
 
 int main(int argc, char* argv[]) {
 	cout << "Please enter digits (ex. 1212123):" << endl;

@@ -5,7 +5,9 @@
 
 using namespace std;
 
-// Add books in the bookshelf and display the names of the books in turn.
+/*
+Add books in a bookshelf and display the names of the book in turn.
+ */
 
 int main() {
 	unique_ptr<BookShelf> book_shelf = unique_ptr<BookShelf>(new BookShelf(5));

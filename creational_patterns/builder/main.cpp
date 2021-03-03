@@ -14,7 +14,9 @@
 
 using namespace std;
 
-// Create documents in HTML format and text format.
+/*
+Create documents in HTML format and text format. It is possible to create different documents in the same construction process.
+ */
 
 int main(int argc, char* argv[]) {
 	cout << "Please enter \"plain\" or \"html\":" << endl;

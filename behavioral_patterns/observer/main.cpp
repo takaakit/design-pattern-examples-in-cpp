@@ -6,7 +6,9 @@
 
 using namespace std;
 
-// Observers observe objects generating a numerical value and display the value.
+/*
+Observers observe objects generating a numerical value and display the value. The display formats are digits and bar charts.
+ */
 
 int main() {
 	unique_ptr<RandomNumber> number = unique_ptr<RandomNumber>(new RandomNumber());

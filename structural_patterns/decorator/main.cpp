@@ -7,7 +7,9 @@
 
 using namespace std;
 
-// Display a character string with a decorative frame.
+/*
+Display a string with decorative frames. The frames can be combined arbitrarily.
+ */
 
 int main(int argc, char* argv[]) {
 	unique_ptr<Display> display_a(new MessageDisplay("Nice to meet you."));

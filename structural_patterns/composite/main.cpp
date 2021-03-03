@@ -5,7 +5,9 @@
 
 using namespace std;
 
-// Represents a file system composed of files and directories.
+/*
+Represents a file system composed of files and directories. "FileSystemElement" makes it possible to treat "File" and "Directory" uniformly.
+ */
 
 int main(int argc, char* argv[]) {
     cout << "Create a file system..." << endl;

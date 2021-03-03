@@ -6,7 +6,9 @@
 
 using namespace std;
 
-// Display only one line or display the specified number of lines.
+/*
+Display only one line or display the specified number of lines.
+ */
 
 int main(int argc, char* argv[]) {
 	unique_ptr<DisplayImpl> display_impl1(new TextDisplayImpl("Japan"));

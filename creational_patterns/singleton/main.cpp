@@ -3,7 +3,9 @@
 
 using namespace std;
 
-// Check whether the same instance is obtained.
+/*
+Check whether the same instance is obtained.
+ */
 
 int main(int argc, char* argv[]) {
 	Singleton* obj1 = Singleton::getInstance();

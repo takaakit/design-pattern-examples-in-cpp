@@ -5,7 +5,9 @@
 
 using namespace std;
 
-// Display the character and string repeatedly 5 times.
+/*
+Display a character or string repeatedly 5 times.
+ */
 
 int main(int argc, char* argv[]) {
 	unique_ptr<CharDisplay> display1(new CharDisplay('H'));
