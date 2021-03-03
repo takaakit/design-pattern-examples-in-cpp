@@ -38,8 +38,8 @@ void PaintingCanvas::paint(const double painting_pos_x, const double painting_po
 	grp_pic_box->FillEllipse(Brushes::LightGreen,
 								static_cast<int>(painting_pos_x - this->point_radius),
 								static_cast<int>(painting_pos_y - this->point_radius),
-								this->point_radius * 2,
-								this->point_radius * 2);
+								static_cast<int>(this->point_radius * 2),
+								static_cast<int>(this->point_radius * 2));
 	picture_box->Image = nullptr;
 	picture_box->Image = bit_map;
 	// ˄

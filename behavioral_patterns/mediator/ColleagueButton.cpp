@@ -3,6 +3,21 @@
 
 using namespace System;
 
+
+// Wrapper class for calling unmanaged code from managed code
+public ref class CLIWrapper
+{
+public:
+	CLIWrapper(Mediator* mediator) : mediator(mediator) {}
+	~CLIWrapper() {}
+	void colleagueChanged(Object^ sender, EventArgs^ e) {
+		mediator->colleagueChanged(sender, e);
+	}
+
+private:
+	Mediator* mediator;	// Pointer to the class of unmanaged code
+};
+
 // ˄
 
 ColleagueButton::ColleagueButton(msclr::gcroot<Button^> button, Mediator* mediator)

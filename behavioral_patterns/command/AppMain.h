@@ -64,26 +64,6 @@ private:
 
 // ˅
 
-// Wrapper class for calling unmanaged code from managed code
-public ref class CLIWrapper
-{
-public:
-	CLIWrapper(AppMain* native_app_main) : native_app_main(native_app_main) {}
-	~CLIWrapper() {}
-	Void clickUndoButton(Object^ sender, EventArgs^ e) {
-		native_app_main->clickUndoButton(sender, e);
-	}
-	Void clickClearButton(Object^ sender, EventArgs^ e) {
-		native_app_main->clickClearButton(sender, e);
-	}
-	Void moveMouseOnTheCanvas(Object^ sender, MouseEventArgs^ e) {
-		native_app_main->moveMouseOnTheCanvas(sender, e);
-	}
-
-private:
-	AppMain * native_app_main;	// Pointer to the class of unmanaged code
-};
-
 // ˄
 
 #endif	// BEHAVIORAL_PATTERNS_COMMAND_APPMAIN_H_

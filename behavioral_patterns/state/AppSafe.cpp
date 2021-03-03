@@ -6,6 +6,7 @@
 
 using namespace std;
 
+
 // Wrapper class for calling unmanaged code from managed code
 public ref class CLIWrapper
 {
