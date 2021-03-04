@@ -13,7 +13,7 @@ This project is available for the following objectives:
 
 > UML model example:
 
-![](screenshots/CompositePattern.png "Composite Pattern")
+![](screenshots/CompositePattern.svg "Composite Pattern")
 
 > C++ header file example:
 ---
@@ -121,7 +121,7 @@ Installation
   **Use ver.2.2 or higher.**
 
 **Visual Studio IDE**
-* Download [Visual Studio IDE](https://visualstudio.microsoft.com/vs/), and install.  
+* Download and install [Visual Studio IDE](https://visualstudio.microsoft.com/vs/).  
   Check "**Desktop development with C++**" and "**C++/CLI support**" when installing.
 
 Usage
