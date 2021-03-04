@@ -16,7 +16,7 @@ This project is available for the following objectives:
 ![](screenshots/CompositePattern.svg "Composite Pattern")
 
 > C++ header file example:
----
+
 ```cpp:File class
 // ˅
 
@@ -39,11 +39,21 @@ class File : public FileSystemElement
 	
 	// ˄
 
+private:
+
+	const string name;
+
+	const int size;
+
 public:
 
 	File(const string& name, const int size);
 
 	~File();
+
+	string getName();
+
+	int getSize();
 
 	// Print this element with the "upper_path".
 	void print(const string& upper_path);
@@ -72,7 +82,7 @@ private:
 ```
 
 > C++ source file example:
----
+
 ```cpp:File class
 // ˅
 #include <iostream>
@@ -83,8 +93,10 @@ using namespace std;
 // ˄
 
 File::File(const string& name, const int size)
+	: name(name)
+	, size(size)
 	// ˅
-    : FileSystemElement(name, size)
+    
 	// ˄
 {
 	// ˅
@@ -96,6 +108,20 @@ File::~File()
 {
 	// ˅
 	
+	// ˄
+}
+
+string File::getName()
+{
+	// ˅
+	return name;
+	// ˄
+}
+
+int File::getSize()
+{
+	// ˅
+	return size;
 	// ˄
 }
 
