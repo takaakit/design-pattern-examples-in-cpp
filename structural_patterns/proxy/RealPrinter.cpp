@@ -58,7 +58,7 @@ void RealPrinter::heavyTask(const string& message)
         usleep(0.5 * 1000000);
 #endif
         
-		cout << ".";
+		cout << "." << flush;
 	}
 	cout << "Done." << endl;
 	// ˄
