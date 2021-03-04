@@ -163,11 +163,6 @@
     <ClInclude Include="PaintingCommand.h" />
     <ClInclude Include="PaintingTarget.h" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="AppMain.resx">
-      <DependentUpon>AppMain.h</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

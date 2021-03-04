@@ -163,11 +163,6 @@
     <ClInclude Include="ColleagueTextField.h" />
     <ClInclude Include="Mediator.h" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="AppLogin.resx">
-      <DependentUpon>AppLogin.h</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

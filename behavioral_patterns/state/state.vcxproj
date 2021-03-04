@@ -161,11 +161,6 @@
     <ClInclude Include="NightState.h" />
     <ClInclude Include="State.h" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="AppSafe.resx">
-      <DependentUpon>AppSafe.h</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
