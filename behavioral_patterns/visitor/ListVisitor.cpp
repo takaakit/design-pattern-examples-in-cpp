@@ -27,14 +27,14 @@ ListVisitor::~ListVisitor()
 	// ˄
 }
 
-void ListVisitor::visit(File* file)
+void ListVisitor::visit(const File* file)
 {
 	// ˅
 	cout << current_directory << "/" << file->toString() << endl;
 	// ˄
 }
 
-void ListVisitor::visit(Directory* directory)
+void ListVisitor::visit(const Directory* directory)
 {
 	// ˅
 	cout << current_directory << "/" << directory->toString() << endl;

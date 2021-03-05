@@ -34,10 +34,10 @@ public:
 	~ListVisitor();
 
 	// Visit a file
-	void visit(File* file);
+	void visit(const File* file);
 
 	// Visit a directory
-	void visit(Directory* directory);
+	void visit(const Directory* directory);
 
 	// ˅
 public:

@@ -21,9 +21,9 @@ public:
 
 	virtual ~Visitor();
 
-	virtual void visit(File* file) = 0;
+	virtual void visit(const File* file) = 0;
 
-	virtual void visit(Directory* directory) = 0;
+	virtual void visit(const Directory* directory) = 0;
 
 	// ˅
 public:

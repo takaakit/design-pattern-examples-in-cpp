@@ -49,10 +49,10 @@ public:
 	FileSystemElement* add(FileSystemElement* element);
 
 	// Get the begin iterator
-	vector<FileSystemElement*>::const_iterator getBeginIterator();
+	vector<FileSystemElement*>::const_iterator getBeginIterator() const;
 
 	// Get the end iterator
-	vector<FileSystemElement*>::const_iterator getEndIterator();
+	vector<FileSystemElement*>::const_iterator getEndIterator() const;
 
 	// ˅
 public:

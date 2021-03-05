@@ -56,14 +56,14 @@ FileSystemElement* Directory::add(FileSystemElement* element)
 	// ˄
 }
 
-vector<FileSystemElement*>::const_iterator Directory::getBeginIterator()
+vector<FileSystemElement*>::const_iterator Directory::getBeginIterator() const
 {
 	// ˅
 	return elements.begin();
 	// ˄
 }
 
-vector<FileSystemElement*>::const_iterator Directory::getEndIterator()
+vector<FileSystemElement*>::const_iterator Directory::getEndIterator() const
 {
 	// ˅
 	return elements.end();
