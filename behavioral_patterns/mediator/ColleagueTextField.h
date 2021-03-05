@@ -23,18 +23,18 @@ class ColleagueTextField : public Colleague
 
 private:
 
-	msclr::gcroot<TextBox^> text_box;
+	const msclr::gcroot<TextBox^> text_box;
 
 public:
 
-	ColleagueTextField(msclr::gcroot<TextBox^> text_box, Mediator* mediator);
+	ColleagueTextField(const msclr::gcroot<TextBox^> text_box, Mediator* mediator);
 
 	~ColleagueTextField();
 
 	// Set enable/disable from the Mediator
 	void setActivation(const bool is_enable);
 
-	bool isEmpty();
+	bool isEmpty() const;
 
 	// ˅
 public:

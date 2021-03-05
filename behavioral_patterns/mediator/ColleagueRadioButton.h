@@ -23,18 +23,18 @@ class ColleagueRadioButton : public Colleague
 
 private:
 
-	msclr::gcroot<RadioButton^> radio_button;
+	const msclr::gcroot<RadioButton^> radio_button;
 
 public:
 
-	ColleagueRadioButton(msclr::gcroot<RadioButton^> radio_button, Mediator* mediator);
+	ColleagueRadioButton(const msclr::gcroot<RadioButton^> radio_button, Mediator* mediator);
 
 	~ColleagueRadioButton();
 
 	// Set enable/disable from the Mediator
 	void setActivation(const bool is_enable);
 
-	bool isSelected();
+	bool isSelected() const;
 
 	// ˅
 public:

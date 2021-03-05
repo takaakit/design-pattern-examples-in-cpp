@@ -20,7 +20,7 @@ private:
 
 // ˄
 
-ColleagueRadioButton::ColleagueRadioButton(msclr::gcroot<RadioButton^> radio_button, Mediator* mediator)
+ColleagueRadioButton::ColleagueRadioButton(const msclr::gcroot<RadioButton^> radio_button, Mediator* mediator)
 	: radio_button(radio_button)
 	// ˅
 	, Colleague(mediator)
@@ -46,7 +46,7 @@ void ColleagueRadioButton::setActivation(const bool is_enable)
 	// ˄
 }
 
-bool ColleagueRadioButton::isSelected()
+bool ColleagueRadioButton::isSelected() const
 {
 	// ˅
 	return radio_button->Checked;

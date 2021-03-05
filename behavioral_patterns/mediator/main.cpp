@@ -15,6 +15,6 @@ And change the editable properties of the elements depending on the state of the
 [STAThread]
 int main()
 {
-	unique_ptr<AppLogin> app_login = unique_ptr<AppLogin>(new AppLogin());
+	unique_ptr<AppLogin> app_login(new AppLogin());
 	return 0;
 }

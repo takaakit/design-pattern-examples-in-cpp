@@ -23,18 +23,18 @@ class ColleagueButton : public Colleague
 
 private:
 
-	msclr::gcroot<Button^> button;
+	const msclr::gcroot<Button^> button;
 
 public:
 
-	ColleagueButton(msclr::gcroot<Button^> button, Mediator* mediator);
+	ColleagueButton(const msclr::gcroot<Button^> button, Mediator* mediator);
 
 	~ColleagueButton();
 
 	// Set enable/disable from the Mediator
 	void setActivation(const bool is_enable);
 
-	bool isPressed();
+	bool isPressed() const;
 
 	// ˅
 public:

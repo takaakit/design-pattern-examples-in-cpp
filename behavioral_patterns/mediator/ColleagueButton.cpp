@@ -20,7 +20,7 @@ private:
 
 // ˄
 
-ColleagueButton::ColleagueButton(msclr::gcroot<Button^> button, Mediator* mediator)
+ColleagueButton::ColleagueButton(const msclr::gcroot<Button^> button, Mediator* mediator)
 	: button(button)
 	// ˅
 	, Colleague(mediator)
@@ -46,7 +46,7 @@ void ColleagueButton::setActivation(const bool is_enable)
 	// ˄
 }
 
-bool ColleagueButton::isPressed()
+bool ColleagueButton::isPressed() const
 {
 	// ˅
 	return button->Focused;
