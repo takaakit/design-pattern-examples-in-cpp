@@ -19,7 +19,7 @@ public:
 
 	virtual ~Iterator();
 
-	virtual bool hasNext() = 0;
+	virtual bool hasNext() const = 0;
 
 	virtual void* next() = 0;
 

@@ -24,7 +24,7 @@ public:
 
 	virtual ~Aggregate();
 
-	virtual Iterator* iterator() = 0;
+	virtual Iterator* iterator() const = 0;
 
 	// ˅
 public:

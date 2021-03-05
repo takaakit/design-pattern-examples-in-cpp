@@ -10,19 +10,19 @@ Add books in a bookshelf and display the names of the book in turn.
  */
 
 int main() {
-	unique_ptr<BookShelf> book_shelf = unique_ptr<BookShelf>(new BookShelf(5));
-	unique_ptr<Book> book1 = unique_ptr<Book>(new Book("Design Patterns: Elements of Reusable Object-Oriented Softwares"));
+	unique_ptr<BookShelf> book_shelf(new BookShelf(5));
+	unique_ptr<Book> book1(new Book("Design Patterns: Elements of Reusable Object-Oriented Softwares"));
 	book_shelf->add(book1.get());
-	unique_ptr<Book> book2 = unique_ptr<Book>(new Book("The Object Primer: Agile Model-Driven Development with UML 2.0"));
+	unique_ptr<Book> book2(new Book("The Object Primer: Agile Model-Driven Development with UML 2.0"));
 	book_shelf->add(book2.get());
-	unique_ptr<Book> book3 = unique_ptr<Book>(new Book("Software Systems Architecture: Working With Stakeholders Using Viewpoints and Perspectives"));
+	unique_ptr<Book> book3(new Book("Software Systems Architecture: Working With Stakeholders Using Viewpoints and Perspectives"));
 	book_shelf->add(book3.get());
-	unique_ptr<Book> book4 = unique_ptr<Book>(new Book("A Practical Guide to SysML: The Systems Modeling Language"));
+	unique_ptr<Book> book4(new Book("A Practical Guide to SysML: The Systems Modeling Language"));
 	book_shelf->add(book4.get());
-	unique_ptr<Book> book5 = unique_ptr<Book>(new Book("A Pattern Language: Towns, Buildings, Construction"));
+	unique_ptr<Book> book5(new Book("A Pattern Language: Towns, Buildings, Construction"));
 	book_shelf->add(book5.get());
 
-	shared_ptr<Iterator> it = shared_ptr<Iterator>(book_shelf->iterator());
+	shared_ptr<Iterator> it(book_shelf->iterator());
 	while (it->hasNext() == true) {
 		Book* book = static_cast<Book*>(it->next());
 		cout << book->title << endl;

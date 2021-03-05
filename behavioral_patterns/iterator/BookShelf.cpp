@@ -25,14 +25,14 @@ BookShelf::~BookShelf()
 	// ˄
 }
 
-Iterator* BookShelf::iterator()
+Iterator* BookShelf::iterator() const
 {
 	// ˅
 	return new BookShelfIterator(this);
 	// ˄
 }
 
-Book* BookShelf::getAt(const int index)
+Book* BookShelf::getAt(const int index) const
 {
 	// ˅
 	return books.at(index);
@@ -47,7 +47,7 @@ void BookShelf::add(Book* book)
 	// ˄
 }
 
-int BookShelf::getNumberOfBooks()
+int BookShelf::getNumberOfBooks() const
 {
 	// ˅
 	return number_of_books;

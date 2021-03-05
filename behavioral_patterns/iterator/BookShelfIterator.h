@@ -22,15 +22,15 @@ private:
 
 	int index;
 
-	BookShelf* book_shelf;
+	const BookShelf* book_shelf;
 
 public:
 
-	BookShelfIterator(BookShelf* book_shelf);
+	BookShelfIterator(const BookShelf* book_shelf);
 
 	~BookShelfIterator();
 
-	bool hasNext();
+	bool hasNext() const;
 
 	void* next();
 

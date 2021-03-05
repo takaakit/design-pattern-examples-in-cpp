@@ -56,15 +56,14 @@ int main() {
 	getcwd(current_directory_path, 255);
 #endif
 	
-	stringstream buf;
 	string line;
 	const string file_path = string(current_directory_path) + "/program.txt";
 	ifstream ifs(file_path);
 	if (ifs.fail() == false) {
 		while (getline(ifs, line)) {
 			cout << "Before parsing : " << line << endl;
-			unique_ptr<Node> node = unique_ptr<Node>(new Program());
-			unique_ptr<Context> context = unique_ptr<Context>(new Context(line));
+			unique_ptr<Node> node(new Program());
+			unique_ptr<Context> context(new Context(line));
 			node->parse(context.get());
 			cout << "After parsing  : " << node->toString() << endl;
 		}

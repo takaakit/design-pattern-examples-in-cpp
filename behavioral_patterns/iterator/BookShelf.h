@@ -35,13 +35,13 @@ public:
 
 	~BookShelf();
 
-	Iterator* iterator();
+	Iterator* iterator() const;
 
-	Book* getAt(const int index);
+	Book* getAt(const int index) const;
 
 	void add(Book* book);
 
-	int getNumberOfBooks();
+	int getNumberOfBooks() const;
 
 	// ˅
 public:
