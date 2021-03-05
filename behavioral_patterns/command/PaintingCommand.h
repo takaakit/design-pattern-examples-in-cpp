@@ -27,15 +27,15 @@ private:
 	// Painting position y
 	const double painting_pos_y;
 
-	PaintingTarget* painting_target;
+	const PaintingTarget* painting_target;
 
 public:
 
-	PaintingCommand(PaintingTarget* painting_target, const double painting_pos_x, const double painting_pos_y);
+	PaintingCommand(const PaintingTarget* painting_target, const double painting_pos_x, const double painting_pos_y);
 
 	~PaintingCommand();
 
-	void execute();
+	void execute() const;
 
 	// ˅
 public:

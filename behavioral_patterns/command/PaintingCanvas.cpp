@@ -24,7 +24,7 @@ PaintingCanvas::~PaintingCanvas()
 	// ˄
 }
 
-void PaintingCanvas::paint(const double painting_pos_x, const double painting_pos_y)
+void PaintingCanvas::paint(const double painting_pos_x, const double painting_pos_y) const
 {
 	// ˅
 	Bitmap^ bit_map = nullptr;

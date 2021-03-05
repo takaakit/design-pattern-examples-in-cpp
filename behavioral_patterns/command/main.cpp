@@ -13,6 +13,6 @@ Simple drawing application:
 [STAThread]
 int main()
 {
-	unique_ptr<AppMain> app_main = unique_ptr<AppMain>(new AppMain());
+	unique_ptr<AppMain> app_main(new AppMain());
 	return 0;
 }

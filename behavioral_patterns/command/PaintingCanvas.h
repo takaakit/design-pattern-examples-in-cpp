@@ -32,7 +32,7 @@ public:
 
 	~PaintingCanvas();
 
-	void paint(const double painting_pos_x, const double painting_pos_y);
+	void paint(const double painting_pos_x, const double painting_pos_y) const;
 
 	void clear();
 

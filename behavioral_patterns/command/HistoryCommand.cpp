@@ -23,7 +23,7 @@ HistoryCommand::~HistoryCommand()
 	// ˄
 }
 
-void HistoryCommand::execute()
+void HistoryCommand::execute() const
 {
 	// ˅
 	for (Command* past_command : past_commands) {

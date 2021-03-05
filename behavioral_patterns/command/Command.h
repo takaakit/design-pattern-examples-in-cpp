@@ -19,7 +19,7 @@ public:
 
 	virtual ~Command();
 
-	virtual void execute() = 0;
+	virtual void execute() const = 0;
 
 	// ˅
 public:

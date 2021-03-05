@@ -32,14 +32,14 @@ public:
 
 	~HistoryCommand();
 
-	void execute();
+	void execute() const;
 
 	void add(Command* cmd);
 
 	// Delete the last command
 	void undo();
 
-	// Delete all past commands.
+	// Delete all past commands
 	void clear();
 
 	// ˅

@@ -16,17 +16,17 @@ A trouble is turned around among supporters, and the trouble will be handled by 
  */
 
 int main() {
-	unique_ptr<LazySupporter> emily = unique_ptr<LazySupporter>(new LazySupporter("Emily"));
-	unique_ptr<MoodySupporter> william = unique_ptr<MoodySupporter>(new MoodySupporter("William"));
-	unique_ptr<SpecialSupporter> amelia = unique_ptr<SpecialSupporter>(new SpecialSupporter("Amelia", 6));
-	unique_ptr<LimitedSupporter> joseph = unique_ptr<LimitedSupporter>(new LimitedSupporter("Joseph", 5));
+	unique_ptr<LazySupporter> emily(new LazySupporter("Emily"));
+	unique_ptr<MoodySupporter> william(new MoodySupporter("William"));
+	unique_ptr<SpecialSupporter> amelia(new SpecialSupporter("Amelia", 6));
+	unique_ptr<LimitedSupporter> joseph(new LimitedSupporter("Joseph", 5));
 
 	//Make a chain.
 	emily->setNext(william.get())->setNext(amelia.get())->setNext(joseph.get());
 
 	// Various troubles occurred.
 	for (int i = 0; i < 10; i++) {
-		unique_ptr<Trouble> trouble = unique_ptr<Trouble>(new Trouble(i));
+		unique_ptr<Trouble> trouble(new Trouble(i));
 		emily->support(trouble.get());
 	}
 
