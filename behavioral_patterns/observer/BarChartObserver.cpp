@@ -30,7 +30,7 @@ BarChartObserver::~BarChartObserver()
 	// ˄
 }
 
-void BarChartObserver::update(Number* number)
+void BarChartObserver::update(const Number* number) const
 {
 	// ˅
 	cout << "Bar chart: ";

@@ -29,7 +29,7 @@ public:
 
 	void generate();
 
-	int getValue();
+	int getValue() const;
 
 	// ˅
 public:

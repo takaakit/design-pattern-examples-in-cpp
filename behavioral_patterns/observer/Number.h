@@ -33,13 +33,13 @@ public:
 
 	virtual void generate() = 0;
 
-	virtual int getValue() = 0;
+	virtual int getValue() const = 0;
 
 	void addObserver(Observer* observer);
 
 	void deleteObserver(const Observer* observer);
 
-	void notifyObservers();
+	void notifyObservers() const;
 
 	// ˅
 public:

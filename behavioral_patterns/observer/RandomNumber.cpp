@@ -35,7 +35,7 @@ void RandomNumber::generate()
 	// ˄
 }
 
-int RandomNumber::getValue()
+int RandomNumber::getValue() const
 {
 	// ˅
 	return value;

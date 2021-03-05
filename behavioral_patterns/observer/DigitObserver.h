@@ -23,7 +23,7 @@ public:
 
 	~DigitObserver();
 
-	void update(Number* number);
+	void update(const Number* number) const;
 
 	// ˅
 public:

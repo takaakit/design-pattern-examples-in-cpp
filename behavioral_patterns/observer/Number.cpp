@@ -41,7 +41,7 @@ void Number::deleteObserver(const Observer* observer)
 	// ˄
 }
 
-void Number::notifyObservers()
+void Number::notifyObservers() const
 {
 	// ˅
 	for (Observer* observer : observers) {

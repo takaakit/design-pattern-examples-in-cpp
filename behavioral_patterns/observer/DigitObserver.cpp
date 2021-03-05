@@ -30,7 +30,7 @@ DigitObserver::~DigitObserver()
 	// ˄
 }
 
-void DigitObserver::update(Number* number)
+void DigitObserver::update(const Number* number) const
 {
 	// ˅
 	cout << "Digit    : " << number->getValue() << endl;
