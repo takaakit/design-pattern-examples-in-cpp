@@ -19,9 +19,9 @@ public:
 
 	virtual ~Print();
 
-	virtual void printWeak() = 0;
+	virtual void printWeak() const = 0;
 
-	virtual void printStrong() = 0;
+	virtual void printStrong() const = 0;
 
 	// ˅
 public:
