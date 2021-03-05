@@ -31,7 +31,7 @@ Display* UnderlineDisplay::createClone()
 	// ˄
 }
 
-void UnderlineDisplay::show(const string& message)
+void UnderlineDisplay::show(const string& message) const
 {
 	// ˅
 	const int length = static_cast<int>(message.size());
