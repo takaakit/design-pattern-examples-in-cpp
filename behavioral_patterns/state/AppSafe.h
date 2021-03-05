@@ -60,9 +60,15 @@ public:
 	// Record security log
 	void recordSecurityLog(const string& msg);
 
-	void countUpTime();
+	void useSafe();
 
-	State* getState();
+	void soundBell();
+
+	void call();
+
+	void exit();
+
+	void countUpTime();
 
 private:
 

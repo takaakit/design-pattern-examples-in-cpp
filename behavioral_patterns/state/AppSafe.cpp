@@ -14,16 +14,16 @@ public:
 	CLIWrapper(AppSafe* native_app_safe) : native_app_safe(native_app_safe) {}
 	~CLIWrapper() {}
 	Void useSate(Object^ sender, EventArgs^ e) {
-		native_app_safe->getState()->useSafe(native_app_safe);
+		native_app_safe->useSafe();
 	}
 	Void soundBell(Object^ sender, EventArgs^ e) {
-		native_app_safe->getState()->soundBell(native_app_safe);
+		native_app_safe->soundBell();
 	}
 	Void call(Object^ sender, EventArgs^ e) {
-		native_app_safe->getState()->call(native_app_safe);
+		native_app_safe->call();
 	}
 	Void exit(Object^ sender, EventArgs^ e) {
-		Application::Exit();
+		native_app_safe->exit();
 	}
 	Void countUpTime(Object^ sender, EventArgs^ e) {
 		native_app_safe->countUpTime();
@@ -100,6 +100,34 @@ void AppSafe::recordSecurityLog(const string& msg)
 	// ˄
 }
 
+void AppSafe::useSafe()
+{
+	// ˅
+	state->useSafe(this);
+	// ˄
+}
+
+void AppSafe::soundBell()
+{
+	// ˅
+	state->soundBell(this);
+	// ˄
+}
+
+void AppSafe::call()
+{
+	// ˅
+	state->call(this);
+	// ˄
+}
+
+void AppSafe::exit()
+{
+	// ˅
+	Application::Exit();
+	// ˄
+}
+
 void AppSafe::countUpTime()
 {
 	// ˅
@@ -108,13 +136,6 @@ void AppSafe::countUpTime()
 		current_time = 0;
 	}
 	this->setTime(current_time);	// Set the time
-	// ˄
-}
-
-State* AppSafe::getState()
-{
-	// ˅
-	return state;
 	// ˄
 }
 
