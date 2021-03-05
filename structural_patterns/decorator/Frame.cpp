@@ -3,7 +3,7 @@
 
 // ˄
 
-Frame::Frame(Display* display)
+Frame::Frame(const Display* display)
 	: display(display)
 	// ˅
 	

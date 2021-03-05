@@ -21,21 +21,21 @@ MessageDisplay::~MessageDisplay()
 	// ˄
 }
 
-int MessageDisplay::getColumns()
+const int MessageDisplay::getColumns() const
 {
 	// ˅
 	return static_cast<int>(message.size());
 	// ˄
 }
 
-int MessageDisplay::getRows()
+const int MessageDisplay::getRows() const
 {
 	// ˅
 	return 1;
 	// ˄
 }
 
-string MessageDisplay::getLineText(const int row)
+const string MessageDisplay::getLineText(const int row) const
 {
 	// ˅
 	if (row == 0) {

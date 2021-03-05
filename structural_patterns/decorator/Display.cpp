@@ -13,7 +13,7 @@ Display::~Display()
 	// ˄
 }
 
-void Display::show()
+void Display::show() const
 {
 	// ˅
 	for (int i = 0; i < getRows(); ++i) {

@@ -31,12 +31,12 @@ public:
 	~MessageDisplay();
 
 	// Number of characters
-	int getColumns();
+	const int getColumns() const;
 
 	// The number of rows is 1
-	int getRows();
+	const int getRows() const;
 
-	string getLineText(const int row);
+	const string getLineText(const int row) const;
 
 	// ˅
 public:

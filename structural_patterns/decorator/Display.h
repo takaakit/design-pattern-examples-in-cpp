@@ -23,15 +23,15 @@ public:
 	virtual ~Display();
 
 	// Column width
-	virtual int getColumns() = 0;
+	virtual const int getColumns() const = 0;
 
 	// Number of rows
-	virtual int getRows() = 0;
+	virtual const int getRows() const = 0;
 
-	virtual string getLineText(const int row) = 0;
+	virtual const string getLineText(const int row) const = 0;
 
 	// Show all
-	void show();
+	void show() const;
 
 	// ˅
 public:

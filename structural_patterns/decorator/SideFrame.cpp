@@ -4,7 +4,7 @@
 
 // ˄
 
-SideFrame::SideFrame(Display* display, const char frame_char)
+SideFrame::SideFrame(const Display* display, const char frame_char)
 	: frame_char(frame_char)
 	// ˅
 	, Frame(display)
@@ -22,21 +22,21 @@ SideFrame::~SideFrame()
 	// ˄
 }
 
-int SideFrame::getColumns()
+const int SideFrame::getColumns() const
 {
 	// ˅
 	return 1 + display->getColumns() + 1;
 	// ˄
 }
 
-int SideFrame::getRows()
+const int SideFrame::getRows() const
 {
 	// ˅
 	return display->getRows();
 	// ˄
 }
 
-string SideFrame::getLineText(const int row)
+const string SideFrame::getLineText(const int row) const
 {
 	// ˅
 	return frame_char + display->getLineText(row) + frame_char;
