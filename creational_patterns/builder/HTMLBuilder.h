@@ -40,12 +40,12 @@ public:
 	void createSection(const string& section);
 
 	// Make items of HTML file
-	void createItems(vector<string> items);
+	void createItems(const vector<string> items);
 
 	void close();
 
 	// Get the file name
-	string getFileName();
+	const string getFileName() const;
 
 	// ˅
 public:
