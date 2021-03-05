@@ -36,7 +36,7 @@ public:
 	const int getSize() const;
 
 	// Print this element with the "upper_path".
-	void print(const string& upper_path);
+	void print(const string& upper_path) const;
 
 	// ˅
 public:

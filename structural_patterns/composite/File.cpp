@@ -39,7 +39,7 @@ const int File::getSize() const
 	// ˄
 }
 
-void File::print(const string& upper_path)
+void File::print(const string& upper_path) const
 {
 	// ˅
 	cout << upper_path << "/" << toString() << endl;
