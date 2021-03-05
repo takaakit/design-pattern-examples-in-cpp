@@ -12,13 +12,13 @@ The subject is a factory to make credit cards. The abstract class("Factory") def
 int main(int argc, char* argv[]) {
 	unique_ptr<CreditCardFactory> factory(new CreditCardFactory());
 
-	shared_ptr<Product> jackson_card(factory->create("Jacson"));
+	shared_ptr<const Product> jackson_card(factory->create("Jacson"));
 	jackson_card->use();
 
-	shared_ptr<Product> sophia_card(factory->create("Sophia"));
+	shared_ptr<const Product> sophia_card(factory->create("Sophia"));
 	sophia_card->use();
 
-	shared_ptr<Product> olivia_card(factory->create("Olivia"));
+	shared_ptr<const Product> olivia_card(factory->create("Olivia"));
 	olivia_card->use();
 
 	return 0;

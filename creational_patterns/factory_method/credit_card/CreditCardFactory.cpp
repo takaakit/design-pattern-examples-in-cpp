@@ -21,7 +21,7 @@ CreditCardFactory::~CreditCardFactory()
 	// ˄
 }
 
-Product* CreditCardFactory::createProduct(const string& owner)
+const Product* CreditCardFactory::createProduct(const string& owner)
 {
 	// ˅
 	return new CreditCard(owner);
