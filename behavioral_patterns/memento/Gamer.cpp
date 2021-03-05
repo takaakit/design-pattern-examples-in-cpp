@@ -74,7 +74,7 @@ int Gamer::getMoney() const
 	// ˄
 }
 
-string Gamer::toString()
+const string Gamer::toString() const
 {
 	// ˅
 	return "[money = " + to_string(money) + "]";

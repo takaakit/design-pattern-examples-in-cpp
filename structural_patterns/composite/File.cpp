@@ -25,14 +25,14 @@ File::~File()
 	// ˄
 }
 
-string File::getName()
+const string File::getName() const
 {
 	// ˅
 	return name;
 	// ˄
 }
 
-int File::getSize()
+const int File::getSize() const
 {
 	// ˅
 	return size;

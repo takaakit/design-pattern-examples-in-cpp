@@ -52,7 +52,7 @@ void NightState::call(Context* context)
 	// ˄
 }
 
-string NightState::toString()
+const string NightState::toString() const
 {
 	// ˅
 	return "[Night]";

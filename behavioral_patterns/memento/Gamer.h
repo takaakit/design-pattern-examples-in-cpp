@@ -43,7 +43,7 @@ public:
 
 	int getMoney() const;
 
-	string toString();
+	const string toString() const;
 
 	// ˅
 public:

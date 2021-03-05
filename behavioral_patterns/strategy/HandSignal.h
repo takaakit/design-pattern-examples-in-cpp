@@ -57,7 +57,7 @@ public:
 	// Return false if "this" is weaker than "hand".
 	bool isWeakerThan(const HandSignal* hand);
 
-	string toString();
+	const string toString() const;
 
 private:
 

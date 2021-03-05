@@ -42,7 +42,7 @@ void Repeat::parse(Context* context)
 	// ˄
 }
 
-string Repeat::toString()
+const string Repeat::toString() const
 {
 	// ˅
 	return "repeat " + to_string(number) + " " + command_list->toString();

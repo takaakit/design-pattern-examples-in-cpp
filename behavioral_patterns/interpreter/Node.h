@@ -27,7 +27,7 @@ public:
 
 	virtual void parse(Context* context) = 0;
 
-	virtual string toString() = 0;
+	virtual const string toString() const = 0;
 
 	// ˅
 public:

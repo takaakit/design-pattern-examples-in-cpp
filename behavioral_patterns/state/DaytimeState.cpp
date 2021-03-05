@@ -52,7 +52,7 @@ void DaytimeState::call(Context* context)
 	// ˄
 }
 
-string DaytimeState::toString()
+const string DaytimeState::toString() const
 {
 	// ˅
 	return "[Daytime]";

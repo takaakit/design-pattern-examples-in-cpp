@@ -39,7 +39,7 @@ void Command::parse(Context* context)
 	// ˄
 }
 
-string Command::toString()
+const string Command::toString() const
 {
 	// ˅
 	return node->toString();

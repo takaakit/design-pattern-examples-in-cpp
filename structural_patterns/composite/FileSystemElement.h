@@ -24,14 +24,14 @@ public:
 
 	virtual ~FileSystemElement();
 
-	virtual string getName() = 0;
+	virtual const string getName() const = 0;
 
-	virtual int getSize() = 0;
+	virtual const int getSize() const = 0;
 
 	// Print this element with the "upper_path".
 	virtual void print(const string& upper_path) = 0;
 
-	string toString();
+	const string toString() const;
 
 	// ˅
 public:

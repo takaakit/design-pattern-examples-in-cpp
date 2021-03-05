@@ -45,7 +45,7 @@ void CommandList::parse(Context* context)
 	// ˄
 }
 
-string CommandList::toString()
+const string CommandList::toString() const
 {
 	// ˅
 	string ret = "[";

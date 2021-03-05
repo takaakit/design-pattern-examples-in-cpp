@@ -36,10 +36,10 @@ public:
 	void accept(Visitor* visitor);
 
 	// File name
-	string getName();
+	const string getName() const;
 
 	// File size
-	int getSize();
+	const int getSize() const;
 
 	// ˅
 public:

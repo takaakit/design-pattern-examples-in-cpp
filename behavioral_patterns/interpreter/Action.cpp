@@ -35,7 +35,7 @@ void Action::parse(Context* context)
 	// ˄
 }
 
-string Action::toString()
+const string Action::toString() const
 {
 	// ˅
 	return name;

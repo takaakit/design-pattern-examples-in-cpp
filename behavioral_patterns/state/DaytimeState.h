@@ -37,7 +37,7 @@ public:
 	// Make a normal call
 	void call(Context* context);
 
-	string toString();
+	const string toString() const;
 
 	// ˅
 public:

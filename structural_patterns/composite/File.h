@@ -31,9 +31,9 @@ public:
 
 	~File();
 
-	string getName();
+	const string getName() const;
 
-	int getSize();
+	const int getSize() const;
 
 	// Print this element with the "upper_path".
 	void print(const string& upper_path);

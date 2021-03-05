@@ -45,7 +45,7 @@ public:
 	// Notify a game result.
 	void notifyGameResult(GameResultType result, HandSignal* ownHand, HandSignal* opponentsHand);
 
-	string toString();
+	const string toString() const;
 
 	// ˅
 public:

@@ -40,10 +40,10 @@ public:
 	void accept(Visitor* visitor);
 
 	// Directory name
-	string getName();
+	const string getName() const;
 
 	// Directory size
-	int getSize();
+	const int getSize() const;
 
 	// Add an entry
 	FileSystemElement* add(FileSystemElement* element);

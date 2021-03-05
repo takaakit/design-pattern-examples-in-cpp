@@ -20,7 +20,7 @@ FileSystemElement::~FileSystemElement()
 	// ˄
 }
 
-string FileSystemElement::toString()
+const string FileSystemElement::toString() const
 {
 	// ˅
 	return getName() + " (" + to_string(getSize()) + ")";

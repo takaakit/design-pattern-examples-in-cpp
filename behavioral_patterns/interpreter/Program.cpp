@@ -34,7 +34,7 @@ void Program::parse(Context* context)
 	// ˄
 }
 
-string Program::toString()
+const string Program::toString() const
 {
 	// ˅
 	if (command_list != nullptr) {

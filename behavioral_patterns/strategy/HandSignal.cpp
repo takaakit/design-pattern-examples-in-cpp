@@ -45,7 +45,7 @@ bool HandSignal::isWeakerThan(const HandSignal* hand)
 	// ˄
 }
 
-string HandSignal::toString()
+const string HandSignal::toString() const
 {
 	// ˅
 	return name.at(value);

@@ -47,7 +47,7 @@ void Player::notifyGameResult(GameResultType result, HandSignal* ownHand, HandSi
 	// ˄
 }
 
-string Player::toString()
+const string Player::toString() const
 {
 	// ˅
 	return name + " [" + to_string(game_count) + " games, " + to_string(win_count) + " won, " + to_string(loss_count) + " lost, " + to_string(game_count - win_count - loss_count) + " drew]";

@@ -33,7 +33,7 @@ public:
 
 	void parse(Context* context);
 
-	string toString();
+	const string toString() const;
 
 	// ˅
 public:

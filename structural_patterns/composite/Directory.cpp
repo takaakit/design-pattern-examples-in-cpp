@@ -25,14 +25,14 @@ Directory::~Directory()
 	// ˄
 }
 
-string Directory::getName()
+const string Directory::getName() const
 {
 	// ˅
 	return name;
 	// ˄
 }
 
-int Directory::getSize()
+const int Directory::getSize() const
 {
 	// ˅
 	int size = 0;
