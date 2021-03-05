@@ -31,14 +31,14 @@ HandSignal::~HandSignal()
 	// ˄
 }
 
-bool HandSignal::isStrongerThan(const HandSignal* hand)
+bool HandSignal::isStrongerThan(const HandSignal* hand) const
 {
 	// ˅
 	return judgeGame(hand) == 1;
 	// ˄
 }
 
-bool HandSignal::isWeakerThan(const HandSignal* hand)
+bool HandSignal::isWeakerThan(const HandSignal* hand) const
 {
 	// ˅
 	return judgeGame(hand) == -1;
@@ -52,7 +52,7 @@ const string HandSignal::toString() const
 	// ˄
 }
 
-int HandSignal::judgeGame(const HandSignal* hand)
+int HandSignal::judgeGame(const HandSignal* hand) const
 {
 	// ˅
 	if (this == hand) {

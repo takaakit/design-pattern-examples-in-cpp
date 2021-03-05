@@ -52,17 +52,17 @@ public:
 	~HandSignal();
 
 	// Return true if "this" is stronger than "hand".
-	bool isStrongerThan(const HandSignal* hand);
+	bool isStrongerThan(const HandSignal* hand) const;
 
 	// Return false if "this" is weaker than "hand".
-	bool isWeakerThan(const HandSignal* hand);
+	bool isWeakerThan(const HandSignal* hand) const;
 
 	const string toString() const;
 
 private:
 
 	// The draw is 0. "this" win is 1. "hand" win is -1.
-	int judgeGame(const HandSignal* hand);
+	int judgeGame(const HandSignal* hand) const;
 
 	// ˅
 public:
