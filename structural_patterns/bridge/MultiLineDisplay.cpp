@@ -21,7 +21,7 @@ MultiLineDisplay::~MultiLineDisplay()
 	// ˄
 }
 
-void MultiLineDisplay::outputMultiple(const int times)
+void MultiLineDisplay::outputMultiple(const int times) const
 {
 	// ˅
 	open();

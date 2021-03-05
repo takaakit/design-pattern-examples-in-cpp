@@ -4,7 +4,7 @@
 
 // ˄
 
-Display::Display(DisplayImpl* impl)
+Display::Display(const DisplayImpl* impl)
 	: impl(impl)
 	// ˅
 	
@@ -22,7 +22,7 @@ Display::~Display()
 	// ˄
 }
 
-void Display::output()
+void Display::output() const
 {
 	// ˅
 	open();
@@ -31,21 +31,21 @@ void Display::output()
 	// ˄
 }
 
-void Display::open()
+void Display::open() const
 {
 	// ˅
 	impl->implOpen();
 	// ˄
 }
 
-void Display::write()
+void Display::write() const
 {
 	// ˅
 	impl->implWrite();
 	// ˄
 }
 
-void Display::close()
+void Display::close() const
 {
 	// ˅
 	impl->implClose();

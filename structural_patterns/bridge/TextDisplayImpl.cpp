@@ -25,28 +25,28 @@ TextDisplayImpl::~TextDisplayImpl()
 	// ˄
 }
 
-void TextDisplayImpl::implOpen()
+void TextDisplayImpl::implOpen() const
 {
 	// ˅
 	printLine();
 	// ˄
 }
 
-void TextDisplayImpl::implWrite()
+void TextDisplayImpl::implWrite() const
 {
 	// ˅
 	cout << ":" << text << ":" << endl;		// Enclose a text with ":" and display it.
 	// ˄
 }
 
-void TextDisplayImpl::implClose()
+void TextDisplayImpl::implClose() const
 {
 	// ˅
 	printLine();
 	// ˄
 }
 
-void TextDisplayImpl::printLine()
+void TextDisplayImpl::printLine() const
 {
 	// ˅
 	cout << "*";							// Display "*" mark at the beginning of a frame.

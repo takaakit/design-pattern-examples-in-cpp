@@ -19,11 +19,11 @@ public:
 
 	virtual ~DisplayImpl();
 
-	virtual void implOpen() = 0;
+	virtual void implOpen() const = 0;
 
-	virtual void implWrite() = 0;
+	virtual void implWrite() const = 0;
 
-	virtual void implClose() = 0;
+	virtual void implClose() const = 0;
 
 	// ˅
 public:
