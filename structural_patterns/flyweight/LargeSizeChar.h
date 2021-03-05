@@ -30,7 +30,7 @@ public:
 	~LargeSizeChar();
 
 	// Display the large size character
-	void display();
+	void display() const;
 
 	// ˅
 public:

@@ -37,7 +37,7 @@ DataLibrary::~DataLibrary()
 	// ˄
 }
 
-map<string, string> DataLibrary::getProperties(const string& data_library_name)
+const map<string, string> DataLibrary::getProperties(const string& data_library_name) const
 {
 	// ˅
 	map<string, string> ret;
