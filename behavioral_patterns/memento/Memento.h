@@ -22,13 +22,13 @@ class Memento
 private:
 
 	// Money
-	int money;
+	const int money;
 
 public:
 
-	Memento(int money);
+	Memento(const int money);
 
-	int getMoney();
+	int getMoney() const;
 
 	// ˅
 public:

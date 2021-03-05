@@ -41,7 +41,7 @@ public:
 	// Play a game
 	void play();
 
-	int getMoney();
+	int getMoney() const;
 
 	string toString();
 

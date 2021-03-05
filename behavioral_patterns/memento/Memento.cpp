@@ -3,7 +3,7 @@
 
 // ˄
 
-Memento::Memento(int money)
+Memento::Memento(const int money)
 	: money(money)
 	// ˅
 	
@@ -14,7 +14,7 @@ Memento::Memento(int money)
 	// ˄
 }
 
-int Memento::getMoney()
+int Memento::getMoney() const
 {
 	// ˅
 	return money;

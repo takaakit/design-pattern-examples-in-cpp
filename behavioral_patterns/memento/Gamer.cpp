@@ -67,7 +67,7 @@ void Gamer::play()
 	// ˄
 }
 
-int Gamer::getMoney()
+int Gamer::getMoney() const
 {
 	// ˅
 	return money;

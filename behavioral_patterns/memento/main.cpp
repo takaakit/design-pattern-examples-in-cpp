@@ -19,7 +19,7 @@ A dice game in which money increases and decreases:
  */
 
 int main() {
-	unique_ptr<Gamer> gamer = unique_ptr<Gamer>(new Gamer(100));// The initial money is 100
+	unique_ptr<Gamer> gamer(new Gamer(100));					// The initial money is 100
 	shared_ptr<Memento> memento(gamer->createMemento());		// Save the initial state
 
 	for (int i = 0; i < 10; ++i) {
