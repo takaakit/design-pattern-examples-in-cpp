@@ -25,7 +25,7 @@ TableData::~TableData()
 	// ˄
 }
 
-string TableData::toHTML()
+const string TableData::toHTML() const
 {
 	// ˅
 	stringstream buffer;

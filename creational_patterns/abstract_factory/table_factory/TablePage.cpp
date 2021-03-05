@@ -24,7 +24,7 @@ TablePage::~TablePage()
 	// ˄
 }
 
-string TablePage::toHTML()
+const string TablePage::toHTML() const
 {
 	// ˅
 	stringstream buffer;

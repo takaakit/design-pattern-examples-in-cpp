@@ -20,7 +20,7 @@ TableLink::~TableLink()
 	// ˄
 }
 
-string TableLink::toHTML()
+const string TableLink::toHTML() const
 {
 	// ˅
 	return "  <td><a href=\"" + url + "\">" + name + "</a></td>\n";

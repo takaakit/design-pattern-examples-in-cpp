@@ -24,7 +24,7 @@ ListPage::~ListPage()
 	// ˄
 }
 
-string ListPage::toHTML()
+const string ListPage::toHTML() const
 {
 	// ˅
 	stringstream buffer;

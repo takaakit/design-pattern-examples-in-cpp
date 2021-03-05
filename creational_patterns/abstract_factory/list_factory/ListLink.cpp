@@ -20,7 +20,7 @@ ListLink::~ListLink()
 	// ˄
 }
 
-string ListLink::toHTML()
+const string ListLink::toHTML() const
 {
 	// ˅
 	return "  <li><a href=\"" + url + "\">" + name + "</a></li>\n";

@@ -24,7 +24,7 @@ ListData::~ListData()
 	// ˄
 }
 
-string ListData::toHTML()
+const string ListData::toHTML() const
 {
 	// ˅
 	stringstream buffer;

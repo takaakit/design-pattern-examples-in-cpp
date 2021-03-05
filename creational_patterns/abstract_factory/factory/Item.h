@@ -28,7 +28,7 @@ public:
 
 	virtual ~Item();
 
-	virtual string toHTML() = 0;
+	virtual const string toHTML() const = 0;
 
 	// ˅
 public:

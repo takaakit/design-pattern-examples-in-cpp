@@ -36,11 +36,11 @@ public:
 
 	virtual ~Page();
 
-	virtual string toHTML() = 0;
+	virtual const string toHTML() const = 0;
 
 	void add(Item* item);
 
-	void output();
+	void output() const;
 
 	// ˅
 public:

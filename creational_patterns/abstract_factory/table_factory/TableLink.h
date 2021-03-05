@@ -25,7 +25,7 @@ public:
 
 	~TableLink();
 
-	string toHTML();
+	const string toHTML() const;
 
 	// ˅
 public:

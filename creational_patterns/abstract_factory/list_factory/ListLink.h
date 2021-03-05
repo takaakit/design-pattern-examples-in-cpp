@@ -25,7 +25,7 @@ public:
 
 	~ListLink();
 
-	string toHTML();
+	const string toHTML() const;
 
 	// ˅
 public:

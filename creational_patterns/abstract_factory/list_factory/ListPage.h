@@ -25,7 +25,7 @@ public:
 
 	~ListPage();
 
-	string toHTML();
+	const string toHTML() const;
 
 	// ˅
 public:

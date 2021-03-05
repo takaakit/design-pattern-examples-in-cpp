@@ -25,7 +25,7 @@ public:
 
 	~ListData();
 
-	string toHTML();
+	const string toHTML() const;
 
 	// ˅
 public:

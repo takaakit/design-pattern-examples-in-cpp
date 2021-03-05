@@ -25,7 +25,7 @@ public:
 
 	~TablePage();
 
-	string toHTML();
+	const string toHTML() const;
 
 	// ˅
 public:

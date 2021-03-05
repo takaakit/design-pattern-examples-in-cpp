@@ -40,7 +40,7 @@ void Page::add(Item* item)
 	// ˄
 }
 
-void Page::output()
+void Page::output() const
 {
 	// ˅
 	const string file_name = title + ".html";
