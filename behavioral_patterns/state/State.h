@@ -28,13 +28,13 @@ public:
 	virtual void setTime(Context* context, const int hour) = 0;
 
 	// Use a safe
-	virtual void useSafe(Context* context) = 0;
+	virtual void useSafe(const Context* context) const = 0;
 
 	// Sound a emergency bell
-	virtual void soundBell(Context* context) = 0;
+	virtual void soundBell(const Context* context) const = 0;
 
 	// Make a normal call
-	virtual void call(Context* context) = 0;
+	virtual void call(const Context* context) const = 0;
 
 	virtual const string toString() const = 0;
 

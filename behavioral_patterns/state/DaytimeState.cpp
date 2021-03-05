@@ -31,21 +31,21 @@ void DaytimeState::setTime(Context* context, const int hour)
 	// ˄
 }
 
-void DaytimeState::useSafe(Context* context)
+void DaytimeState::useSafe(const Context* context) const
 {
 	// ˅
 	context->recordSecurityLog("Use a safe in the daytime");
 	// ˄
 }
 
-void DaytimeState::soundBell(Context* context)
+void DaytimeState::soundBell(const Context* context) const
 {
 	// ˅
 	context->callSecurityGuardsRoom("Sound a emergency bell in the daytime");
 	// ˄
 }
 
-void DaytimeState::call(Context* context)
+void DaytimeState::call(const Context* context) const
 {
 	// ˅
 	context->callSecurityGuardsRoom("Make a normal call in the daytime");

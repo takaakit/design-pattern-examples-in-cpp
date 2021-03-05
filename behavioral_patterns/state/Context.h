@@ -32,10 +32,10 @@ public:
 	virtual void changeState(State* state) = 0;
 
 	// Call a security guard room
-	virtual void callSecurityGuardsRoom(const string& msg) = 0;
+	virtual void callSecurityGuardsRoom(const string& msg) const = 0;
 
 	// Record security log
-	virtual void recordSecurityLog(const string& msg) = 0;
+	virtual void recordSecurityLog(const string& msg) const = 0;
 
 	// ˅
 public:

@@ -29,13 +29,13 @@ public:
 	void setTime(Context* context, const int hour);
 
 	// Use a safe
-	void useSafe(Context* context);
+	void useSafe(const Context* context) const;
 
 	// Sound a emergency bell
-	void soundBell(Context* context);
+	void soundBell(const Context* context) const;
 
 	// Make a normal call
-	void call(Context* context);
+	void call(const Context* context) const;
 
 	const string toString() const;
 

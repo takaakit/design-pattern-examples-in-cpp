@@ -84,7 +84,7 @@ void AppSafe::changeState(State* state)
 	// ˄
 }
 
-void AppSafe::callSecurityGuardsRoom(const string& msg)
+void AppSafe::callSecurityGuardsRoom(const string& msg) const
 {
 	// ˅
 	rich_text_message->HideSelection = false;		// Setting to automatically scroll to the bottom
@@ -92,7 +92,7 @@ void AppSafe::callSecurityGuardsRoom(const string& msg)
 	// ˄
 }
 
-void AppSafe::recordSecurityLog(const string& msg)
+void AppSafe::recordSecurityLog(const string& msg) const
 {
 	// ˅
 	rich_text_message->HideSelection = false;		// Setting to automatically scroll to the bottom

@@ -31,21 +31,21 @@ void NightState::setTime(Context* context, const int hour)
 	// ˄
 }
 
-void NightState::useSafe(Context* context)
+void NightState::useSafe(const Context* context) const
 {
 	// ˅
 	context->callSecurityGuardsRoom("Emergency: Use a safe at night!");
 	// ˄
 }
 
-void NightState::soundBell(Context* context)
+void NightState::soundBell(const Context* context) const
 {
 	// ˅
 	context->callSecurityGuardsRoom("Sound a emergency bell at night");
 	// ˄
 }
 
-void NightState::call(Context* context)
+void NightState::call(const Context* context) const
 {
 	// ˅
 	context->recordSecurityLog("Record a night call");

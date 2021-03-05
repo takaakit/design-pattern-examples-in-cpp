@@ -55,10 +55,10 @@ public:
 	void changeState(State* state);
 
 	// Call a security guard room
-	void callSecurityGuardsRoom(const string& msg);
+	void callSecurityGuardsRoom(const string& msg) const;
 
 	// Record security log
-	void recordSecurityLog(const string& msg);
+	void recordSecurityLog(const string& msg) const;
 
 	void useSafe();
 
