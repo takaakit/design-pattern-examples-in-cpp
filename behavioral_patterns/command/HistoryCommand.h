@@ -8,7 +8,7 @@
 // ˅
 #include <vector>
 #include <memory>
-#include "behavioral_patterns/command/Command.h"
+#include "Command.h"
 
 using namespace std;
 

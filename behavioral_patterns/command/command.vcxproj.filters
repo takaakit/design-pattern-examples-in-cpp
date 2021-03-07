@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <ClCompile Include="WindowsForm.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="AppMain.cpp" />
+    <ClCompile Include="Command.cpp" />
     <ClCompile Include="HistoryCommand.cpp" />
     <ClCompile Include="PaintingCanvas.cpp" />
     <ClCompile Include="PaintingCommand.cpp" />
     <ClCompile Include="PaintingTarget.cpp" />
-    <ClCompile Include="Command.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="WindowsForm.h" />
     <ClInclude Include="AppMain.h" />
     <ClInclude Include="Command.h" />
     <ClInclude Include="HistoryCommand.h" />
     <ClInclude Include="PaintingCanvas.h" />
     <ClInclude Include="PaintingCommand.h" />
     <ClInclude Include="PaintingTarget.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="AppMain.resx" />
+    <ClInclude Include="CLIWrapper.h" />
   </ItemGroup>
 </Project>

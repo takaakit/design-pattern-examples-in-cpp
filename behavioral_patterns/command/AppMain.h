@@ -7,6 +7,8 @@
 
 // ˅
 #include <memory>
+#include <msclr/gcroot.h>
+#include "WindowsForm.h"
 
 class HistoryCommand;
 class PaintingCanvas;
@@ -29,6 +31,8 @@ class AppMain
 
 private:
 
+	msclr::gcroot<command::WindowsForm^> windows_form;
+
 	// Painting history
 	HistoryCommand* history;
 
@@ -45,10 +49,6 @@ public:
 	void clickClearButton(Object^ sender, EventArgs^ e);
 
 	void moveMouseOnTheCanvas(Object^ sender, MouseEventArgs^ e);
-
-private:
-
-	Form^ InitializeComponent();
 
 	// ˅
 public:

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <ClCompile Include="WindowsForm.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="AppLogin.cpp" />
     <ClCompile Include="Colleague.cpp" />
@@ -10,14 +11,13 @@
     <ClCompile Include="Mediator.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="WindowsForm.h" />
     <ClInclude Include="AppLogin.h" />
     <ClInclude Include="Colleague.h" />
     <ClInclude Include="ColleagueButton.h" />
     <ClInclude Include="ColleagueRadioButton.h" />
     <ClInclude Include="ColleagueTextField.h" />
     <ClInclude Include="Mediator.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="AppLogin.resx" />
+    <ClInclude Include="CLIWrapper.h" />
   </ItemGroup>
 </Project>

@@ -9,7 +9,8 @@
 #include <string>
 #include <memory>
 #include <msclr/gcroot.h>
-#include "behavioral_patterns/state/Context.h"
+#include "WindowsForm.h"
+#include "Context.h"
 
 class State;
 
@@ -35,7 +36,7 @@ private:
 	msclr::gcroot<TextBox^> text_time;
 
 	// Display of security center
-	msclr::gcroot<RichTextBox^> rich_text_message;
+	msclr::gcroot<TextBox^> text_message;
 
 	int current_time;
 
@@ -69,10 +70,6 @@ public:
 	void exit();
 
 	void countUpTime();
-
-private:
-
-	Form^ InitializeComponent();
 
 	// ˅
 public:

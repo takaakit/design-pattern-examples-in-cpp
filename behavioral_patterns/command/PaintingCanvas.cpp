@@ -1,5 +1,5 @@
 // ˅
-#include "behavioral_patterns/command/PaintingCanvas.h"
+#include "PaintingCanvas.h"
 
 using namespace System::Drawing;
 

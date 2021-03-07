@@ -7,7 +7,7 @@
 
 // ˅
 #include <msclr/gcroot.h>
-#include "behavioral_patterns/mediator/Mediator.h"
+#include "Mediator.h"
 
 using namespace System;
 

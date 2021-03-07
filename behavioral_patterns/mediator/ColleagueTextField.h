@@ -8,7 +8,7 @@
 // ˅
 #include <string>
 #include <msclr/gcroot.h>
-#include "behavioral_patterns/mediator/Colleague.h"
+#include "Colleague.h"
 
 using namespace std;
 using namespace System::Windows::Forms;

@@ -1,5 +1,5 @@
 // ˅
-#include "behavioral_patterns/mediator/Mediator.h"
+#include "Mediator.h"
 
 // ˄
 

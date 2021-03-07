@@ -25,9 +25,9 @@ public:
 
 	virtual ~Mediator();
 
-	virtual void colleagueChanged(Object^ sender, EventArgs^ e) = 0;
-
 	virtual void createColleagues() = 0;
+
+	virtual void colleagueChanged(Object^ sender, EventArgs^ e) = 0;
 
 	// ˅
 public:

@@ -8,7 +8,8 @@
 // ˅
 #include <msclr/gcroot.h>
 #include <memory>
-#include "behavioral_patterns/mediator/Mediator.h"
+#include "WindowsForm.h"
+#include "Mediator.h"
 
 class ColleagueButton;
 class ColleagueRadioButton;
@@ -32,7 +33,7 @@ class AppLogin : public Mediator
 
 private:
 
-	msclr::gcroot<Form^> main_form;
+	msclr::gcroot<mediator::WindowsForm^> windows_form;
 
 	ColleagueRadioButton* radio_user;
 
@@ -52,10 +53,14 @@ public:
 
 	~AppLogin();
 
+	void createColleagues();
+
 	// Change enable/disable of the Colleagues when notified from the Mediators.
 	void colleagueChanged(Object^ sender, EventArgs^ e);
 
-	void createColleagues();
+private:
+
+	void setEvents();
 
 	// ˅
 public:

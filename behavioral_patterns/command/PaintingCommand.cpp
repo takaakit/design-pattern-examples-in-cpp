@@ -1,6 +1,6 @@
 // ˅
-#include "behavioral_patterns/command/PaintingCommand.h"
-#include "behavioral_patterns/command/PaintingTarget.h"
+#include "PaintingCommand.h"
+#include "PaintingTarget.h"
 
 // ˄
 

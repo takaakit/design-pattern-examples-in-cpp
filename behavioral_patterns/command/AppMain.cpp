@@ -1,30 +1,10 @@
 // ˅
 #include <memory>
-#include "behavioral_patterns/command/AppMain.h"
-#include "behavioral_patterns/command/HistoryCommand.h"
-#include "behavioral_patterns/command/PaintingCommand.h"
-#include "behavioral_patterns/command/PaintingCanvas.h"
-
-
-// Wrapper class for calling unmanaged code from managed code
-public ref class CLIWrapper
-{
-public:
-	CLIWrapper(AppMain* native_app_main) : native_app_main(native_app_main) {}
-	~CLIWrapper() {}
-	Void clickUndoButton(Object^ sender, EventArgs^ e) {
-		native_app_main->clickUndoButton(sender, e);
-	}
-	Void clickClearButton(Object^ sender, EventArgs^ e) {
-		native_app_main->clickClearButton(sender, e);
-	}
-	Void moveMouseOnTheCanvas(Object^ sender, MouseEventArgs^ e) {
-		native_app_main->moveMouseOnTheCanvas(sender, e);
-	}
-
-private:
-	AppMain* native_app_main;	// Pointer to the class of unmanaged code
-};
+#include "AppMain.h"
+#include "HistoryCommand.h"
+#include "PaintingCommand.h"
+#include "PaintingCanvas.h"
+#include "CLIWrapper.h"
 
 // ˄
 
@@ -36,7 +16,24 @@ AppMain::AppMain()
 	// ˅
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
-	Application::Run(InitializeComponent());
+
+	msclr::gcroot<command::WindowsForm^> windows_form = gcnew command::WindowsForm();
+
+	// Set up GUI objects
+	windows_form->InitializeLifetimeService();
+
+	// Wrapper class for calling unmanaged code from managed code
+	CLIWrapper^ cli_wrapper = gcnew CLIWrapper(this);
+
+	// Set events
+	windows_form->getButtonUndo()->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::clickUndoButton);
+	windows_form->getButtonClear()->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::clickClearButton);
+	windows_form->getPictureBox()->MouseMove += gcnew MouseEventHandler(cli_wrapper, &CLIWrapper::moveMouseOnTheCanvas);
+
+	history = new HistoryCommand();
+	canvas = new PaintingCanvas(windows_form->getPictureBox());
+
+	Application::Run(windows_form);
 	// ˄
 }
 
@@ -77,64 +74,6 @@ void AppMain::moveMouseOnTheCanvas(Object^ sender, MouseEventArgs^ e)
 		history->add(painting_command);
 		painting_command->execute();
 	}
-	// ˄
-}
-
-Form^ AppMain::InitializeComponent()
-{
-	// ˅
-	// Wrapper class for calling unmanaged code from managed code
-	CLIWrapper^ cli_wrapper = gcnew CLIWrapper(this);
-
-	// Undo button
-	Button^ undo_button = gcnew Button();
-	undo_button->Location = Point(250, 550);
-	undo_button->Name = L"undo_button";
-	undo_button->Size = Size(150, 40);
-	undo_button->TabIndex = 1;
-	undo_button->Text = L"Undo";
-	undo_button->UseVisualStyleBackColor = true;
-	undo_button->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::clickUndoButton);
-
-	// Clear button
-	Button^ clear_button = gcnew Button();
-	clear_button->Location = Point(400, 550);
-	clear_button->Name = L"clear_button";
-	clear_button->Size = Size(150, 40);
-	clear_button->TabIndex = 2;
-	clear_button->Text = L"Clear";
-	clear_button->UseVisualStyleBackColor = true;
-	clear_button->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::clickClearButton);
-
-	// canvas
-	PictureBox^ picture_box = gcnew PictureBox();
-	(cli::safe_cast<ISupportInitialize^>(picture_box))->BeginInit();
-	picture_box->BackColor = Color::White;
-	picture_box->Location = Point(12, 12);
-	picture_box->Name = L"canvas";
-	picture_box->Size = Size(780, 530);
-	picture_box->TabIndex = 3;
-	picture_box->TabStop = false;
-	picture_box->MouseMove += gcnew MouseEventHandler(cli_wrapper, &CLIWrapper::moveMouseOnTheCanvas);
-
-	// AppMain
-	Form^ main_form = gcnew Form();
-	main_form->SuspendLayout();
-	main_form->AutoScaleDimensions = SizeF(10, 20);
-	main_form->AutoScaleMode = AutoScaleMode::Font;
-	main_form->ClientSize = Size(800, 600);
-	main_form->Controls->Add(picture_box);
-	main_form->Controls->Add(clear_button);
-	main_form->Controls->Add(undo_button);
-	main_form->Name = L"AppMain";
-	main_form->Text = L"AppMain";
-	(cli::safe_cast<ISupportInitialize^>(picture_box))->EndInit();
-	main_form->ResumeLayout(false);
-	
-	history = new HistoryCommand();
-	canvas = new PaintingCanvas(picture_box);
-
-	return main_form;
 	// ˄
 }
 

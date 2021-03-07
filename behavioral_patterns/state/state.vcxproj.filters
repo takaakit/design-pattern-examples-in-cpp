@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <ClCompile Include="WindowsForm.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="AppSafe.cpp" />
     <ClCompile Include="Context.cpp" />
@@ -9,13 +10,12 @@
     <ClCompile Include="State.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="WindowsForm.h" />
     <ClInclude Include="AppSafe.h" />
     <ClInclude Include="Context.h" />
     <ClInclude Include="DaytimeState.h" />
     <ClInclude Include="NightState.h" />
     <ClInclude Include="State.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="AppSafe.resx" />
+    <ClInclude Include="CLIWrapper.h" />
   </ItemGroup>
 </Project>

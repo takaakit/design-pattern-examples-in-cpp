@@ -7,7 +7,7 @@
 
 // ˅
 #include <msclr/gcroot.h>
-#include "behavioral_patterns/command/PaintingTarget.h"
+#include "PaintingTarget.h"
 
 using namespace System::Windows::Forms;
 
