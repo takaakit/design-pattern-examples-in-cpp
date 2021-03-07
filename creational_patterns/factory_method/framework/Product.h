@@ -19,7 +19,7 @@ public:
 
 	virtual ~Product();
 
-	virtual void use() = 0;
+	virtual void use() const = 0;
 
 	// ˅
 public:

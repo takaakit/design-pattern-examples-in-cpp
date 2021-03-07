@@ -24,14 +24,14 @@ MessageDisplay::~MessageDisplay()
 	// ˄
 }
 
-void MessageDisplay::displayWithHyphens()
+void MessageDisplay::displayWithHyphens() const
 {
 	// ˅
 	cout << "-- " << message << " --" << endl;
 	// ˄
 }
 
-void MessageDisplay::displayWithBrackets()
+void MessageDisplay::displayWithBrackets() const
 {
 	// ˅
 	cout << "[[ " << message << " ]]" << endl;

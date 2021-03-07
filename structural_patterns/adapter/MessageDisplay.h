@@ -28,9 +28,9 @@ public:
 
 	virtual ~MessageDisplay();
 
-	void displayWithHyphens();
+	void displayWithHyphens() const;
 
-	void displayWithBrackets();
+	void displayWithBrackets() const;
 
 	// ˅
 public:

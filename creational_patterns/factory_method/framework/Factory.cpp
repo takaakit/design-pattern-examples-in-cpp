@@ -21,7 +21,7 @@ Factory::~Factory()
 	// ˄
 }
 
-Product* Factory::create(const string& owner)
+const Product* Factory::create(const string& owner)
 {
 	// ˅
 	return createProduct(owner);

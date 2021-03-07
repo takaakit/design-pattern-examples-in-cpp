@@ -37,12 +37,12 @@ public:
 	void createSection(const string& section);
 
 	// Make items of plain text
-	void createItems(vector<string> items);
+	void createItems(const vector<string> items);
 
 	void close();
 
 	// String to output
-	string getContent();
+	const string getContent() const;
 
 	// ˅
 public:

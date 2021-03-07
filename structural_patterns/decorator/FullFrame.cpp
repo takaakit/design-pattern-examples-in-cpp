@@ -7,7 +7,7 @@ using namespace std;
 
 // ˄
 
-FullFrame::FullFrame(Display* display)
+FullFrame::FullFrame(const Display* display)
 	// ˅
 	: Frame(display)
 	// ˄
@@ -24,21 +24,21 @@ FullFrame::~FullFrame()
 	// ˄
 }
 
-int FullFrame::getColumns()
+const int FullFrame::getColumns() const
 {
 	// ˅
 	return 1 + display->getColumns() + 1;
 	// ˄
 }
 
-int FullFrame::getRows()
+const int FullFrame::getRows() const
 {
 	// ˅
 	return 1 + display->getRows() + 1;
 	// ˄
 }
 
-string FullFrame::getLineText(const int row)
+const string FullFrame::getLineText(const int row) const
 {
 	// ˅
 	if (row == 0) {
@@ -53,7 +53,7 @@ string FullFrame::getLineText(const int row)
 	// ˄
 }
 
-string FullFrame::createLine(const char ch, const int size)
+const string FullFrame::createLine(const char ch, const int size) const
 {
 	// ˅
 	stringstream buffer;

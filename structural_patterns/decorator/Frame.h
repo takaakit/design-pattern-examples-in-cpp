@@ -18,9 +18,9 @@ class Frame : public Display
 
 protected:
 
-	Display* display;
+	const Display* display;
 
-	Frame(Display* display);
+	Frame(const Display* display);
 
 public:
 

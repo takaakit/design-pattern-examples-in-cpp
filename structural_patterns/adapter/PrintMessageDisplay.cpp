@@ -20,14 +20,14 @@ PrintMessageDisplay::~PrintMessageDisplay()
 	// ˄
 }
 
-void PrintMessageDisplay::printWeak()
+void PrintMessageDisplay::printWeak() const
 {
 	// ˅
 	displayWithHyphens();
 	// ˄
 }
 
-void PrintMessageDisplay::printStrong()
+void PrintMessageDisplay::printStrong() const
 {
 	// ˅
 	displayWithBrackets();

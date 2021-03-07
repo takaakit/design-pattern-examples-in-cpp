@@ -27,7 +27,7 @@ public:
 
 	virtual void createSection(const string& section) = 0;
 
-	virtual void createItems(vector<string> items) = 0;
+	virtual void createItems(const vector<string> items) = 0;
 
 	virtual void close() = 0;
 

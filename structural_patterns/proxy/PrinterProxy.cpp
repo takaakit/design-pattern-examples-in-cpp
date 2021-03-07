@@ -25,7 +25,7 @@ PrinterProxy::~PrinterProxy()
 	// ˄
 }
 
-string PrinterProxy::getPrinterName()
+const string PrinterProxy::getPrinterName() const
 {
 	// ˅
 	return current_name;

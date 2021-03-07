@@ -36,7 +36,7 @@ private:
 public:
 
 	// Read a data library file.
-	map<string, string> getProperties(const string& data_library_name);
+	const map<string, string> getProperties(const string& data_library_name) const;
 
 	// ˅
 public:

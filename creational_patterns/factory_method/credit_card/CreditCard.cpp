@@ -24,7 +24,7 @@ CreditCard::~CreditCard()
 	// ˄
 }
 
-void CreditCard::use()
+void CreditCard::use() const
 {
 	// ˅
 	cout << "Use " << owner << "'s card." << endl;

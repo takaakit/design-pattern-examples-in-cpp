@@ -35,7 +35,7 @@ public:
 
 	~PrinterProxy();
 
-	string getPrinterName();
+	const string getPrinterName() const;
 
 	void setPrinterName(const string& value);
 

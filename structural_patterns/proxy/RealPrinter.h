@@ -37,7 +37,7 @@ public:
 private:
 
 	// Heavy task (Please think so...)
-	void heavyTask(const string& message);
+	void heavyTask(const string& message) const;
 
 	// ˅
 public:

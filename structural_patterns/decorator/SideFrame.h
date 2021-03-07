@@ -26,17 +26,17 @@ private:
 
 public:
 
-	SideFrame(Display* display, const char frame_char);
+	SideFrame(const Display* display, const char frame_char);
 
 	~SideFrame();
 
 	// Number of characters added left and right decoration characters
-	int getColumns();
+	const int getColumns() const;
 
 	// Number of lines
-	int getRows();
+	const int getRows() const;
 
-	string getLineText(const int row);
+	const string getLineText(const int row) const;
 
 	// ˅
 public:

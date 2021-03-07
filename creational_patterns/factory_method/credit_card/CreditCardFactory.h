@@ -28,7 +28,7 @@ public:
 
 protected:
 
-	Product* createProduct(const string& owner);
+	const Product* createProduct(const string& owner);
 
 	// ˅
 public:

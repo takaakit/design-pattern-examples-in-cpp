@@ -25,7 +25,7 @@ public:
 	~MultiLineDisplay();
 
 	// Repeat display for the specified number of times
-	void outputMultiple(const int times);
+	void outputMultiple(const int times) const;
 
 	// ˅
 public:

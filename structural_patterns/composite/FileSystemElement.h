@@ -29,7 +29,7 @@ public:
 	virtual const int getSize() const = 0;
 
 	// Print this element with the "upper_path".
-	virtual void print(const string& upper_path) = 0;
+	virtual void print(const string& upper_path) const = 0;
 
 	const string toString() const;
 

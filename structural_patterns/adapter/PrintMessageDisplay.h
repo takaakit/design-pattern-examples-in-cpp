@@ -26,9 +26,9 @@ public:
 
 	~PrintMessageDisplay();
 
-	void printWeak();
+	void printWeak() const;
 
-	void printStrong();
+	void printStrong() const;
 
 	// ˅
 public:

@@ -47,7 +47,7 @@ void RealPrinter::output(const string& content)
 	// ˄
 }
 
-void RealPrinter::heavyTask(const string& message)
+void RealPrinter::heavyTask(const string& message) const
 {
 	// ˅
 	cout << message;

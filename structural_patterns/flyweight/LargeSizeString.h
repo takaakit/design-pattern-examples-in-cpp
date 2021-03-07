@@ -32,7 +32,7 @@ public:
 
 	~LargeSizeString();
 
-	void display();
+	void display() const;
 
 	// ˅
 public:

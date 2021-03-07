@@ -24,7 +24,7 @@ LargeSizeString::~LargeSizeString()
 	// ˄
 }
 
-void LargeSizeString::display()
+void LargeSizeString::display() const
 {
 	// ˅
 	for (int i = 0; i < static_cast<int>(large_size_chars.size()); ++i) {

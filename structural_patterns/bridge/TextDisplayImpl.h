@@ -33,15 +33,15 @@ public:
 
 	~TextDisplayImpl();
 
-	void implOpen();
+	void implOpen() const;
 
-	void implWrite();
+	void implWrite() const;
 
-	void implClose();
+	void implClose() const;
 
 private:
 
-	void printLine();
+	void printLine() const;
 
 	// ˅
 public:

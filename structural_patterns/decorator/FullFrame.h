@@ -23,21 +23,21 @@ class FullFrame : public Frame
 
 public:
 
-	FullFrame(Display* display);
+	FullFrame(const Display* display);
 
 	~FullFrame();
 
 	// Number of characters added left and right decoration characters
-	int getColumns();
+	const int getColumns() const;
 
 	// Number of rows added the upper and lower decoration lines
-	int getRows();
+	const int getRows() const;
 
-	string getLineText(const int row);
+	const string getLineText(const int row) const;
 
 private:
 
-	string createLine(const char ch, const int size);
+	const string createLine(const char ch, const int size) const;
 
 	// ˅
 public:

@@ -38,7 +38,7 @@ void HTMLBuilder::createSection(const string& section)
 	// ˄
 }
 
-void HTMLBuilder::createItems(vector<string> items)
+void HTMLBuilder::createItems(const vector<string> items)
 {
 	// ˅
 	writer << "<ul>" << endl;			// Write items
@@ -57,7 +57,7 @@ void HTMLBuilder::close()
 	// ˄
 }
 
-string HTMLBuilder::getFileName()
+const string HTMLBuilder::getFileName() const
 {
 	// ˅
 	return file_name;

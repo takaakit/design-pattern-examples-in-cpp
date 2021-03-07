@@ -27,11 +27,11 @@ public:
 
 	virtual ~Factory();
 
-	Product* create(const string& owner);
+	const Product* create(const string& owner);
 
 protected:
 
-	virtual Product* createProduct(const string& owner) = 0;
+	virtual const Product* createProduct(const string& owner) = 0;
 
 	// ˅
 public:

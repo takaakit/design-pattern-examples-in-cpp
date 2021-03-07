@@ -28,7 +28,7 @@ void Manager::registerDisplay(const string& display_name, Display* display)
 	// ˄
 }
 
-Display* Manager::getDisplay(const string& display_name)
+const Display* Manager::getDisplay(const string& display_name) const
 {
 	// ˅
 	Display* d = displays.at(display_name);

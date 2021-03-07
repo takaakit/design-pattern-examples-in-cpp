@@ -18,23 +18,23 @@ class Display
 
 private:
 
-	DisplayImpl* impl;
+	const DisplayImpl* impl;
 
 public:
 
-	Display(DisplayImpl* impl);
+	Display(const DisplayImpl* impl);
 
 	virtual ~Display();
 
-	void output();
+	void output() const;
 
 protected:
 
-	void open();
+	void open() const;
 
-	void write();
+	void write() const;
 
-	void close();
+	void close() const;
 
 	// ˅
 public:

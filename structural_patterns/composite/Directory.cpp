@@ -43,7 +43,7 @@ const int Directory::getSize() const
 	// ˄
 }
 
-void Directory::print(const string& upper_path)
+void Directory::print(const string& upper_path) const
 {
 	// ˅
 	cout << upper_path << "/" << this->toString() << endl;

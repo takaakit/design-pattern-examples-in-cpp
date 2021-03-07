@@ -53,7 +53,7 @@ LargeSizeChar::~LargeSizeChar()
 	// ˄
 }
 
-void LargeSizeChar::display()
+void LargeSizeChar::display() const
 {
 	// ˅
 	cout << display_data << endl;

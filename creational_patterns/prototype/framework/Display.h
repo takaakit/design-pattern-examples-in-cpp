@@ -27,7 +27,7 @@ public:
 
 	virtual Display* createClone() = 0;
 
-	virtual void show(const string& message) = 0;
+	virtual void show(const string& message) const = 0;
 
 	// ˅
 public:

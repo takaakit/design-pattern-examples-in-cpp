@@ -31,7 +31,7 @@ Display* FrameDisplay::createClone()
 	// ˄
 }
 
-void FrameDisplay::show(const string& message)
+void FrameDisplay::show(const string& message) const
 {
 	// ˅
 	const int length = static_cast<int>(message.size());

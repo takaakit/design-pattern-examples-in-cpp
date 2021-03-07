@@ -27,7 +27,7 @@ public:
 
 	~CreditCard();
 
-	void use();
+	void use() const;
 
 	// ˅
 public:

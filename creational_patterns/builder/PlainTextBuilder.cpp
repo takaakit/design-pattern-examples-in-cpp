@@ -37,7 +37,7 @@ void PlainTextBuilder::createSection(const string& section)
 	// ˄
 }
 
-void PlainTextBuilder::createItems(vector<string> items)
+void PlainTextBuilder::createItems(const vector<string> items)
 {
 	// ˅
 	for (string item : items) {
@@ -54,7 +54,7 @@ void PlainTextBuilder::close()
 	// ˄
 }
 
-string PlainTextBuilder::getContent()
+const string PlainTextBuilder::getContent() const
 {
 	// ˅
 	return buffer.str();

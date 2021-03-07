@@ -34,7 +34,7 @@ public:
 
 	void registerDisplay(const string& display_name, Display* display);
 
-	Display* getDisplay(const string& display_name);
+	const Display* getDisplay(const string& display_name) const;
 
 	// ˅
 public:

@@ -31,7 +31,7 @@ public:
 
 	Display* createClone();
 
-	void show(const string& message);
+	void show(const string& message) const;
 
 	// ˅
 public:

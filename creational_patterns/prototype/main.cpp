@@ -22,11 +22,11 @@ int main(int argc, char* argv[]) {
 	manager->registerDisplay("warning", warning_frame.get());
 
 	// Require to display
-	shared_ptr<Display> display1(manager->getDisplay("emphasis"));
+	shared_ptr<const Display> display1(manager->getDisplay("emphasis"));
 	display1->show("Nice to meet you.");
-	shared_ptr<Display> display2(manager->getDisplay("highlight"));
+	shared_ptr<const Display> display2(manager->getDisplay("highlight"));
 	display2->show("Nice to meet you.");
-	shared_ptr<Display> display3(manager->getDisplay("warning"));
+	shared_ptr<const Display> display3(manager->getDisplay("warning"));
 	display3->show("Nice to meet you.");
 
 	return 0;
