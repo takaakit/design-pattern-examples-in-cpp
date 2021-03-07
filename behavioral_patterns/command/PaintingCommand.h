@@ -6,9 +6,10 @@
 #define BEHAVIORAL_PATTERNS_COMMAND_PAINTINGCOMMAND_H_
 
 // ˅
-#include "Command.h"
+#include "behavioral_patterns/command/Command.h"
 
 class PaintingTarget;
+
 
 // ˄
 

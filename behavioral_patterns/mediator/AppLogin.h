@@ -7,21 +7,13 @@
 
 // ˅
 #include <msclr/gcroot.h>
-#include <memory>
-#include "WindowsForm.h"
-#include "Mediator.h"
+#include "behavioral_patterns/mediator/Mediator.h"
+#include "behavioral_patterns/mediator/WindowsForm.h"
 
 class ColleagueButton;
 class ColleagueRadioButton;
 class ColleagueTextField;
 
-using namespace std;
-using namespace System;
-using namespace System::ComponentModel;
-using namespace System::Collections;
-using namespace System::Windows::Forms;
-using namespace System::Data;
-using namespace System::Drawing;
 
 // ˄
 

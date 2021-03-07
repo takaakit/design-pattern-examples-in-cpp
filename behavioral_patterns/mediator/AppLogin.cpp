@@ -1,12 +1,10 @@
 // ˅
-#include <iostream>
-#include "AppLogin.h"
-#include "ColleagueButton.h"
-#include "ColleagueRadioButton.h"
-#include "ColleagueTextField.h"
-#include "CLIWrapper.h"
+#include "behavioral_patterns/mediator/AppLogin.h"
+#include "behavioral_patterns/mediator/ColleagueButton.h"
+#include "behavioral_patterns/mediator/ColleagueRadioButton.h"
+#include "behavioral_patterns/mediator/ColleagueTextField.h"
+#include "behavioral_patterns/mediator/CLIWrapper.h"
 
-using namespace std;
 
 // ˄
 

@@ -1,6 +1,7 @@
 // ˅
-#include "Colleague.h"
-#include "Mediator.h"
+#include "behavioral_patterns/mediator/Colleague.h"
+#include "behavioral_patterns/mediator/Mediator.h"
+
 
 // ˄
 

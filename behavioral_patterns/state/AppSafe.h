@@ -7,10 +7,8 @@
 
 // ˅
 #include <string>
-#include <memory>
 #include <msclr/gcroot.h>
-#include "WindowsForm.h"
-#include "Context.h"
+#include "behavioral_patterns/state/Context.h"
 
 class State;
 

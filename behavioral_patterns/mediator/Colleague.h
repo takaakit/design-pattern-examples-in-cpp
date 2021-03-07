@@ -6,10 +6,8 @@
 #define BEHAVIORAL_PATTERNS_MEDIATOR_COLLEAGUE_H_
 
 // ˅
-#include <msclr/gcroot.h>
-#include "Mediator.h"
+class Mediator;
 
-using namespace System;
 
 // ˄
 

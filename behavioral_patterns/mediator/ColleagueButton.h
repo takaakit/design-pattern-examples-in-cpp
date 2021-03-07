@@ -6,11 +6,9 @@
 #define BEHAVIORAL_PATTERNS_MEDIATOR_COLLEAGUEBUTTON_H_
 
 // ˅
-#include <string>
 #include <msclr/gcroot.h>
-#include "Colleague.h"
+#include "behavioral_patterns/mediator/Colleague.h"
 
-using namespace std;
 using namespace System::Windows::Forms;
 
 // ˄

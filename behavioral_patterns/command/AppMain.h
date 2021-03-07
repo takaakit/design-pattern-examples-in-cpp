@@ -6,14 +6,12 @@
 #define BEHAVIORAL_PATTERNS_COMMAND_APPMAIN_H_
 
 // ˅
-#include <memory>
 #include <msclr/gcroot.h>
-#include "WindowsForm.h"
+#include "behavioral_patterns/command/WindowsForm.h"
 
 class HistoryCommand;
 class PaintingCanvas;
 
-using namespace std;
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;

@@ -1,7 +1,6 @@
 // ˅
-#include "ColleagueButton.h"
+#include "behavioral_patterns/mediator/ColleagueButton.h"
 
-using namespace System;
 
 // ˄
 

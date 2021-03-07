@@ -1,8 +1,6 @@
 // ˅
-#include <memory>
-#include "HistoryCommand.h"
+#include "behavioral_patterns/command/HistoryCommand.h"
 
-using namespace std;
 
 // ˄
 

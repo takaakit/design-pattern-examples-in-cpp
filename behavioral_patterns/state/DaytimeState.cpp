@@ -1,7 +1,7 @@
 // ˅
-#include "DaytimeState.h"
-#include "NightState.h"
-#include "Context.h"
+#include "behavioral_patterns/state/DaytimeState.h"
+#include "behavioral_patterns/state/NightState.h"
+#include "behavioral_patterns/state/Context.h"
 
 // ˄
 

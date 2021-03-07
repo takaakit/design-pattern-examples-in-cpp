@@ -1,9 +1,10 @@
 // ˅
 #include <iostream>
-#include "AppSafe.h"
-#include "DaytimeState.h"
-#include "NightState.h"
-#include "CLIWrapper.h"
+#include "behavioral_patterns/state/AppSafe.h"
+#include "behavioral_patterns/state/State.h"
+#include "behavioral_patterns/state/DaytimeState.h"
+#include "behavioral_patterns/state/CLIWrapper.h"
+#include "behavioral_patterns/state/WindowsForm.h"
 
 using namespace std;
 
