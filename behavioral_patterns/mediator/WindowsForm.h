@@ -18,9 +18,6 @@ namespace mediator {
 		WindowsForm(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
 		}
 
 	protected:
@@ -38,20 +35,10 @@ namespace mediator {
 	private: System::Windows::Forms::RadioButton^ forms_radio_login;
 	private: System::Windows::Forms::TextBox^ forms_text_username;
 	private: System::Windows::Forms::TextBox^ forms_text_password;
-	protected:
-
-
-
-
 	private: System::Windows::Forms::Label^ forms_label_username;
 	private: System::Windows::Forms::Label^ forms_label_password;
 	private: System::Windows::Forms::Button^ forms_button_ok;
 	private: System::Windows::Forms::Button^ forms_button_cancel;
-
-
-
-
-	protected:
 
 	private:
 		/// <summary>
@@ -199,5 +186,6 @@ namespace mediator {
 		System::Windows::Forms::TextBox^ getFormsTextPassword();
 		System::Windows::Forms::Button^ getFormsButtonOk();
 		System::Windows::Forms::Button^ getFormsButtonCancel();
+
 	};
 }

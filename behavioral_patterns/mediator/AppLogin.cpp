@@ -57,10 +57,8 @@ AppLogin::~AppLogin()
 void AppLogin::createColleagues()
 {
 	// ˅
-	windows_form = gcnew mediator::WindowsForm();
-
 	// Set up GUI objects
-	windows_form->InitializeLifetimeService();
+	windows_form = gcnew mediator::WindowsForm();
 
 	radio_guest = new ColleagueRadioButton(windows_form->getFormsRadioGuest(), this);
 	radio_user = new ColleagueRadioButton(windows_form->getFormsRadioLogin(), this);

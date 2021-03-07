@@ -18,10 +18,8 @@ AppMain::AppMain()
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
-	msclr::gcroot<command::WindowsForm^> windows_form = gcnew command::WindowsForm();
-
 	// Set up GUI objects
-	windows_form->InitializeLifetimeService();
+	msclr::gcroot<command::WindowsForm^> windows_form = gcnew command::WindowsForm();
 
 	// Wrapper class for calling unmanaged code from managed code
 	CLIWrapper^ cli_wrapper = gcnew CLIWrapper(this);

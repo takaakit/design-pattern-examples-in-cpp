@@ -18,9 +18,6 @@ namespace command {
 		WindowsForm(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
 		}
 
 	protected:
@@ -35,13 +32,8 @@ namespace command {
 			}
 		}
 	private: System::Windows::Forms::PictureBox^ picture_box;
-	protected:
-
 	private: System::Windows::Forms::Button^ button_undo;
 	private: System::Windows::Forms::Button^ button_clear;
-	protected:
-
-
 
 	private:
 		/// <summary>

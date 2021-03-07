@@ -18,9 +18,6 @@ namespace state {
 		WindowsForm(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
 		}
 
 	protected:
@@ -34,20 +31,12 @@ namespace state {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::TextBox^ text_time;
 	private: System::Windows::Forms::TextBox^ text_message;
 	private: System::Windows::Forms::Button^ button_use;
 	private: System::Windows::Forms::Button^ button_alarm;
 	private: System::Windows::Forms::Button^ button_phone;
 	private: System::Windows::Forms::Button^ button_exit;
-	protected:
-
-	protected:
-
-
-
-
-	private: System::Windows::Forms::TextBox^ text_time;
-
 
 	private:
 		/// <summary>

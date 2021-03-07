@@ -21,10 +21,9 @@ AppSafe::AppSafe()
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
-	msclr::gcroot<state::WindowsForm^> windows_form = gcnew state::WindowsForm();
-	windows_form->InitializeLifetimeService();
-
 	// Set up GUI objects
+	msclr::gcroot<state::WindowsForm^> windows_form = gcnew state::WindowsForm();
+
 	this->text_time = windows_form->getTextTime();
 	this->text_message = windows_form->getTextMessage();
 	msclr::gcroot<Button^> button_use = windows_form->getButtonUse();
