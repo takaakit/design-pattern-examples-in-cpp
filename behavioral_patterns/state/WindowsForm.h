@@ -75,9 +75,11 @@ namespace state {
 			this->text_message->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
+			this->text_message->BackColor = System::Drawing::SystemColors::Window;
 			this->text_message->Location = System::Drawing::Point(1, 39);
 			this->text_message->Multiline = true;
 			this->text_message->Name = L"text_message";
+			this->text_message->ReadOnly = true;
 			this->text_message->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
 			this->text_message->Size = System::Drawing::Size(498, 287);
 			this->text_message->TabIndex = 0;
@@ -132,10 +134,12 @@ namespace state {
 			// 
 			// text_time
 			// 
+			this->text_time->BackColor = System::Drawing::SystemColors::Window;
 			this->text_time->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(128)));
 			this->text_time->Location = System::Drawing::Point(1, 6);
 			this->text_time->Name = L"text_time";
+			this->text_time->ReadOnly = true;
 			this->text_time->Size = System::Drawing::Size(200, 27);
 			this->text_time->TabIndex = 5;
 			// 

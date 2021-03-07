@@ -83,6 +83,7 @@ namespace command {
 			this->button_undo->Name = L"button_undo";
 			this->button_undo->Size = System::Drawing::Size(120, 30);
 			this->button_undo->TabIndex = 1;
+			this->button_undo->TabStop = false;
 			this->button_undo->Text = L"Undo";
 			this->button_undo->UseVisualStyleBackColor = true;
 			// 
@@ -95,6 +96,7 @@ namespace command {
 			this->button_clear->Name = L"button_clear";
 			this->button_clear->Size = System::Drawing::Size(120, 30);
 			this->button_clear->TabIndex = 2;
+			this->button_clear->TabStop = false;
 			this->button_clear->Text = L"Clear";
 			this->button_clear->UseVisualStyleBackColor = true;
 			// 
