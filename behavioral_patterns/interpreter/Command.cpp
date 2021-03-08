@@ -29,13 +29,17 @@ Command::~Command()
 void Command::parse(Context* context)
 {
 	// ˅
+	Node* a_node;
 	if (context->getToken() == "repeat") {
-		node = new Repeat();
+		a_node = new Repeat();
+		a_node->parse(context);
 	}
 	else {
-		node = new Action();
+		a_node = new Action();
+		a_node->parse(context);
 	}
-	node->parse(context);
+
+	node = a_node;		// Hold the parsed node
 	// ˄
 }
 

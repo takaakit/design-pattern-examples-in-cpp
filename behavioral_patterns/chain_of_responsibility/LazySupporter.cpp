@@ -20,7 +20,7 @@ LazySupporter::~LazySupporter()
 	// ˄
 }
 
-bool LazySupporter::handle(const Trouble* trouble) const
+bool LazySupporter::canHandle(const Trouble* trouble) const
 {
 	// ˅
 	return false;

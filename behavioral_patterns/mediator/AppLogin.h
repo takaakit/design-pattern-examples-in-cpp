@@ -50,10 +50,6 @@ public:
 	// Change enable/disable of the Colleagues when notified from the Mediators.
 	void colleagueChanged(Object^ sender, EventArgs^ e);
 
-private:
-
-	void setEvents();
-
 	// ˅
 public:
 	

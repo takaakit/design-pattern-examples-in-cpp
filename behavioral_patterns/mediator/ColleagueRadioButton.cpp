@@ -1,5 +1,6 @@
 // ˅
 #include "behavioral_patterns/mediator/ColleagueRadioButton.h"
+#include "behavioral_patterns/mediator/CLIWrapper.h"
 
 using namespace System;
 
@@ -12,7 +13,10 @@ ColleagueRadioButton::ColleagueRadioButton(const msclr::gcroot<RadioButton^> rad
 	// ˄
 {
 	// ˅
-	
+	// Wrapper class for calling unmanaged code from managed code
+	CLIWrapper^ cli_wrapper = gcnew CLIWrapper(mediator);
+
+	radio_button->CheckedChanged += gcnew EventHandler(cli_wrapper, &CLIWrapper::colleagueChanged);
 	// ˄
 }
 

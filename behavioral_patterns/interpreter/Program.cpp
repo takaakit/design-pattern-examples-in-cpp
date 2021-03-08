@@ -29,8 +29,11 @@ void Program::parse(Context* context)
 {
 	// ˅
 	context->slideToken("program");
-	command_list = new CommandList();
-	command_list->parse(context);
+
+	Node* a_command_list = new CommandList();
+	a_command_list->parse(context);
+
+	this->command_list = a_command_list;	// Hold the parsed command list
 	// ˄
 }
 

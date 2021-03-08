@@ -32,7 +32,7 @@ public:
 protected:
 
 	// Troubles with the specific ID are handled.
-	bool handle(const Trouble* trouble) const;
+	bool canHandle(const Trouble* trouble) const;
 
 	// ˅
 public:

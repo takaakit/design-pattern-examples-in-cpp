@@ -21,7 +21,7 @@ LimitedSupporter::~LimitedSupporter()
 	// ˄
 }
 
-bool LimitedSupporter::handle(const Trouble* trouble) const
+bool LimitedSupporter::canHandle(const Trouble* trouble) const
 {
 	// ˅
 	return trouble->id <= limit_id;

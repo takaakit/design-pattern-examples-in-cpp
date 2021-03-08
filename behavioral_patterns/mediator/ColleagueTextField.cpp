@@ -1,5 +1,6 @@
 // ˅
 #include "behavioral_patterns/mediator/ColleagueTextField.h"
+#include "behavioral_patterns/mediator/CLIWrapper.h"
 
 using namespace System;
 
@@ -12,7 +13,10 @@ ColleagueTextField::ColleagueTextField(const msclr::gcroot<TextBox^> text_box, M
 	// ˄
 {
 	// ˅
-	
+	// Wrapper class for calling unmanaged code from managed code
+	CLIWrapper^ cli_wrapper = gcnew CLIWrapper(mediator);
+
+	text_box->TextChanged += gcnew EventHandler(cli_wrapper, &CLIWrapper::colleagueChanged);
 	// ˄
 }
 

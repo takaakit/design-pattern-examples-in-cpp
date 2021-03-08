@@ -1,4 +1,5 @@
 // ˅
+#include <iostream>
 #include "behavioral_patterns/interpreter/Action.h"
 #include "behavioral_patterns/interpreter/Context.h"
 
@@ -27,11 +28,15 @@ Action::~Action()
 void Action::parse(Context* context)
 {
 	// ˅
-	name = context->getToken();
-	context->slideToken(name);
-	if (name != "forward" && name != "right" && name != "left") {
+	string current_token = context->getToken();
+	if (current_token != "forward" && current_token != "right" && current_token != "left") {
+		cerr << current_token << " is unknown" << endl;
 		exit(1);
 	}
+
+	name = current_token;		// Hold the current token as this action name
+
+	context->slideToken(current_token);
 	// ˄
 }
 

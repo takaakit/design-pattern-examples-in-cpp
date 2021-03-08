@@ -20,7 +20,7 @@ MoodySupporter::~MoodySupporter()
 	// ˄
 }
 
-bool MoodySupporter::handle(const Trouble* trouble) const
+bool MoodySupporter::canHandle(const Trouble* trouble) const
 {
 	// ˅
 	return trouble->id % 2 == 1;

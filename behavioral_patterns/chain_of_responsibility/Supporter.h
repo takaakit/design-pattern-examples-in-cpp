@@ -44,7 +44,7 @@ public:
 
 protected:
 
-	virtual bool handle(const Trouble* trouble) const;
+	virtual bool canHandle(const Trouble* trouble) const = 0;
 
 private:
 

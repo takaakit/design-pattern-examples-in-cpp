@@ -21,7 +21,7 @@ SpecialSupporter::~SpecialSupporter()
 	// ˄
 }
 
-bool SpecialSupporter::handle(const Trouble* trouble) const
+bool SpecialSupporter::canHandle(const Trouble* trouble) const
 {
 	// ˅
 	return trouble->id == target_id;

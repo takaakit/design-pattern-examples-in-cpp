@@ -3,7 +3,6 @@
 #include "behavioral_patterns/mediator/ColleagueButton.h"
 #include "behavioral_patterns/mediator/ColleagueRadioButton.h"
 #include "behavioral_patterns/mediator/ColleagueTextField.h"
-#include "behavioral_patterns/mediator/CLIWrapper.h"
 
 
 // ˄
@@ -24,7 +23,6 @@ AppLogin::AppLogin()
 	Application::SetCompatibleTextRenderingDefault(false);
 
 	createColleagues();
-	setEvents();
 
 	Application::Run(windows_form);
 	// ˄
@@ -96,22 +94,6 @@ void AppLogin::colleagueChanged(Object^ sender, EventArgs^ e)
 			}
 		}
 	}
-	// ˄
-}
-
-void AppLogin::setEvents()
-{
-	// ˅
-	// Wrapper class for calling unmanaged code from managed code
-	CLIWrapper^ cli_wrapper = gcnew CLIWrapper(this);
-
-	// Set events
-	windows_form->getFormsRadioGuest()->CheckedChanged += gcnew EventHandler(cli_wrapper, &CLIWrapper::colleagueChanged);
-	windows_form->getFormsRadioLogin()->CheckedChanged += gcnew EventHandler(cli_wrapper, &CLIWrapper::colleagueChanged);
-	windows_form->getFormsTextUsername()->TextChanged += gcnew EventHandler(cli_wrapper, &CLIWrapper::colleagueChanged);
-	windows_form->getFormsTextPassword()->TextChanged += gcnew EventHandler(cli_wrapper, &CLIWrapper::colleagueChanged);
-	windows_form->getFormsButtonOk()->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::colleagueChanged);
-	windows_form->getFormsButtonCancel()->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::colleagueChanged);
 	// ˄
 }
 

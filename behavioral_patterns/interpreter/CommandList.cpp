@@ -39,7 +39,8 @@ void CommandList::parse(Context* context)
 		else {
 			Node* a_node = new Command();
 			a_node->parse(context);
-			nodes.push_back(a_node);
+
+			nodes.push_back(a_node);	// Hold the parsed node
 		}
 	}
 	// ˄

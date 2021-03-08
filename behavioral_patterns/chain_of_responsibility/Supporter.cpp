@@ -28,7 +28,7 @@ Supporter::~Supporter()
 void Supporter::support(const Trouble* trouble) const
 {
 	// ˅
-	if (handle(trouble) == true) {
+	if (canHandle(trouble) == true) {
 		supported(trouble);
 	}
 	else if (next != nullptr) {
@@ -52,13 +52,6 @@ const string Supporter::toString() const
 {
 	// ˅
 	return "[" + name + "]";
-	// ˄
-}
-
-bool Supporter::handle(const Trouble* trouble) const
-{
-	// ˅
-	return false;
 	// ˄
 }
 
