@@ -45,7 +45,7 @@ public:
 	// Directory size
 	const int getSize() const;
 
-	// Add an entry
+	// Add an element
 	FileSystemElement* add(FileSystemElement* element);
 
 	// Get the begin iterator

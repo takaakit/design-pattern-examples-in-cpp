@@ -39,7 +39,7 @@ public:
 	// Print this element with the "upper_path".
 	void print(const string& upper_path) const;
 
-	// Add a element
+	// Add an element
 	FileSystemElement* add(FileSystemElement* element);
 
 	// ˅
