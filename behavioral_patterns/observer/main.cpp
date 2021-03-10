@@ -7,7 +7,8 @@
 using namespace std;
 
 /*
-Observers observe objects generating a numerical value and display the value. The display formats are digits and bar charts.
+Observers observe objects generating a numerical value and display the value.
+The display formats are digits and bar charts.
  */
 
 int main() {

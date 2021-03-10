@@ -16,7 +16,8 @@
 using namespace std;
 
 /*
-An interpreter for mini language to operate radio controlled car. It parses the following syntax composed of "forward", "left", "right", and "repeat" commands:
+An interpreter for mini language to operate radio controlled car. It parses the following syntax
+composed of "forward", "left", "right", and "repeat" commands:
 ```
 <program>      ::= program <command list>
 <command list> ::= <command>* end

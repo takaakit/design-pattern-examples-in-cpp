@@ -1,22 +1,14 @@
-/*
-#include "WindowsForm.h"
-
-using namespace System;
-using namespace System::Windows::Forms;
-
-[STAThreadAttribute]
-int main(array<String^>^ args) {
-	Application::EnableVisualStyles();
-	Application::SetCompatibleTextRenderingDefault(false);
-	Application::Run(gcnew command::WindowsForm());
-	return 0;
-}
-*/
-
 #include <memory>
 #include "AppMain.h"
 
 using namespace std;
+
+/*
+Simple drawing application:
+* Draw a path with points by dragging the mouse.
+* Revert to one previous drawing by pressing the Undo button.
+* Erase all drawing by pressing the Clear button.
+ */
 
 [STAThread]
 int main()
