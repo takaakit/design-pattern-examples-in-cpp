@@ -5,6 +5,18 @@
 
 // ˄
 
+NightState* NightState::instance = nullptr;
+
+NightState* NightState::getInstance()
+{
+	// ˅
+	if (instance == nullptr) {
+		instance = new NightState();
+	}
+	return instance;
+	// ˄
+}
+
 NightState::NightState()
 	// ˅
 	
@@ -26,7 +38,7 @@ void NightState::setTime(Context* context, const int hour)
 {
 	// ˅
 	if (9 <= hour && hour < 17) {
-		context->changeState(new DaytimeState());
+		context->changeState(DaytimeState::getInstance());
 	}
 	// ˄
 }

@@ -20,9 +20,19 @@ class DaytimeState : public State
 	
 	// ˄
 
+private:
+
+	static DaytimeState* instance;
+
 public:
 
+	static DaytimeState* getInstance();
+
+private:
+
 	DaytimeState();
+
+public:
 
 	~DaytimeState();
 

@@ -20,9 +20,19 @@ class NightState : public State
 	
 	// ˄
 
+private:
+
+	static NightState* instance;
+
 public:
 
+	static NightState* getInstance();
+
+private:
+
 	NightState();
+
+public:
 
 	~NightState();
 

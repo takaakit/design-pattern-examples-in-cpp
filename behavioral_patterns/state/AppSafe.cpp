@@ -12,7 +12,7 @@ using namespace std;
 
 AppSafe::AppSafe()
 	: current_time(0)
-	, state(new DaytimeState())
+	, state(DaytimeState::getInstance())
 	// ˅
 	
 	// ˄
@@ -78,10 +78,7 @@ void AppSafe::changeState(State* state)
 {
 	// ˅
 	cout << "The state changed from " << this->state->toString() << " to " << state->toString() << "." << endl;
-
-	State* preState = this->state;
 	this->state = state;
-	delete preState;		// Delete the previous State object
 	// ˄
 }
 
