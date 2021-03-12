@@ -30,6 +30,8 @@ private:
 
 	Singleton();
 
+public:
+
 	~Singleton();
 
 	// ˅

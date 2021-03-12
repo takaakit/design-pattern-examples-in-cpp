@@ -35,9 +35,9 @@ private:
 
 	LargeSizeCharFactory();
 
-	~LargeSizeCharFactory();
-
 public:
+
+	~LargeSizeCharFactory();
 
 	// Create an instance of the large size character.
 	LargeSizeChar* getLargeSizeChar(const char char_name);

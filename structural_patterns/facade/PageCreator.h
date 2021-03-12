@@ -30,9 +30,9 @@ private:
 
 	PageCreator();
 
-	~PageCreator();
-
 public:
+
+	~PageCreator();
 
 	void createSimpleHomepage(const string& mail_address, const string& html_file_name);
 

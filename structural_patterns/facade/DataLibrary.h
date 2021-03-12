@@ -31,9 +31,9 @@ private:
 
 	DataLibrary();
 
-	~DataLibrary();
-
 public:
+
+	~DataLibrary();
 
 	// Read a data library file.
 	const map<string, string> getProperties(const string& data_library_name) const;
