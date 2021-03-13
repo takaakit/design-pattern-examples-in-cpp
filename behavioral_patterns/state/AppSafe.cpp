@@ -68,8 +68,10 @@ void AppSafe::setTime(const int hour)
 		clock_string += to_string(hour) + ":00";
 	}
 	cout << clock_string << endl;
+	
 	text_time->ResetText();
 	text_time->AppendText(gcnew String(clock_string.c_str()));
+	
 	state->setTime(this, hour);
 	// ˄
 }

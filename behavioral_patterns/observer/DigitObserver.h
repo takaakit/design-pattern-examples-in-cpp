@@ -10,7 +10,7 @@
 
 // ˄
 
-// Display values with digits.
+// Display values as a number.
 class DigitObserver : public Observer
 {
 	// ˅

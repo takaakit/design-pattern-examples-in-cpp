@@ -10,7 +10,7 @@
 
 // ˄
 
-// Display values with a bar chart.
+// Display values as a bar chart.
 class BarChartObserver : public Observer
 {
 	// ˅
