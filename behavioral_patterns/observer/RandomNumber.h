@@ -17,10 +17,6 @@ class RandomNumber : public Number
 	
 	// ˄
 
-private:
-
-	int value;
-
 public:
 
 	RandomNumber();
@@ -28,8 +24,6 @@ public:
 	~RandomNumber();
 
 	void generate();
-
-	int getValue() const;
 
 	// ˅
 public:

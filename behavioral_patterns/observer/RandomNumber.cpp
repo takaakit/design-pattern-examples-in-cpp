@@ -5,7 +5,6 @@
 // ˄
 
 RandomNumber::RandomNumber()
-	: value(0)
 	// ˅
 	
 	// ˄
@@ -32,13 +31,6 @@ void RandomNumber::generate()
 		value = random_value(mt);
 		notifyObservers();
 	}
-	// ˄
-}
-
-int RandomNumber::getValue() const
-{
-	// ˅
-	return value;
 	// ˄
 }
 

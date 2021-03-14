@@ -5,6 +5,7 @@
 // ˄
 
 Number::Number()
+	: value(0)
 	// ˅
 	
 	// ˄
@@ -28,7 +29,7 @@ void Number::addObserver(Observer* observer)
 	// ˄
 }
 
-void Number::deleteObserver(const Observer* observer)
+void Number::removeObserver(const Observer* observer)
 {
 	// ˅
 	vector<Observer*>::iterator it = observers.begin();
@@ -47,6 +48,13 @@ void Number::notifyObservers() const
 	for (Observer* observer : observers) {
 		observer->update(this);
 	}
+	// ˄
+}
+
+int Number::getValue() const
+{
+	// ˅
+	return value;
 	// ˄
 }
 

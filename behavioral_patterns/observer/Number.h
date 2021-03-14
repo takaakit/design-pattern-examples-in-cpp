@@ -21,6 +21,10 @@ class Number
 	
 	// ˄
 
+protected:
+
+	int value;
+
 private:
 
 	vector<Observer*> observers;
@@ -33,13 +37,13 @@ public:
 
 	virtual void generate() = 0;
 
-	virtual int getValue() const = 0;
-
 	void addObserver(Observer* observer);
 
-	void deleteObserver(const Observer* observer);
+	void removeObserver(const Observer* observer);
 
 	void notifyObservers() const;
+
+	int getValue() const;
 
 	// ˅
 public:
