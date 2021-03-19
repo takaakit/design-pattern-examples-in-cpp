@@ -19,7 +19,7 @@ RealPrinter::RealPrinter(const string& name)
 	// ˄
 {
 	// ˅
-	heavyTask("Creating an instance(" + name + ") of the Printer");
+	heavyTask("Creating an instance (" + name + ") of the Printer");
 	// ˄
 }
 
