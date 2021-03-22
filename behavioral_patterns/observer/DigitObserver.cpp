@@ -1,19 +1,15 @@
 // ˅
 #include <iostream>
 #include "behavioral_patterns/observer/DigitObserver.h"
-#include "behavioral_patterns/observer/Number.h"
-
-#ifdef _MSC_VER
-#include <windows.h>
-#else
-#include <unistd.h>
-#endif
+#include "behavioral_patterns/observer/Subject.h"
+#include "behavioral_patterns/observer/NumberSubject.h"
 
 using namespace std;
 
 // ˄
 
-DigitObserver::DigitObserver()
+DigitObserver::DigitObserver(const NumberSubject* numberSubject)
+	: numberSubject(numberSubject)
 	// ˅
 	
 	// ˄
@@ -30,16 +26,12 @@ DigitObserver::~DigitObserver()
 	// ˄
 }
 
-void DigitObserver::update(const Number* number) const
+void DigitObserver::update(const Subject* changedSubject) const
 {
 	// ˅
-	cout << "Digit    : " << number->getValue() << endl;
-	
-#ifdef _MSC_VER
-    Sleep(100);
-#else
-    usleep(0.1 * 1000000);
-#endif
+	if (changedSubject == numberSubject) {
+		cout << "Digit    : " << numberSubject->getValue() << endl;
+	}
 	// ˄
 }
 

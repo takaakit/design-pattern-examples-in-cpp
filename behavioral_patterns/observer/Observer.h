@@ -6,7 +6,7 @@
 #define BEHAVIORAL_PATTERNS_OBSERVER_OBSERVER_H_
 
 // ˅
-class Number;
+class Subject;
 
 // ˄
 
@@ -20,7 +20,7 @@ public:
 
 	virtual ~Observer();
 
-	virtual void update(const Number* number) const = 0;
+	virtual void update(const Subject* changedSubject) const = 0;
 
 	// ˅
 public:

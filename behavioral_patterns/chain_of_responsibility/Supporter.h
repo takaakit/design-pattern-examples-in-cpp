@@ -40,8 +40,6 @@ public:
 	// Set a next supporter.
 	Supporter* setNext(Supporter* next);
 
-	const string toString() const;
-
 protected:
 
 	virtual bool canHandle(const Trouble* trouble) const = 0;

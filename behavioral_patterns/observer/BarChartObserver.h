@@ -8,6 +8,8 @@
 // ˅
 #include "behavioral_patterns/observer/Observer.h"
 
+class NumberSubject;
+
 // ˄
 
 // Display values as a bar chart.
@@ -17,13 +19,17 @@ class BarChartObserver : public Observer
 	
 	// ˄
 
+private:
+
+	const NumberSubject* numberSubject;
+
 public:
 
-	BarChartObserver();
+	BarChartObserver(const NumberSubject* numberSubject);
 
 	~BarChartObserver();
 
-	void update(const Number* number) const;
+	void update(const Subject* changedSubject) const;
 
 	// ˅
 public:

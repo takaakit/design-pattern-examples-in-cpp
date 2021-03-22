@@ -141,16 +141,16 @@
     <ClCompile Include="BarChartObserver.cpp" />
     <ClCompile Include="DigitObserver.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Number.cpp" />
+    <ClCompile Include="NumberSubject.cpp" />
     <ClCompile Include="Observer.cpp" />
-    <ClCompile Include="RandomNumber.cpp" />
+    <ClCompile Include="Subject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BarChartObserver.h" />
     <ClInclude Include="DigitObserver.h" />
-    <ClInclude Include="Number.h" />
+    <ClInclude Include="NumberSubject.h" />
     <ClInclude Include="Observer.h" />
-    <ClInclude Include="RandomNumber.h" />
+    <ClInclude Include="Subject.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

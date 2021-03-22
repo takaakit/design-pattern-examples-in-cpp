@@ -8,6 +8,8 @@
 // ˅
 #include "behavioral_patterns/observer/Observer.h"
 
+class NumberSubject;
+
 // ˄
 
 // Display values as a number.
@@ -17,13 +19,17 @@ class DigitObserver : public Observer
 	
 	// ˄
 
+private:
+
+	const NumberSubject* numberSubject;
+
 public:
 
-	DigitObserver();
+	DigitObserver(const NumberSubject* numberSubject);
 
 	~DigitObserver();
 
-	void update(const Number* number) const;
+	void update(const Subject* changedSubject) const;
 
 	// ˅
 public:

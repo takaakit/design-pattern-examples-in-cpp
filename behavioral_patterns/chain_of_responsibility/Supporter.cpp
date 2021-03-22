@@ -48,13 +48,6 @@ Supporter* Supporter::setNext(Supporter* next)
 	// ˄
 }
 
-const string Supporter::toString() const
-{
-	// ˅
-	return "[" + name + "]";
-	// ˄
-}
-
 void Supporter::supported(const Trouble* trouble) const
 {
 	// ˅
