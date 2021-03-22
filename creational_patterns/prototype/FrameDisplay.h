@@ -29,7 +29,7 @@ public:
 
 	~FrameDisplay();
 
-	Display* createClone();
+	Display* clone();
 
 	void show(const string& message) const;
 

@@ -29,7 +29,7 @@ public:
 
 	~UnderlineDisplay();
 
-	Display* createClone();
+	Display* clone();
 
 	void show(const string& message) const;
 

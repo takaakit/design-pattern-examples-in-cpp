@@ -25,7 +25,7 @@ public:
 
 	virtual ~Display();
 
-	virtual Display* createClone() = 0;
+	virtual Display* clone() = 0;
 
 	virtual void show(const string& message) const = 0;
 

@@ -32,7 +32,7 @@ const Display* Manager::getDisplay(const string& display_name) const
 {
 	// ˅
 	Display* d = displays.at(display_name);
-	return d->createClone();
+	return d->clone();
 	// ˄
 }
 

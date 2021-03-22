@@ -24,7 +24,7 @@ FrameDisplay::~FrameDisplay()
 	// ˄
 }
 
-Display* FrameDisplay::createClone()
+Display* FrameDisplay::clone()
 {
 	// ˅
 	return new FrameDisplay(border_char);

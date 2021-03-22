@@ -24,7 +24,7 @@ UnderlineDisplay::~UnderlineDisplay()
 	// ˄
 }
 
-Display* UnderlineDisplay::createClone()
+Display* UnderlineDisplay::clone()
 {
 	// ˅
 	return new UnderlineDisplay(underline_char);
