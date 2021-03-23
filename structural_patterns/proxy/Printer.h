@@ -22,6 +22,10 @@ public:
 
 	virtual ~Printer();
 
+	virtual const string getName() const = 0;
+
+	virtual void changeName(const string& name) = 0;
+
 	virtual void output(const string& content) = 0;
 
 	// ˅

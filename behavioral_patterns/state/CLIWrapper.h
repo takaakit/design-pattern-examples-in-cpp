@@ -9,14 +9,14 @@ public ref class CLIWrapper
 public:
 	CLIWrapper(AppSafe* native_app_safe) : native_app_safe(native_app_safe) {}
 	~CLIWrapper() {}
-	Void useSate(Object^ sender, EventArgs^ e) {
-		native_app_safe->useSafe();
+	Void use(Object^ sender, EventArgs^ e) {
+		native_app_safe->use();
 	}
-	Void soundBell(Object^ sender, EventArgs^ e) {
-		native_app_safe->soundBell();
+	Void alarm(Object^ sender, EventArgs^ e) {
+		native_app_safe->alarm();
 	}
-	Void call(Object^ sender, EventArgs^ e) {
-		native_app_safe->call();
+	Void phone(Object^ sender, EventArgs^ e) {
+		native_app_safe->phone();
 	}
 	Void exit(Object^ sender, EventArgs^ e) {
 		native_app_safe->exit();

@@ -2,7 +2,7 @@ CFLAGS = -I. -I../.. -std=c++11
 
 SRC = \
 	Printer.cpp \
-	PrinterProxy.cpp \
+	ProxyPrinter.cpp \
 	RealPrinter.cpp \
 	main.cpp
 

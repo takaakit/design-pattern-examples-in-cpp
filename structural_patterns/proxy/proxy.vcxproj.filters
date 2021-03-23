@@ -3,12 +3,12 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Printer.cpp" />
-    <ClCompile Include="PrinterProxy.cpp" />
     <ClCompile Include="RealPrinter.cpp" />
+    <ClCompile Include="ProxyPrinter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Printer.h" />
-    <ClInclude Include="PrinterProxy.h" />
     <ClInclude Include="RealPrinter.h" />
+    <ClInclude Include="ProxyPrinter.h" />
   </ItemGroup>
 </Project>

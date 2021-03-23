@@ -140,12 +140,12 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Printer.cpp" />
-    <ClCompile Include="PrinterProxy.cpp" />
+    <ClCompile Include="ProxyPrinter.cpp" />
     <ClCompile Include="RealPrinter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Printer.h" />
-    <ClInclude Include="PrinterProxy.h" />
+    <ClInclude Include="ProxyPrinter.h" />
     <ClInclude Include="RealPrinter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

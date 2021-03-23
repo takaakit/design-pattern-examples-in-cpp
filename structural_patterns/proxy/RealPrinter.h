@@ -21,7 +21,7 @@ class RealPrinter : public Printer
 
 private:
 
-	string printer_name;
+	string name;
 
 public:
 
@@ -29,7 +29,9 @@ public:
 
 	~RealPrinter();
 
-	void setPrinterName(string name);
+	const string getName() const;
+
+	void changeName(const string& name);
 
 	// Display a content with the name
 	void output(const string& content);

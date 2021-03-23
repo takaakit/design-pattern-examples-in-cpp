@@ -41,9 +41,9 @@ AppSafe::AppSafe()
 	timer->Start();
 
 	// Set events
-	button_use->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::useSate);		// Safe use button pressed
-	button_alarm->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::soundBell);	// Emergency bell button pressed
-	button_phone->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::call);		// Normal call button pressed
+	button_use->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::use);			// Use button pressed
+	button_alarm->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::alarm);		// Alarm button pressed
+	button_phone->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::phone);		// Phone button pressed
 	button_exit->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::exit);		// Exit button pressed
 
 	Application::Run(windows_form);
@@ -100,21 +100,21 @@ void AppSafe::recordSecurityLog(const string& msg) const
 	// ˄
 }
 
-void AppSafe::useSafe()
+void AppSafe::use()
 {
 	// ˅
 	state->useSafe(this);
 	// ˄
 }
 
-void AppSafe::soundBell()
+void AppSafe::alarm()
 {
 	// ˅
 	state->soundBell(this);
 	// ˄
 }
 
-void AppSafe::call()
+void AppSafe::phone()
 {
 	// ˅
 	state->call(this);

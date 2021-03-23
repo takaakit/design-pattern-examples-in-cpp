@@ -59,11 +59,11 @@ public:
 	// Record security log
 	void recordSecurityLog(const string& msg) const;
 
-	void useSafe();
+	void use();
 
-	void soundBell();
+	void alarm();
 
-	void call();
+	void phone();
 
 	void exit();
 

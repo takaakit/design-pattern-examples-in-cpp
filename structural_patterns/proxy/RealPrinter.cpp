@@ -13,7 +13,7 @@ using namespace std;
 // ˄
 
 RealPrinter::RealPrinter(const string& name)
-	: printer_name(name)
+	: name(name)
 	// ˅
 	
 	// ˄
@@ -30,10 +30,17 @@ RealPrinter::~RealPrinter()
 	// ˄
 }
 
-void RealPrinter::setPrinterName(string name)
+const string RealPrinter::getName() const
 {
 	// ˅
-	printer_name = name;
+	return name;
+	// ˄
+}
+
+void RealPrinter::changeName(const string& name)
+{
+	// ˅
+	this->name = name;
 	// ˄
 }
 
@@ -42,7 +49,7 @@ void RealPrinter::output(const string& content)
 	// ˅
 	cout << "==========" << endl
 		<< content << endl
-		<< "Printed by " << printer_name << endl
+		<< "Printed by " << name << endl
 		<< "==========" << endl;
 	// ˄
 }
