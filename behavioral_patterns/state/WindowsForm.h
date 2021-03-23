@@ -36,7 +36,7 @@ namespace state {
 	private: System::Windows::Forms::Button^ button_use;
 	private: System::Windows::Forms::Button^ button_alarm;
 	private: System::Windows::Forms::Button^ button_phone;
-	private: System::Windows::Forms::Button^ button_exit;
+
 
 	private:
 		/// <summary>
@@ -55,7 +55,6 @@ namespace state {
 			this->button_use = (gcnew System::Windows::Forms::Button());
 			this->button_alarm = (gcnew System::Windows::Forms::Button());
 			this->button_phone = (gcnew System::Windows::Forms::Button());
-			this->button_exit = (gcnew System::Windows::Forms::Button());
 			this->text_time = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
 			// 
@@ -78,7 +77,7 @@ namespace state {
 			this->button_use->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->button_use->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(128)));
-			this->button_use->Location = System::Drawing::Point(1, 340);
+			this->button_use->Location = System::Drawing::Point(63, 340);
 			this->button_use->Name = L"button_use";
 			this->button_use->Size = System::Drawing::Size(120, 30);
 			this->button_use->TabIndex = 1;
@@ -90,7 +89,7 @@ namespace state {
 			this->button_alarm->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->button_alarm->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(128)));
-			this->button_alarm->Location = System::Drawing::Point(127, 340);
+			this->button_alarm->Location = System::Drawing::Point(189, 340);
 			this->button_alarm->Name = L"button_alarm";
 			this->button_alarm->Size = System::Drawing::Size(120, 30);
 			this->button_alarm->TabIndex = 2;
@@ -102,24 +101,12 @@ namespace state {
 			this->button_phone->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->button_phone->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(128)));
-			this->button_phone->Location = System::Drawing::Point(253, 340);
+			this->button_phone->Location = System::Drawing::Point(315, 340);
 			this->button_phone->Name = L"button_phone";
 			this->button_phone->Size = System::Drawing::Size(120, 30);
 			this->button_phone->TabIndex = 3;
 			this->button_phone->Text = L"Phone";
 			this->button_phone->UseVisualStyleBackColor = true;
-			// 
-			// button_exit
-			// 
-			this->button_exit->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
-			this->button_exit->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(128)));
-			this->button_exit->Location = System::Drawing::Point(379, 340);
-			this->button_exit->Name = L"button_exit";
-			this->button_exit->Size = System::Drawing::Size(120, 30);
-			this->button_exit->TabIndex = 4;
-			this->button_exit->Text = L"Exit";
-			this->button_exit->UseVisualStyleBackColor = true;
 			// 
 			// text_time
 			// 
@@ -138,7 +125,6 @@ namespace state {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(500, 381);
 			this->Controls->Add(this->text_time);
-			this->Controls->Add(this->button_exit);
 			this->Controls->Add(this->button_phone);
 			this->Controls->Add(this->button_alarm);
 			this->Controls->Add(this->button_use);
@@ -157,7 +143,6 @@ namespace state {
 		System::Windows::Forms::Button^ getButtonUse();
 		System::Windows::Forms::Button^ getButtonAlarm();
 		System::Windows::Forms::Button^ getButtonPhone();
-		System::Windows::Forms::Button^ getButtonExit();
 
 	};
 }

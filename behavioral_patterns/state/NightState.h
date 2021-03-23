@@ -36,17 +36,13 @@ public:
 
 	~NightState();
 
-	// Set time
 	void setTime(Context* context, const int hour);
 
-	// Use a safe
-	void useSafe(const Context* context) const;
+	void use(const Context* context) const;
 
-	// Sound a emergency bell
-	void soundBell(const Context* context) const;
+	void alarm(const Context* context) const;
 
-	// Make a normal call
-	void call(const Context* context) const;
+	void phone(const Context* context) const;
 
 	const string toString() const;
 

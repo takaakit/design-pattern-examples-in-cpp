@@ -24,8 +24,3 @@ System::Windows::Forms::Button^ state::WindowsForm::getButtonPhone()
 {
     return this->button_phone;
 }
-
-System::Windows::Forms::Button^ state::WindowsForm::getButtonExit()
-{
-    return this->button_exit;
-}

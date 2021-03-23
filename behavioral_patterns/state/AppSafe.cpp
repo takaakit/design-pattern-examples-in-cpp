@@ -29,7 +29,6 @@ AppSafe::AppSafe()
 	msclr::gcroot<Button^> button_use = windows_form->getButtonUse();
 	msclr::gcroot<Button^> button_alarm = windows_form->getButtonAlarm();
 	msclr::gcroot<Button^> button_phone = windows_form->getButtonPhone();
-	msclr::gcroot<Button^> button_exit = windows_form->getButtonExit();
 
 	// Wrapper class for calling unmanaged code from managed code
 	CLIWrapper^ cli_wrapper = gcnew CLIWrapper(this);
@@ -41,10 +40,9 @@ AppSafe::AppSafe()
 	timer->Start();
 
 	// Set events
-	button_use->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::use);			// Use button pressed
-	button_alarm->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::alarm);		// Alarm button pressed
-	button_phone->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::phone);		// Phone button pressed
-	button_exit->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::exit);		// Exit button pressed
+	button_use->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::pressedUseButton);
+	button_alarm->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::pressedAlarmButton);
+	button_phone->Click += gcnew EventHandler(cli_wrapper, &CLIWrapper::pressedPhoneButton);
 
 	Application::Run(windows_form);
 	// ˄
@@ -100,31 +98,24 @@ void AppSafe::recordSecurityLog(const string& msg) const
 	// ˄
 }
 
-void AppSafe::use()
+void AppSafe::pressedUseButton()
 {
 	// ˅
-	state->useSafe(this);
+	state->use(this);
 	// ˄
 }
 
-void AppSafe::alarm()
+void AppSafe::pressedAlarmButton()
 {
 	// ˅
-	state->soundBell(this);
+	state->alarm(this);
 	// ˄
 }
 
-void AppSafe::phone()
+void AppSafe::pressedPhoneButton()
 {
 	// ˅
-	state->call(this);
-	// ˄
-}
-
-void AppSafe::exit()
-{
-	// ˅
-	Application::Exit();
+	state->phone(this);
 	// ˄
 }
 

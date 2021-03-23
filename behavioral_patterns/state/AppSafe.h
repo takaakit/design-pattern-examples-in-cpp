@@ -59,13 +59,11 @@ public:
 	// Record security log
 	void recordSecurityLog(const string& msg) const;
 
-	void use();
+	void pressedUseButton();
 
-	void alarm();
+	void pressedAlarmButton();
 
-	void phone();
-
-	void exit();
+	void pressedPhoneButton();
 
 	void countUpTime();
 

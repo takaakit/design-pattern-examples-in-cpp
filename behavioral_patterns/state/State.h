@@ -25,17 +25,13 @@ public:
 
 	virtual ~State();
 
-	// Set time
 	virtual void setTime(Context* context, const int hour) = 0;
 
-	// Use a safe
-	virtual void useSafe(const Context* context) const = 0;
+	virtual void use(const Context* context) const = 0;
 
-	// Sound a emergency bell
-	virtual void soundBell(const Context* context) const = 0;
+	virtual void alarm(const Context* context) const = 0;
 
-	// Make a normal call
-	virtual void call(const Context* context) const = 0;
+	virtual void phone(const Context* context) const = 0;
 
 	virtual const string toString() const = 0;
 
