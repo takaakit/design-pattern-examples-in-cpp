@@ -53,7 +53,7 @@ void DaytimeState::use(const Context* context) const
 void DaytimeState::alarm(const Context* context) const
 {
 	// ˅
-	context->callSecurityGuardsRoom("Sound a emergency bell in the daytime");
+	context->callSecurityGuardsRoom("Sound an emergency bell in the daytime");
 	// ˄
 }
 

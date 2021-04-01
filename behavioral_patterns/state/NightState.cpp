@@ -53,7 +53,7 @@ void NightState::use(const Context* context) const
 void NightState::alarm(const Context* context) const
 {
 	// ˅
-	context->callSecurityGuardsRoom("Sound a emergency bell at night");
+	context->callSecurityGuardsRoom("Sound an emergency bell at night");
 	// ˄
 }
 
