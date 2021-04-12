@@ -24,7 +24,13 @@ Factory::~Factory()
 const Product* Factory::create(const string& owner)
 {
 	// ˅
-	return createProduct(owner);
+	// Write pre-creation code here, if any.
+
+	const Product* product = createProduct(owner);
+
+	// Write post-creation code here, if any.
+
+	return product;
 	// ˄
 }
 
