@@ -24,7 +24,7 @@ PaintingCanvas::~PaintingCanvas()
 	// ˄
 }
 
-void PaintingCanvas::paint(const double painting_pos_x, const double painting_pos_y) const
+void PaintingCanvas::paint(const double x, const double y) const
 {
 	// ˅
 	Bitmap^ bit_map = nullptr;
@@ -36,8 +36,8 @@ void PaintingCanvas::paint(const double painting_pos_x, const double painting_po
 	}
 	Graphics^ grp_pic_box = Graphics::FromImage(bit_map);
 	grp_pic_box->FillEllipse(Brushes::LightGreen,
-								static_cast<int>(painting_pos_x - this->point_radius),
-								static_cast<int>(painting_pos_y - this->point_radius),
+								static_cast<int>(x - this->point_radius),
+								static_cast<int>(y - this->point_radius),
 								static_cast<int>(this->point_radius * 2),
 								static_cast<int>(this->point_radius * 2));
 	picture_box->Image = nullptr;
