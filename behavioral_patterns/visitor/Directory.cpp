@@ -48,11 +48,10 @@ const int Directory::getSize() const
 	// ˄
 }
 
-FileSystemElement* Directory::add(FileSystemElement* element)
+void Directory::add(FileSystemElement* element)
 {
 	// ˅
 	elements.push_back(element);
-	return this;
 	// ˄
 }
 

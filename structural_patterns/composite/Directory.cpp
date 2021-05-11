@@ -53,11 +53,10 @@ void Directory::print(const string& upper_path) const
 	// ˄
 }
 
-FileSystemElement* Directory::add(FileSystemElement* element)
+void Directory::add(FileSystemElement* element)
 {
 	// ˅
 	elements.push_back(element);
-	return this;
 	// ˄
 }
 

@@ -40,7 +40,7 @@ public:
 	void print(const string& upper_path) const;
 
 	// Add an element
-	FileSystemElement* add(FileSystemElement* element);
+	void add(FileSystemElement* element);
 
 	// ˅
 public:

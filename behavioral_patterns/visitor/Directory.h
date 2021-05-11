@@ -46,7 +46,7 @@ public:
 	const int getSize() const;
 
 	// Add an element
-	FileSystemElement* add(FileSystemElement* element);
+	void add(FileSystemElement* element);
 
 	// Get the begin iterator
 	vector<FileSystemElement*>::const_iterator getBeginIterator() const;
