@@ -6,10 +6,9 @@ Design Pattern Examples in C++
 Model and code examples of GoF Design Patterns for C++.  
 This project is available for the following objectives:  
 
-* To try Model-Driven Development (MDD) using Astah and M PLUS plug-in.
+* To understand GoF Design Pattern examples in C++.
 * To understand the mapping between UML model and C++ code.
-* To understand GoF Design Pattern examples in C++.  
-  etc.
+* To try Model-Driven Development (MDD) using Astah and M PLUS plug-in.
 
 > UML model example:
 
