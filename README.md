@@ -17,7 +17,7 @@ This project is available for the following objectives:
 <a id="code-example"></a>
 > C++ header file example:
 
-```cpp:File class
+```cpp
 // ˅
 
 // ˄
@@ -83,7 +83,7 @@ private:
 
 > C++ source file example:
 
-```cpp:File class
+```cpp
 // ˅
 #include <iostream>
 #include "structural_patterns/composite/File.h"
