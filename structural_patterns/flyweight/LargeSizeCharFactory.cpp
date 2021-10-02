@@ -41,12 +41,12 @@ LargeSizeChar* LargeSizeCharFactory::getLargeSizeChar(const char char_name)
 {
 	// ˅
     LargeSizeChar* lsc = nullptr;
-    if (pool_chars.find(to_string(char_name)) == pool_chars.end()) {
+    if (pool_chars.find(char_name) == pool_chars.end()) {
         lsc = new LargeSizeChar(char_name);							// Create an instance
-		pool_chars.insert(map<string, LargeSizeChar*>::value_type(to_string(char_name), lsc));
+		pool_chars.insert(map<char, LargeSizeChar*>::value_type(char_name, lsc));
     }
     else {
-		lsc = pool_chars.at(to_string(char_name));
+		lsc = pool_chars.at(char_name);
     }
 	return lsc;
 	// ˄

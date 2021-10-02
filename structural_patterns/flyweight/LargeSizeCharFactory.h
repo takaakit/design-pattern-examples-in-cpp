@@ -23,7 +23,7 @@ class LargeSizeCharFactory
 
 private:
 
-	map<string, LargeSizeChar*> pool_chars;
+	map<char, LargeSizeChar*> pool_chars;
 
 	static LargeSizeCharFactory* instance;
 
