@@ -22,9 +22,9 @@ class Context
 
 private:
 
-	vector<string> nodes;
+	vector<string> tokens;
 
-	vector<string>::iterator current_node;
+	vector<string>::iterator iter;
 
 public:
 

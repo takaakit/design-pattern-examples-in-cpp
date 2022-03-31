@@ -18,10 +18,10 @@ Context::Context(const string& text)
     stringstream text_stream(text);
     string node = "";
     while (getline(text_stream, node, ' ') && node.empty() == false) {
-        nodes.push_back(node);
+        tokens.push_back(node);
     }
 	
-    current_node = nodes.begin();
+    iter = tokens.begin();
 	// ˄
 }
 
@@ -35,7 +35,7 @@ Context::~Context()
 string Context::nextToken()
 {
 	// ˅
-    ++current_node;
+    ++iter;
 	return getToken();
 	// ˄
 }
@@ -43,8 +43,8 @@ string Context::nextToken()
 string Context::getToken()
 {
 	// ˅
-    if (current_node != nodes.end()) {
-        return (*current_node);
+    if (iter != tokens.end()) {
+        return (*iter);
     }
     else {
         return "";
