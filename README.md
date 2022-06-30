@@ -146,8 +146,8 @@ Installation on Windows
 
 **Visual Studio**
 * Download and install [Visual Studio](https://visualstudio.microsoft.com/vs/).  
-  Check "**Desktop development with C++**" and "**C++/CLI support**" when installing.
-* Microsoft .NET Framework **4.7.2** or higher is required.
+  Check "**Desktop development with C++**" and "**C++/CLI support**" when installing.  
+  ![](screenshots/VisualStudioInstaller.png "Visual Studio Installer")
 
 Usage on Windows
 -----
