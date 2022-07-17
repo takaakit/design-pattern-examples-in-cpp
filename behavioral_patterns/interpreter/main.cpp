@@ -57,6 +57,7 @@ int main() {
 	getcwd(current_directory_path, 255);
 #endif
 	
+	// Reads commands line by line from the "program.txt" and parses them.
 	string line;
 	const string file_path = string(current_directory_path) + "/program.txt";
 	ifstream ifs(file_path);

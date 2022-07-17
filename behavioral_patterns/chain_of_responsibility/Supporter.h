@@ -37,7 +37,7 @@ public:
 	// Troubles are sent around.
 	void support(const Trouble* trouble) const;
 
-	// Set a next supporter.
+	// Set a next supporter and return it.
 	Supporter* setNext(Supporter* next);
 
 protected:

@@ -32,6 +32,7 @@ public:
 
 	~HistoryCommand();
 
+	// Execute all past commands
 	void execute() const;
 
 	void add(Command* cmd);
