@@ -25,6 +25,7 @@ NumberSubject::~NumberSubject()
 void NumberSubject::setValue(int value)
 {
 	// ˅
+	// Notify observers when the value is set.
 	this->value = value;
 	notifyObservers();
 	// ˄

@@ -29,6 +29,7 @@ DigitObserver::~DigitObserver()
 void DigitObserver::update(const Subject* changedSubject) const
 {
 	// ˅
+	// Before processing, it checks to make sure the changed subject is the subject held.
 	if (changedSubject == numberSubject) {
 		cout << "Digit    : " << numberSubject->getValue() << endl;
 	}
