@@ -23,6 +23,8 @@ int main(int argc, char* argv[]) {
 	for (int i = 0; i < 100; ++i) {
 		HandSignal* hand_of_player1 = player1->showHandSignal();
 		HandSignal* hand_of_player2 = player2->showHandSignal();
+		
+		// Judge win, loss, or draw
 		GameResultType resultOfPlayer1 = GameResultType::Draw;
 		GameResultType resultOfPlayer2 = GameResultType::Draw;
 		if (hand_of_player1->isStrongerThan(hand_of_player2) == true) {
@@ -40,6 +42,7 @@ int main(int argc, char* argv[]) {
 			resultOfPlayer1 = GameResultType::Draw;
 			resultOfPlayer2 = GameResultType::Draw;
 		}
+		
 		player1->notifyGameResult(resultOfPlayer1, hand_of_player1, hand_of_player2);
 		player2->notifyGameResult(resultOfPlayer2, hand_of_player2, hand_of_player1);
 	}
