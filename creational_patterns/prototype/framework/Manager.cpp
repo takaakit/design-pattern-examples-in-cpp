@@ -32,7 +32,7 @@ const Display* Manager::getDisplay(const string& display_name) const
 {
 	// ˅
 	Display* d = displays.at(display_name);
-	return d->clone();
+	return d->clone();		// Create a new object by asking a concrete class to clone itself. Therefore, do not need to know the concrete Display class name.
 	// ˄
 }
 
