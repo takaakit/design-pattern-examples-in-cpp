@@ -14,7 +14,7 @@ The "createProduct()" is called a Factory Method, and it is responsible for manu
 int main(int argc, char* argv[]) {
 	unique_ptr<CreditCardFactory> factory(new CreditCardFactory());
 
-	unique_ptr<const Product> jackson_card(factory->create("Jacson"));
+	unique_ptr<const Product> jackson_card(factory->create("Jackson"));
 	jackson_card->use();
 
 	unique_ptr<const Product> sophia_card(factory->create("Sophia"));
