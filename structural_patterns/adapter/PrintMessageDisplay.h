@@ -14,6 +14,7 @@ using namespace std;
 
 // ˄
 
+// Adapt the MessageDisplay interface to the Print interface.
 class PrintMessageDisplay : public MessageDisplay, public Print
 {
 	// ˅
