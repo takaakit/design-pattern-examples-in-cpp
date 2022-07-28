@@ -28,7 +28,12 @@ ProxyPrinter::~ProxyPrinter()
 const string ProxyPrinter::getName() const
 {
 	// ˅
-	return current_name;
+	if (real != nullptr) {
+		return real->getName();
+	}
+	else {
+		return current_name;
+	}
 	// ˄
 }
 
