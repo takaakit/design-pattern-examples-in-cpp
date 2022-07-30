@@ -16,6 +16,7 @@ using namespace std;
 
 // ˄
 
+// ProxyPrinter forwards requests to RealPrinter when appropriate.
 class ProxyPrinter : public Printer
 {
 	// ˅
