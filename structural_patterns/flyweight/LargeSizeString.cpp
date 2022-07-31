@@ -11,8 +11,8 @@ LargeSizeString::LargeSizeString(const string& string_data)
 	// ˄
 {
 	// ˅
-    for (int i = 0; i < static_cast<int>(string_data.size()); ++i) {
-        large_size_chars.push_back(LargeSizeCharFactory::getInstance()->getLargeSizeChar(string_data.at(i)));
+    for (char char_data : string_data) {
+        large_size_chars.push_back(LargeSizeCharFactory::getInstance()->getLargeSizeChar(char_data));
     }
 	// ˄
 }
@@ -27,8 +27,8 @@ LargeSizeString::~LargeSizeString()
 void LargeSizeString::display() const
 {
 	// ˅
-	for (int i = 0; i < static_cast<int>(large_size_chars.size()); ++i) {
-        large_size_chars.at(i)->display();
+	for (LargeSizeChar* large_size_char : large_size_chars) {
+		large_size_char->display();
 	}
 	// ˄
 }
