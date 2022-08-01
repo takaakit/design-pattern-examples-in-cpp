@@ -51,7 +51,7 @@ void ProxyPrinter::changeName(const string& name)
 void ProxyPrinter::output(const string& content)
 {
 	// ˅
-	// Check to see if the the RealPrinter had been created, create it if necessary.
+	// Check to see if the RealPrinter had been created, create it if necessary.
 	if (real == nullptr) {
 		real = new RealPrinter(current_name);
 	}
