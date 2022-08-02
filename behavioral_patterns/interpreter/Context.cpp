@@ -21,7 +21,7 @@ Context::Context(const string& text)
         tokens.push_back(node);
     }
 	
-    iter = tokens.begin();
+    iter = begin(tokens);
 	// ˄
 }
 
@@ -43,7 +43,7 @@ string Context::nextToken()
 string Context::getToken()
 {
 	// ˅
-    if (iter != tokens.end()) {
+    if (iter != end(tokens)) {
         return (*iter);
     }
     else {

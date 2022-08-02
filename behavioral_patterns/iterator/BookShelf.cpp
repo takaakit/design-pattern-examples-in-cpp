@@ -42,7 +42,7 @@ Book* BookShelf::getAt(const int index) const
 void BookShelf::add(Book* book)
 {
 	// ˅
-	books.insert(books.begin() + number_of_books, book);
+	books.insert(begin(books) + number_of_books, book);
 	++number_of_books;
 	// ˄
 }

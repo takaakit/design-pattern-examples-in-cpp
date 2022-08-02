@@ -58,14 +58,14 @@ void Directory::add(FileSystemElement* element)
 vector<FileSystemElement*>::const_iterator Directory::getBeginIterator() const
 {
 	// ˅
-	return elements.begin();
+	return begin(elements);
 	// ˄
 }
 
 vector<FileSystemElement*>::const_iterator Directory::getEndIterator() const
 {
 	// ˅
-	return elements.end();
+	return end(elements);
 	// ˄
 }
 

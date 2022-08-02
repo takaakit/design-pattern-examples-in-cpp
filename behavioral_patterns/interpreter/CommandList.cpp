@@ -50,11 +50,11 @@ const string CommandList::toString() const
 {
 	// ˅
 	string ret = "[";
-	vector<Node*>::const_iterator it = nodes.begin();
-	while (it != nodes.end()) {
+	vector<Node*>::const_iterator it = begin(nodes);
+	while (it != end(nodes)) {
 		ret += (*it)->toString();
 		++it;
-		if (it != nodes.end()) {
+		if (it != end(nodes)) {
 			ret += ", ";
 		}
 	}

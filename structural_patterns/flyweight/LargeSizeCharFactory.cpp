@@ -41,7 +41,7 @@ LargeSizeChar* LargeSizeCharFactory::getLargeSizeChar(const char char_name)
 {
 	// ˅
     LargeSizeChar* lsc = nullptr;
-    if (pool_chars.find(char_name) == pool_chars.end()) {
+    if (pool_chars.find(char_name) == end(pool_chars)) {
         lsc = new LargeSizeChar(char_name);							// Create an instance
 		pool_chars.insert(map<char, LargeSizeChar*>::value_type(char_name, lsc));
     }

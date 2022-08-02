@@ -31,8 +31,8 @@ void Subject::attach(Observer* observer)
 void Subject::detach(const Observer* observer)
 {
 	// ˅
-	vector<Observer*>::iterator it = observers.begin();
-	while (it != observers.end()) {
+	vector<Observer*>::iterator it = begin(observers);
+	while (it != end(observers)) {
 		if (*it == observer) {
 			observers.erase(it);
 		}
