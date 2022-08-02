@@ -15,11 +15,14 @@ int main(int argc, char* argv[]) {
 	unique_ptr<Display> display_a(new MessageDisplay("Nice to meet you."));
 	display_a->show();
 
-	unique_ptr<Display> display_b(new SideFrame(new MessageDisplay("Nice to meet you."), '!'));
-	display_b->show();
+	unique_ptr<Display> diaplay_b1(new MessageDisplay("Nice to meet you."));
+	unique_ptr<Display> display_b2(new SideFrame(diaplay_b1.get(), '!'));
+	display_b2->show();
 
-	unique_ptr<Display> display_c(new FullFrame(new SideFrame(new MessageDisplay("Nice to meet you."), '!')));
-	display_c->show();
+	unique_ptr<Display> display_c1(new MessageDisplay("Nice to meet you."));
+	unique_ptr<Display> display_c2(new SideFrame(display_c1.get(), '!'));
+	unique_ptr<Display> display_c3(new FullFrame(display_c2.get()));
+	display_c3->show();
 
 	return 0;
 }
