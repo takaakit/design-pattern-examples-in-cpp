@@ -31,17 +31,15 @@ LargeSizeChar::LargeSizeChar(const char char_name)
 	getcwd(current_directory_path, 255);
 #endif
 
-	stringstream buf;
-	string line;
 	ifstream ifs(string(current_directory_path) + "/big" + char_name + ".txt");
-	if (ifs.fail() == true) {
-		display_data = string(1, char_name) + "?";
+	if (ifs.is_open()) {
+		string line;
+		while (getline(ifs, line)) {
+			display_data  += line + "\n";
+		}
 	}
 	else {
-		while (getline(ifs, line)) {
-			buf << line << endl;
-		}
-		display_data = buf.str();
+		display_data = string(1, char_name) + "?";
 	}
 	// ˄
 }

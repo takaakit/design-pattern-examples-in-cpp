@@ -42,8 +42,8 @@ const map<string, string> DataLibrary::getProperties(const string& data_library_
 	// ˅
 	map<string, string> ret;
 	ifstream ifs(data_library_name);
-	if (ifs.fail() == false) {
-		string line = "";
+	if (ifs.is_open()) {
+		string line;
 		while (getline(ifs, line)) {
 			string::size_type pos = line.find("=");
 			if (pos != string::npos) {
