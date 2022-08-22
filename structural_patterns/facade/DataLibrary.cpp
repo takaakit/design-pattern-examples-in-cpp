@@ -8,14 +8,10 @@ using namespace std;
 
 // ˄
 
-DataLibrary* DataLibrary::instance = nullptr;
-
 DataLibrary* DataLibrary::getInstance()
 {
 	// ˅
-	if (instance == nullptr) {
-		instance = new DataLibrary();
-	}
+	static DataLibrary* instance = new DataLibrary();
 	return instance;
 	// ˄
 }

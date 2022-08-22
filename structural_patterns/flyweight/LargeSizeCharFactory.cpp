@@ -8,14 +8,10 @@ using namespace std;
 
 // ˄
 
-LargeSizeCharFactory* LargeSizeCharFactory::instance = nullptr;
-
 LargeSizeCharFactory* LargeSizeCharFactory::getInstance()
 {
 	// ˅
-	if (instance == nullptr) {
-		instance = new LargeSizeCharFactory();
-	}
+	static LargeSizeCharFactory* instance = new LargeSizeCharFactory();
 	return instance;
 	// ˄
 }

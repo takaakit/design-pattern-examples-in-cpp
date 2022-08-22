@@ -5,14 +5,10 @@
 
 // ˄
 
-DaytimeState* DaytimeState::instance = nullptr;
-
 DaytimeState* DaytimeState::getInstance()
 {
 	// ˅
-	if (instance == nullptr) {
-		instance = new DaytimeState();
-	}
+	static DaytimeState* instance = new DaytimeState();
 	return instance;
 	// ˄
 }

@@ -5,14 +5,10 @@
 
 // ˄
 
-NightState* NightState::instance = nullptr;
-
 NightState* NightState::getInstance()
 {
 	// ˅
-	if (instance == nullptr) {
-		instance = new NightState();
-	}
+	static NightState* instance = new NightState();
 	return instance;
 	// ˄
 }

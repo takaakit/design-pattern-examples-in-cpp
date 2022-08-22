@@ -13,15 +13,13 @@ using namespace std;
 
 // ˄
 
+// Singleton ( based on the example code on Wikipedia )
+// https://en.wikipedia.org/wiki/Singleton_pattern#C++
 class DataLibrary
 {
 	// ˅
 	
 	// ˄
-
-private:
-
-	static DataLibrary* instance;
 
 public:
 

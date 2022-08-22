@@ -17,14 +17,10 @@ using namespace std;
 
 // ˄
 
-PageCreator* PageCreator::instance = nullptr;
-
 PageCreator* PageCreator::getInstance()
 {
 	// ˅
-	if (instance == nullptr) {
-		instance = new PageCreator();
-	}
+	static PageCreator* instance = new PageCreator();
 	return instance;
 	// ˄
 }

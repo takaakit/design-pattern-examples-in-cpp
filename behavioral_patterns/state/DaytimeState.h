@@ -14,15 +14,13 @@ using namespace std;
 
 // ˄
 
+// Singleton ( based on the example code on Wikipedia )
+// https://en.wikipedia.org/wiki/Singleton_pattern#C++
 class DaytimeState : public State
 {
 	// ˅
 	
 	// ˄
-
-private:
-
-	static DaytimeState* instance;
 
 public:
 

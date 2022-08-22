@@ -15,6 +15,8 @@ using namespace std;
 
 // ˄
 
+// Singleton ( based on the example code on Wikipedia )
+// https://en.wikipedia.org/wiki/Singleton_pattern#C++
 class LargeSizeCharFactory
 {
 	// ˅
@@ -24,8 +26,6 @@ class LargeSizeCharFactory
 private:
 
 	map<char, LargeSizeChar*> pool_chars;
-
-	static LargeSizeCharFactory* instance;
 
 public:
 
