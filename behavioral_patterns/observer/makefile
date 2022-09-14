@@ -1,11 +1,11 @@
 CFLAGS = -I. -I../.. -std=c++11
 
 SRC = \
+	Observer.cpp \
 	BarChartObserver.cpp \
 	DigitObserver.cpp \
-	Number.cpp \
-	Observer.cpp \
-	RandomNumber.cpp \
+	Subject.cpp \
+	NumberSubject.cpp \
 	main.cpp
 
 PROG = observer.exe
