@@ -42,6 +42,8 @@ protected:
 private:
 	Command(const Command&) = delete;
 	Command& operator=(const Command&) = delete;
+	Command(Command&&) = delete;
+	Command& operator=(Command&&) = delete;
 	
 	// ˄
 };

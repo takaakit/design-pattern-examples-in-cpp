@@ -39,6 +39,8 @@ protected:
 private:
 	PrintMessageDisplay(const PrintMessageDisplay&) = delete;
 	PrintMessageDisplay& operator=(const PrintMessageDisplay&) = delete;
+	PrintMessageDisplay(PrintMessageDisplay&&) = delete;
+	PrintMessageDisplay& operator=(PrintMessageDisplay&&) = delete;
 	
 	// ˄
 };

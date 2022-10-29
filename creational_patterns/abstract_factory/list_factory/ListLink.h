@@ -35,6 +35,8 @@ protected:
 private:
 	ListLink(const ListLink&) = delete;
 	ListLink& operator=(const ListLink&) = delete;
+	ListLink(ListLink&&) = delete;
+	ListLink& operator=(ListLink&&) = delete;
 	
 	// ˄
 };

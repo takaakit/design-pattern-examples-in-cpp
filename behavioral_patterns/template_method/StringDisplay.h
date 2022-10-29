@@ -50,6 +50,8 @@ protected:
 private:
 	StringDisplay(const StringDisplay&) = delete;
 	StringDisplay& operator=(const StringDisplay&) = delete;
+	StringDisplay(StringDisplay&&) = delete;
+	StringDisplay& operator=(StringDisplay&&) = delete;
 	
 	// ˄
 };

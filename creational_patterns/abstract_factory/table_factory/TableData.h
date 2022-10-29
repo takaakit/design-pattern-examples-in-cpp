@@ -35,6 +35,8 @@ protected:
 private:
 	TableData(const TableData&) = delete;
 	TableData& operator=(const TableData&) = delete;
+	TableData(TableData&&) = delete;
+	TableData& operator=(TableData&&) = delete;
 	
 	// ˄
 };

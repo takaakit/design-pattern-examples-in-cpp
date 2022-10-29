@@ -35,6 +35,8 @@ protected:
 private:
 	MultiLineDisplay(const MultiLineDisplay&) = delete;
 	MultiLineDisplay& operator=(const MultiLineDisplay&) = delete;
+	MultiLineDisplay(MultiLineDisplay&&) = delete;
+	MultiLineDisplay& operator=(MultiLineDisplay&&) = delete;
 	
 	// ˄
 };

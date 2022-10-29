@@ -58,6 +58,8 @@ protected:
 private:
 	AppLogin(const AppLogin&) = delete;
 	AppLogin& operator=(const AppLogin&) = delete;
+	AppLogin(AppLogin&&) = delete;
+	AppLogin& operator=(AppLogin&&) = delete;
 	
 	// ˄
 };

@@ -45,6 +45,8 @@ protected:
 private:
 	Subject(const Subject&) = delete;
 	Subject& operator=(const Subject&) = delete;
+	Subject(Subject&&) = delete;
+	Subject& operator=(Subject&&) = delete;
 	
 	// ˄
 };

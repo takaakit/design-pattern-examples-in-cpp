@@ -52,6 +52,8 @@ protected:
 private:
 	NightState(const NightState&) = delete;
 	NightState& operator=(const NightState&) = delete;
+	NightState(NightState&&) = delete;
+	NightState& operator=(NightState&&) = delete;
 	
 	// ˄
 };

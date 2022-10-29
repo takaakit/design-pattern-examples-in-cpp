@@ -43,6 +43,8 @@ protected:
 private:
 	ListFactory(const ListFactory&) = delete;
 	ListFactory& operator=(const ListFactory&) = delete;
+	ListFactory(ListFactory&&) = delete;
+	ListFactory& operator=(ListFactory&&) = delete;
 	
 	// ˄
 };

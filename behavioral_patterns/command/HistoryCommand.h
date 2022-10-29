@@ -51,6 +51,8 @@ protected:
 private:
 	HistoryCommand(const HistoryCommand&) = delete;
 	HistoryCommand& operator=(const HistoryCommand&) = delete;
+	HistoryCommand(HistoryCommand&&) = delete;
+	HistoryCommand& operator=(HistoryCommand&&) = delete;
 	
 	// ˄
 };

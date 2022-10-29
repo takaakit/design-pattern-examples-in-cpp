@@ -58,8 +58,6 @@ public:
 protected:
 	
 private:
-	Supporter(const Supporter&) = delete;
-	Supporter& operator=(const Supporter&) = delete;
 	
 	// ˄
 };

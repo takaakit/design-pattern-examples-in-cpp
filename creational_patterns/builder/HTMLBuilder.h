@@ -55,6 +55,8 @@ protected:
 private:
 	HTMLBuilder(const HTMLBuilder&) = delete;
 	HTMLBuilder& operator=(const HTMLBuilder&) = delete;
+	HTMLBuilder(HTMLBuilder&&) = delete;
+	HTMLBuilder& operator=(HTMLBuilder&&) = delete;
 	
 	// ˄
 };

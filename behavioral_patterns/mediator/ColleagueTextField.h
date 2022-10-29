@@ -42,6 +42,8 @@ protected:
 private:
 	ColleagueTextField(const ColleagueTextField&) = delete;
 	ColleagueTextField& operator=(const ColleagueTextField&) = delete;
+	ColleagueTextField(ColleagueTextField&&) = delete;
+	ColleagueTextField& operator=(ColleagueTextField&&) = delete;
 	
 	// ˄
 };

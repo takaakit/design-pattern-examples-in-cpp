@@ -44,6 +44,8 @@ protected:
 private:
 	PaintingCanvas(const PaintingCanvas&) = delete;
 	PaintingCanvas& operator=(const PaintingCanvas&) = delete;
+	PaintingCanvas(PaintingCanvas&&) = delete;
+	PaintingCanvas& operator=(PaintingCanvas&&) = delete;
 	
 	// ˄
 };

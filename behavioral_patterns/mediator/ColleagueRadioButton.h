@@ -42,6 +42,8 @@ protected:
 private:
 	ColleagueRadioButton(const ColleagueRadioButton&) = delete;
 	ColleagueRadioButton& operator=(const ColleagueRadioButton&) = delete;
+	ColleagueRadioButton(ColleagueRadioButton&&) = delete;
+	ColleagueRadioButton& operator=(ColleagueRadioButton&&) = delete;
 	
 	// ˄
 };

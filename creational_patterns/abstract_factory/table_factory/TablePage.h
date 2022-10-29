@@ -35,6 +35,8 @@ protected:
 private:
 	TablePage(const TablePage&) = delete;
 	TablePage& operator=(const TablePage&) = delete;
+	TablePage(TablePage&&) = delete;
+	TablePage& operator=(TablePage&&) = delete;
 	
 	// ˄
 };

@@ -38,6 +38,8 @@ protected:
 private:
 	MoodySupporter(const MoodySupporter&) = delete;
 	MoodySupporter& operator=(const MoodySupporter&) = delete;
+	MoodySupporter(MoodySupporter&&) = delete;
+	MoodySupporter& operator=(MoodySupporter&&) = delete;
 	
 	// ˄
 };

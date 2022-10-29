@@ -53,6 +53,8 @@ protected:
 private:
 	HtmlWriter(const HtmlWriter&) = delete;
 	HtmlWriter& operator=(const HtmlWriter&) = delete;
+	HtmlWriter(HtmlWriter&&) = delete;
+	HtmlWriter& operator=(HtmlWriter&&) = delete;
 	
 	// ˄
 };

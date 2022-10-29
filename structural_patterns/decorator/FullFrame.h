@@ -47,6 +47,8 @@ protected:
 private:
 	FullFrame(const FullFrame&) = delete;
 	FullFrame& operator=(const FullFrame&) = delete;
+	FullFrame(FullFrame&&) = delete;
+	FullFrame& operator=(FullFrame&&) = delete;
 	
 	// ˄
 };

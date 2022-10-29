@@ -52,6 +52,8 @@ protected:
 private:
 	DaytimeState(const DaytimeState&) = delete;
 	DaytimeState& operator=(const DaytimeState&) = delete;
+	DaytimeState(DaytimeState&&) = delete;
+	DaytimeState& operator=(DaytimeState&&) = delete;
 	
 	// ˄
 };

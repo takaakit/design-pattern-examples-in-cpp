@@ -41,6 +41,8 @@ protected:
 private:
 	FrameDisplay(const FrameDisplay&) = delete;
 	FrameDisplay& operator=(const FrameDisplay&) = delete;
+	FrameDisplay(FrameDisplay&&) = delete;
+	FrameDisplay& operator=(FrameDisplay&&) = delete;
 	
 	// ˄
 };

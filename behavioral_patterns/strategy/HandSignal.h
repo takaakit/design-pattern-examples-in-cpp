@@ -72,6 +72,8 @@ protected:
 private:
 	HandSignal(const HandSignal&) = delete;
 	HandSignal& operator=(const HandSignal&) = delete;
+	HandSignal(HandSignal&&) = delete;
+	HandSignal& operator=(HandSignal&&) = delete;
 	
 	// ˄
 };

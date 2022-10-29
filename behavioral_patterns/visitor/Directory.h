@@ -62,6 +62,8 @@ protected:
 private:
 	Directory(const Directory&) = delete;
 	Directory& operator=(const Directory&) = delete;
+	Directory(Directory&&) = delete;
+	Directory& operator=(Directory&&) = delete;
 	
 	// ˄
 };

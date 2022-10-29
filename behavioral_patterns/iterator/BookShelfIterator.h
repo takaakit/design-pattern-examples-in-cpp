@@ -42,6 +42,8 @@ protected:
 private:
 	BookShelfIterator(const BookShelfIterator&) = delete;
 	BookShelfIterator& operator=(const BookShelfIterator&) = delete;
+	BookShelfIterator(BookShelfIterator&&) = delete;
+	BookShelfIterator& operator=(BookShelfIterator&&) = delete;
 	
 	// ˄
 };

@@ -38,6 +38,8 @@ protected:
 private:
 	RandomStrategy(const RandomStrategy&) = delete;
 	RandomStrategy& operator=(const RandomStrategy&) = delete;
+	RandomStrategy(RandomStrategy&&) = delete;
+	RandomStrategy& operator=(RandomStrategy&&) = delete;
 	
 	// ˄
 };

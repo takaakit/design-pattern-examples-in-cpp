@@ -43,6 +43,8 @@ protected:
 private:
 	CommandList(const CommandList&) = delete;
 	CommandList& operator=(const CommandList&) = delete;
+	CommandList(CommandList&&) = delete;
+	CommandList& operator=(CommandList&&) = delete;
 	
 	// ˄
 };

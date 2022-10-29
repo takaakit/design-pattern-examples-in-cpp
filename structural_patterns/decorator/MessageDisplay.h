@@ -46,6 +46,8 @@ protected:
 private:
 	MessageDisplay(const MessageDisplay&) = delete;
 	MessageDisplay& operator=(const MessageDisplay&) = delete;
+	MessageDisplay(MessageDisplay&&) = delete;
+	MessageDisplay& operator=(MessageDisplay&&) = delete;
 	
 	// ˄
 };

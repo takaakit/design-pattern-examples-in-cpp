@@ -40,6 +40,8 @@ protected:
 private:
 	CharDisplay(const CharDisplay&) = delete;
 	CharDisplay& operator=(const CharDisplay&) = delete;
+	CharDisplay(CharDisplay&&) = delete;
+	CharDisplay& operator=(CharDisplay&&) = delete;
 	
 	// ˄
 };

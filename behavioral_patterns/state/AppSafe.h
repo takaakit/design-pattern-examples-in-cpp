@@ -75,6 +75,8 @@ protected:
 private:
 	AppSafe(const AppSafe&) = delete;
 	AppSafe& operator=(const AppSafe&) = delete;
+	AppSafe(AppSafe&&) = delete;
+	AppSafe& operator=(AppSafe&&) = delete;
 	
 	// ˄
 };

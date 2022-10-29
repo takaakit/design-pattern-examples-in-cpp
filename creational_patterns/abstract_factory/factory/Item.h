@@ -36,8 +36,6 @@ public:
 protected:
 	
 private:
-	Item(const Item&) = delete;
-	Item& operator=(const Item&) = delete;
 	
 	// ˄
 };

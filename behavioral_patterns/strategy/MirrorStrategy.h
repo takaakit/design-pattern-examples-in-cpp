@@ -41,6 +41,8 @@ protected:
 private:
 	MirrorStrategy(const MirrorStrategy&) = delete;
 	MirrorStrategy& operator=(const MirrorStrategy&) = delete;
+	MirrorStrategy(MirrorStrategy&&) = delete;
+	MirrorStrategy& operator=(MirrorStrategy&&) = delete;
 	
 	// ˄
 };

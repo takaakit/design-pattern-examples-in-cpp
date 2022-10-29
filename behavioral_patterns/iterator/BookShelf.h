@@ -51,6 +51,8 @@ protected:
 private:
 	BookShelf(const BookShelf&) = delete;
 	BookShelf& operator=(const BookShelf&) = delete;
+	BookShelf(BookShelf&&) = delete;
+	BookShelf& operator=(BookShelf&&) = delete;
 	
 	// ˄
 };

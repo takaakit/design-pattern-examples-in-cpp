@@ -56,6 +56,8 @@ protected:
 private:
 	AppMain(const AppMain&) = delete;
 	AppMain& operator=(const AppMain&) = delete;
+	AppMain(AppMain&&) = delete;
+	AppMain& operator=(AppMain&&) = delete;
 	
 	// ˄
 };

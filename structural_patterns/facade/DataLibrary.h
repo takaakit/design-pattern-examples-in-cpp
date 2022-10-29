@@ -44,6 +44,8 @@ protected:
 private:
 	DataLibrary(const DataLibrary&) = delete;
 	DataLibrary& operator=(const DataLibrary&) = delete;
+	DataLibrary(DataLibrary&&) = delete;
+	DataLibrary& operator=(DataLibrary&&) = delete;
 	
 	// ˄
 };

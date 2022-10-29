@@ -45,6 +45,8 @@ protected:
 private:
 	Repeat(const Repeat&) = delete;
 	Repeat& operator=(const Repeat&) = delete;
+	Repeat(Repeat&&) = delete;
+	Repeat& operator=(Repeat&&) = delete;
 	
 	// ˄
 };

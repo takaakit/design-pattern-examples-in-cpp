@@ -37,6 +37,8 @@ protected:
 private:
 	Link(const Link&) = delete;
 	Link& operator=(const Link&) = delete;
+	Link(Link&&) = delete;
+	Link& operator=(Link&&) = delete;
 	
 	// ˄
 };

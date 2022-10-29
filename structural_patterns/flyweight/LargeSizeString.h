@@ -42,6 +42,8 @@ protected:
 private:
 	LargeSizeString(const LargeSizeString&) = delete;
 	LargeSizeString& operator=(const LargeSizeString&) = delete;
+	LargeSizeString(LargeSizeString&&) = delete;
+	LargeSizeString& operator=(LargeSizeString&&) = delete;
 	
 	// ˄
 };

@@ -34,6 +34,8 @@ protected:
 private:
 	Frame(const Frame&) = delete;
 	Frame& operator=(const Frame&) = delete;
+	Frame(Frame&&) = delete;
+	Frame& operator=(Frame&&) = delete;
 	
 	// ˄
 };

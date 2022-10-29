@@ -39,6 +39,8 @@ protected:
 private:
 	BarChartObserver(const BarChartObserver&) = delete;
 	BarChartObserver& operator=(const BarChartObserver&) = delete;
+	BarChartObserver(BarChartObserver&&) = delete;
+	BarChartObserver& operator=(BarChartObserver&&) = delete;
 	
 	// ˄
 };

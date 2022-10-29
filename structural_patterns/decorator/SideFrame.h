@@ -46,6 +46,8 @@ protected:
 private:
 	SideFrame(const SideFrame&) = delete;
 	SideFrame& operator=(const SideFrame&) = delete;
+	SideFrame(SideFrame&&) = delete;
+	SideFrame& operator=(SideFrame&&) = delete;
 	
 	// ˄
 };

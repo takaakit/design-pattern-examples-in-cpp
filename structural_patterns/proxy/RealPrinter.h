@@ -49,6 +49,8 @@ protected:
 private:
 	RealPrinter(const RealPrinter&) = delete;
 	RealPrinter& operator=(const RealPrinter&) = delete;
+	RealPrinter(RealPrinter&&) = delete;
+	RealPrinter& operator=(RealPrinter&&) = delete;
 	
 	// ˄
 };

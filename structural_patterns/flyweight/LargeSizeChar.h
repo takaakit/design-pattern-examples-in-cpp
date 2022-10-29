@@ -40,6 +40,8 @@ protected:
 private:
 	LargeSizeChar(const LargeSizeChar&) = delete;
 	LargeSizeChar& operator=(const LargeSizeChar&) = delete;
+	LargeSizeChar(LargeSizeChar&&) = delete;
+	LargeSizeChar& operator=(LargeSizeChar&&) = delete;
 	
 	// ˄
 };

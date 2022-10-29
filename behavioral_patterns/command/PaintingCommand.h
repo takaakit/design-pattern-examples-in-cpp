@@ -46,6 +46,8 @@ protected:
 private:
 	PaintingCommand(const PaintingCommand&) = delete;
 	PaintingCommand& operator=(const PaintingCommand&) = delete;
+	PaintingCommand(PaintingCommand&&) = delete;
+	PaintingCommand& operator=(PaintingCommand&&) = delete;
 	
 	// ˄
 };

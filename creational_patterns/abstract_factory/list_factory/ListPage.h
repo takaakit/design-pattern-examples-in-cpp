@@ -35,6 +35,8 @@ protected:
 private:
 	ListPage(const ListPage&) = delete;
 	ListPage& operator=(const ListPage&) = delete;
+	ListPage(ListPage&&) = delete;
+	ListPage& operator=(ListPage&&) = delete;
 	
 	// ˄
 };

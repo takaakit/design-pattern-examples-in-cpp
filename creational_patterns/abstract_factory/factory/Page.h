@@ -48,8 +48,6 @@ public:
 protected:
 	
 private:
-	Page(const Page&) = delete;
-	Page& operator=(const Page&) = delete;
 	
 	// ˄
 };

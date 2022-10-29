@@ -38,6 +38,8 @@ protected:
 private:
 	Memento(const Memento&) = delete;
 	Memento& operator=(const Memento&) = delete;
+	Memento(Memento&&) = delete;
+	Memento& operator=(Memento&&) = delete;
 	
 	// ˄
 };

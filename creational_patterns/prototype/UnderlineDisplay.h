@@ -41,6 +41,8 @@ protected:
 private:
 	UnderlineDisplay(const UnderlineDisplay&) = delete;
 	UnderlineDisplay& operator=(const UnderlineDisplay&) = delete;
+	UnderlineDisplay(UnderlineDisplay&&) = delete;
+	UnderlineDisplay& operator=(UnderlineDisplay&&) = delete;
 	
 	// ˄
 };

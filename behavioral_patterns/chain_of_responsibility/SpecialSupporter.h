@@ -42,6 +42,8 @@ protected:
 private:
 	SpecialSupporter(const SpecialSupporter&) = delete;
 	SpecialSupporter& operator=(const SpecialSupporter&) = delete;
+	SpecialSupporter(SpecialSupporter&&) = delete;
+	SpecialSupporter& operator=(SpecialSupporter&&) = delete;
 	
 	// ˄
 };

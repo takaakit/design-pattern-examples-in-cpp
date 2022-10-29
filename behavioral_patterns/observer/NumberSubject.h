@@ -39,6 +39,8 @@ protected:
 private:
 	NumberSubject(const NumberSubject&) = delete;
 	NumberSubject& operator=(const NumberSubject&) = delete;
+	NumberSubject(NumberSubject&&) = delete;
+	NumberSubject& operator=(NumberSubject&&) = delete;
 	
 	// ˄
 };

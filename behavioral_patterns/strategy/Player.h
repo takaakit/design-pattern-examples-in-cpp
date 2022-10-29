@@ -55,6 +55,8 @@ protected:
 private:
 	Player(const Player&) = delete;
 	Player& operator=(const Player&) = delete;
+	Player(Player&&) = delete;
+	Player& operator=(Player&&) = delete;
 	
 	// ˄
 };

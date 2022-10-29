@@ -37,6 +37,8 @@ protected:
 private:
 	CreditCard(const CreditCard&) = delete;
 	CreditCard& operator=(const CreditCard&) = delete;
+	CreditCard(CreditCard&&) = delete;
+	CreditCard& operator=(CreditCard&&) = delete;
 	
 	// ˄
 };

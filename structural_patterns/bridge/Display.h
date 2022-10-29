@@ -44,6 +44,8 @@ protected:
 private:
 	Display(const Display&) = delete;
 	Display& operator=(const Display&) = delete;
+	Display(Display&&) = delete;
+	Display& operator=(Display&&) = delete;
 	
 	// ˄
 };

@@ -47,6 +47,8 @@ protected:
 private:
 	ListVisitor(const ListVisitor&) = delete;
 	ListVisitor& operator=(const ListVisitor&) = delete;
+	ListVisitor(ListVisitor&&) = delete;
+	ListVisitor& operator=(ListVisitor&&) = delete;
 	
 	// ˄
 };

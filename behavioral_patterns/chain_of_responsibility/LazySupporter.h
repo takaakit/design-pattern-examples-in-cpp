@@ -38,6 +38,8 @@ protected:
 private:
 	LazySupporter(const LazySupporter&) = delete;
 	LazySupporter& operator=(const LazySupporter&) = delete;
+	LazySupporter(LazySupporter&&) = delete;
+	LazySupporter& operator=(LazySupporter&&) = delete;
 	
 	// ˄
 };

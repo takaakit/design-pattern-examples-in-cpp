@@ -37,6 +37,8 @@ protected:
 private:
 	Trouble(const Trouble&) = delete;
 	Trouble& operator=(const Trouble&) = delete;
+	Trouble(Trouble&&) = delete;
+	Trouble& operator=(Trouble&&) = delete;
 	
 	// ˄
 };

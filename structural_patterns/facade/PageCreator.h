@@ -42,6 +42,8 @@ protected:
 private:
 	PageCreator(const PageCreator&) = delete;
 	PageCreator& operator=(const PageCreator&) = delete;
+	PageCreator(PageCreator&&) = delete;
+	PageCreator& operator=(PageCreator&&) = delete;
 	
 	// ˄
 };

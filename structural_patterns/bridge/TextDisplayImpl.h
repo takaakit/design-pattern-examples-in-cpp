@@ -51,6 +51,8 @@ protected:
 private:
 	TextDisplayImpl(const TextDisplayImpl&) = delete;
 	TextDisplayImpl& operator=(const TextDisplayImpl&) = delete;
+	TextDisplayImpl(TextDisplayImpl&&) = delete;
+	TextDisplayImpl& operator=(TextDisplayImpl&&) = delete;
 	
 	// ˄
 };

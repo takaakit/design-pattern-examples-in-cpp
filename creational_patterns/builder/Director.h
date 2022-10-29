@@ -37,6 +37,8 @@ protected:
 private:
 	Director(const Director&) = delete;
 	Director& operator=(const Director&) = delete;
+	Director(Director&&) = delete;
+	Director& operator=(Director&&) = delete;
 	
 	// ˄
 };

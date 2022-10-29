@@ -39,6 +39,8 @@ protected:
 private:
 	DigitObserver(const DigitObserver&) = delete;
 	DigitObserver& operator=(const DigitObserver&) = delete;
+	DigitObserver(DigitObserver&&) = delete;
+	DigitObserver& operator=(DigitObserver&&) = delete;
 	
 	// ˄
 };

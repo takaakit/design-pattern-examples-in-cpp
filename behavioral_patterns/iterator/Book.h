@@ -34,6 +34,8 @@ protected:
 private:
 	Book(const Book&) = delete;
 	Book& operator=(const Book&) = delete;
+	Book(Book&&) = delete;
+	Book& operator=(Book&&) = delete;
 	
 	// ˄
 };

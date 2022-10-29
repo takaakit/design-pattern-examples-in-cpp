@@ -42,6 +42,8 @@ protected:
 private:
 	Action(const Action&) = delete;
 	Action& operator=(const Action&) = delete;
+	Action(Action&&) = delete;
+	Action& operator=(Action&&) = delete;
 	
 	// ˄
 };

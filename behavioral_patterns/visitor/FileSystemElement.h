@@ -37,8 +37,6 @@ public:
 protected:
 	
 private:
-	FileSystemElement(const FileSystemElement&) = delete;
-	FileSystemElement& operator=(const FileSystemElement&) = delete;
 	
 	// ˄
 };

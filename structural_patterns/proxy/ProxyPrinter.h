@@ -50,6 +50,8 @@ protected:
 private:
 	ProxyPrinter(const ProxyPrinter&) = delete;
 	ProxyPrinter& operator=(const ProxyPrinter&) = delete;
+	ProxyPrinter(ProxyPrinter&&) = delete;
+	ProxyPrinter& operator=(ProxyPrinter&&) = delete;
 	
 	// ˄
 };

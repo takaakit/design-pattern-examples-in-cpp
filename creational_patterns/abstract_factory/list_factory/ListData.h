@@ -35,6 +35,8 @@ protected:
 private:
 	ListData(const ListData&) = delete;
 	ListData& operator=(const ListData&) = delete;
+	ListData(ListData&&) = delete;
+	ListData& operator=(ListData&&) = delete;
 	
 	// ˄
 };

@@ -43,6 +43,8 @@ protected:
 private:
 	TableFactory(const TableFactory&) = delete;
 	TableFactory& operator=(const TableFactory&) = delete;
+	TableFactory(TableFactory&&) = delete;
+	TableFactory& operator=(TableFactory&&) = delete;
 	
 	// ˄
 };

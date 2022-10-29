@@ -50,6 +50,8 @@ protected:
 private:
 	LargeSizeCharFactory(const LargeSizeCharFactory&) = delete;
 	LargeSizeCharFactory& operator=(const LargeSizeCharFactory&) = delete;
+	LargeSizeCharFactory(LargeSizeCharFactory&&) = delete;
+	LargeSizeCharFactory& operator=(LargeSizeCharFactory&&) = delete;
 	
 	// ˄
 };

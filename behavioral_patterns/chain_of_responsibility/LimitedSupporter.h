@@ -42,6 +42,8 @@ protected:
 private:
 	LimitedSupporter(const LimitedSupporter&) = delete;
 	LimitedSupporter& operator=(const LimitedSupporter&) = delete;
+	LimitedSupporter(LimitedSupporter&&) = delete;
+	LimitedSupporter& operator=(LimitedSupporter&&) = delete;
 	
 	// ˄
 };

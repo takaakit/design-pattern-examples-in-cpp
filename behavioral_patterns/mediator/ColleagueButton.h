@@ -42,6 +42,8 @@ protected:
 private:
 	ColleagueButton(const ColleagueButton&) = delete;
 	ColleagueButton& operator=(const ColleagueButton&) = delete;
+	ColleagueButton(ColleagueButton&&) = delete;
+	ColleagueButton& operator=(ColleagueButton&&) = delete;
 	
 	// ˄
 };

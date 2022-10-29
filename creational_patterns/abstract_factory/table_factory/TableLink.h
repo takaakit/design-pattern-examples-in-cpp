@@ -35,6 +35,8 @@ protected:
 private:
 	TableLink(const TableLink&) = delete;
 	TableLink& operator=(const TableLink&) = delete;
+	TableLink(TableLink&&) = delete;
+	TableLink& operator=(TableLink&&) = delete;
 	
 	// ˄
 };

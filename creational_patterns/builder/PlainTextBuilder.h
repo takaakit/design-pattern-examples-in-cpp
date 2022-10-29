@@ -52,6 +52,8 @@ protected:
 private:
 	PlainTextBuilder(const PlainTextBuilder&) = delete;
 	PlainTextBuilder& operator=(const PlainTextBuilder&) = delete;
+	PlainTextBuilder(PlainTextBuilder&&) = delete;
+	PlainTextBuilder& operator=(PlainTextBuilder&&) = delete;
 	
 	// ˄
 };

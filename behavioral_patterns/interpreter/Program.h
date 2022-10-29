@@ -43,6 +43,8 @@ protected:
 private:
 	Program(const Program&) = delete;
 	Program& operator=(const Program&) = delete;
+	Program(Program&&) = delete;
+	Program& operator=(Program&&) = delete;
 	
 	// ˄
 };

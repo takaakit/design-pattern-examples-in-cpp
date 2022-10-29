@@ -38,6 +38,8 @@ protected:
 private:
 	CreditCardFactory(const CreditCardFactory&) = delete;
 	CreditCardFactory& operator=(const CreditCardFactory&) = delete;
+	CreditCardFactory(CreditCardFactory&&) = delete;
+	CreditCardFactory& operator=(CreditCardFactory&&) = delete;
 	
 	// ˄
 };
