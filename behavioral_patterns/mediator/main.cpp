@@ -1,7 +1,4 @@
-#include <memory>
 #include "AppLogin.h"
-
-using namespace std;
 
 /*
 Show a login dialog for entering a username and password. The dialog has the following elements:
@@ -15,6 +12,6 @@ And change the editable properties of the elements depending on the state of the
 [STAThread]
 int main()
 {
-	unique_ptr<AppLogin> app_login(new AppLogin());
+	AppLogin();
 	return 0;
 }

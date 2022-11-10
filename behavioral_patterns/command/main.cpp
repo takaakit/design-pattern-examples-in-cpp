@@ -1,7 +1,4 @@
-#include <memory>
 #include "AppMain.h"
-
-using namespace std;
 
 /*
 Simple drawing application:
@@ -13,6 +10,6 @@ Simple drawing application:
 [STAThread]
 int main()
 {
-	unique_ptr<AppMain> app_login(new AppMain());
+	AppMain();
 	return 0;
 }
