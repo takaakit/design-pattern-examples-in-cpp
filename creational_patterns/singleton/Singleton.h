@@ -6,9 +6,6 @@
 #define CREATIONAL_PATTERNS_SINGLETON_SINGLETON_H_
 
 // ˅
-#include <memory>
-
-using namespace std;
 
 // ˄
 

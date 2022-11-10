@@ -7,7 +7,6 @@
 
 // ˅
 #include <vector>
-#include <memory>
 #include "behavioral_patterns/iterator/Aggregate.h"
 
 class Book;

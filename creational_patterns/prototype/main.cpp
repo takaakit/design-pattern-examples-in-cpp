@@ -1,4 +1,3 @@
-#include <iostream>
 #include <memory>
 #include "creational_patterns/prototype/framework/Manager.h"
 #include "creational_patterns/prototype/UnderlineDisplay.h"

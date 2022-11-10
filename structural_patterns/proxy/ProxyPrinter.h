@@ -7,7 +7,6 @@
 
 // ˅
 #include <string>
-#include <memory>
 #include "structural_patterns/proxy/Printer.h"
 
 class RealPrinter;

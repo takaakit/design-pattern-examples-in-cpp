@@ -8,7 +8,6 @@
 // ˅
 #include <string>
 #include <vector>
-#include <memory>
 #include "creational_patterns/abstract_factory/factory/Item.h"
 
 using namespace std;

@@ -6,11 +6,7 @@
 #define BEHAVIORAL_PATTERNS_ITERATOR_AGGREGATE_H_
 
 // ˅
-#include <memory>
-
 class Iterator;
-
-using namespace std;
 
 // ˄
 

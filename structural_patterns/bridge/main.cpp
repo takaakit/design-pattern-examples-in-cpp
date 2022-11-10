@@ -1,4 +1,3 @@
-#include <iostream>
 #include <memory>
 #include "structural_patterns/bridge/Display.h"
 #include "structural_patterns/bridge/MultiLineDisplay.h"

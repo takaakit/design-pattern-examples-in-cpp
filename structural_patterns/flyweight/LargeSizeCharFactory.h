@@ -7,7 +7,6 @@
 
 // ˅
 #include <map>
-#include <memory>
 
 class LargeSizeChar;
 

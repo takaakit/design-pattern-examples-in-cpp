@@ -7,7 +7,6 @@
 
 // ˅
 #include <string>
-#include <memory>
 #include "behavioral_patterns/strategy/GameResultType.h"
 
 class Strategy;

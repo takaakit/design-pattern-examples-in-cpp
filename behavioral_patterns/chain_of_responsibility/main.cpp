@@ -1,4 +1,3 @@
-#include <iostream>
 #include <memory>
 #include "behavioral_patterns/chain_of_responsibility/LazySupporter.h"
 #include "behavioral_patterns/chain_of_responsibility/MoodySupporter.h"

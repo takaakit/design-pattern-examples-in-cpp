@@ -1,11 +1,9 @@
 // ˅
-#include <memory>
 #include "behavioral_patterns/command/AppMain.h"
 #include "behavioral_patterns/command/HistoryCommand.h"
 #include "behavioral_patterns/command/PaintingCanvas.h"
 #include "behavioral_patterns/command/PaintingCommand.h"
 #include "behavioral_patterns/command/CLIWrapper.h"
-
 
 // ˄
 

@@ -1,4 +1,3 @@
-#include <iostream>
 #include <memory>
 #include "structural_patterns/decorator/Display.h"
 #include "structural_patterns/decorator/MessageDisplay.h"

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory>
 #include "behavioral_patterns/iterator/BookShelf.h"
 #include "behavioral_patterns/iterator/Book.h"
 #include "behavioral_patterns/iterator/Iterator.h"
