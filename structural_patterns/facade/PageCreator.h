@@ -13,7 +13,8 @@ using namespace std;
 // ˄
 
 // Singleton ( based on the example code on Wikipedia )
-// https://en.wikipedia.org/wiki/Singleton_pattern#C++
+//   https://en.wikipedia.org/w/index.php?title=Singleton_pattern&oldid=1115882454#C++
+//   Note: The latest Wikipedia page has had the C++ code example removed. This link is to the page before it was removed.
 class PageCreator
 {
 	// ˅
