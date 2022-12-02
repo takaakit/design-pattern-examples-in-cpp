@@ -1,7 +1,10 @@
 // ˅
+#include <iostream>
 #include "behavioral_patterns/interpreter/CommandList.h"
 #include "behavioral_patterns/interpreter/Command.h"
 #include "behavioral_patterns/interpreter/Context.h"
+
+using namespace std;
 
 // ˄
 
@@ -30,6 +33,7 @@ void CommandList::parse(Context* context)
 	// ˅
 	while (true) {
 		if (context->getToken() == "") {
+			cerr << "Missing 'end'" << endl;
 			exit(1);
 		}
 		else if (context->getToken() == "end") {

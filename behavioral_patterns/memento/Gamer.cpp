@@ -61,7 +61,7 @@ void Gamer::play()
 		break;
 	default:
 		// Other...Exit
-		cout << "Unexpected value." << endl;
+		cerr << "Unexpected value." << endl;
 		exit(1);
 	}
 	// ˄

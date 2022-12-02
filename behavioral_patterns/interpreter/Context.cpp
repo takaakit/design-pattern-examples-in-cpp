@@ -56,7 +56,7 @@ void Context::slideToken(const string& token)
 {
 	// ˅
     if (token != getToken()) {
-        cerr <<  "WARNING: " << token << " is expected but " << getToken() << " was found." << endl;
+        cerr << token << " is expected but " << getToken() << " was found." << endl;
 		exit(1);
 	}
 	nextToken();
@@ -72,11 +72,11 @@ const int Context::getNumber()
         ret = stoi(token);
     }
     catch (invalid_argument e) {
-        cerr << "WARNING: " << e.what() << endl;
+        cerr << e.what() << endl;
         exit(1);
     }
     catch (out_of_range e) {
-        cerr << "WARNING: " << e.what() << endl;
+        cerr << e.what() << endl;
         exit(1);
 	}
     return ret;
