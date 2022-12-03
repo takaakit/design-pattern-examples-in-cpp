@@ -2,25 +2,25 @@
 
 System::Windows::Forms::TextBox^ state::WindowsForm::getTextTime()
 {
-    return this->text_time;
+	return this->text_time;
 }
 
 System::Windows::Forms::TextBox^ state::WindowsForm::getTextMessage()
 {
-    return this->text_message;
+	return this->text_message;
 }
 
 System::Windows::Forms::Button^ state::WindowsForm::getButtonUse()
 {
-    return this->button_use;
+	return this->button_use;
 }
 
 System::Windows::Forms::Button^ state::WindowsForm::getButtonAlarm()
 {
-    return this->button_alarm;
+	return this->button_alarm;
 }
 
 System::Windows::Forms::Button^ state::WindowsForm::getButtonPhone()
 {
-    return this->button_phone;
+	return this->button_phone;
 }

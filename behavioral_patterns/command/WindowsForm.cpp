@@ -2,15 +2,15 @@
 
 System::Windows::Forms::PictureBox^ command::WindowsForm::getPictureBox()
 {
-    return this->picture_box;
+	return this->picture_box;
 }
 
 System::Windows::Forms::Button^ command::WindowsForm::getButtonUndo()
 {
-    return this->button_undo;
+	return this->button_undo;
 }
 
 System::Windows::Forms::Button^ command::WindowsForm::getButtonClear()
 {
-    return this->button_clear;
+	return this->button_clear;
 }

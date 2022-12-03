@@ -43,7 +43,7 @@ int main() {
 #ifdef _MSC_VER
 		Sleep(1000);
 #else
-        sleep(1);
+		sleep(1);
 #endif
 	}
 

@@ -11,7 +11,7 @@ it possible to treat File and Directory uniformly.
  */
 
 int main(int argc, char* argv[]) {
-    cout << "Create a file system..." << endl;
+	cout << "Create a file system..." << endl;
 
 	unique_ptr<Directory> bin_dir(new Directory("bin"));
 	unique_ptr<File> ls_file(new File("ls", 20));
@@ -35,7 +35,7 @@ int main(int argc, char* argv[]) {
 	root_dir->add(home_dir.get());
 	root_dir->add(bin_dir.get());
 
-    root_dir->print("");
+	root_dir->print("");
 
 	return 0;
 }

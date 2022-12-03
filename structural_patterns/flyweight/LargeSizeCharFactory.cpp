@@ -36,14 +36,14 @@ LargeSizeCharFactory::~LargeSizeCharFactory()
 LargeSizeChar* LargeSizeCharFactory::getLargeSizeChar(const char char_name)
 {
 	// ˅
-    LargeSizeChar* lsc = nullptr;
-    if (pool_chars.find(char_name) == end(pool_chars)) {
-        lsc = new LargeSizeChar(char_name);							// Create an instance
+	LargeSizeChar* lsc = nullptr;
+	if (pool_chars.find(char_name) == end(pool_chars)) {
+		lsc = new LargeSizeChar(char_name);							// Create an instance
 		pool_chars.insert(map<char, LargeSizeChar*>::value_type(char_name, lsc));
-    }
-    else {
+	}
+	else {
 		lsc = pool_chars.at(char_name);
-    }
+	}
 	return lsc;
 	// ˄
 }

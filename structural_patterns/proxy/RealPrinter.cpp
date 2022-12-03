@@ -60,11 +60,11 @@ void RealPrinter::heavyTask(const string& message) const
 	cout << message;
 	for (int i = 0; i < 10; ++i) {
 #ifdef _MSC_VER
-        Sleep(500);
+		Sleep(500);
 #else
-        usleep(0.5 * 1000000);
+		usleep(0.5 * 1000000);
 #endif
-        
+		
 		cout << "." << flush;
 	}
 	cout << "Done." << endl;

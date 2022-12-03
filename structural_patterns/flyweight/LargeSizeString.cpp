@@ -11,9 +11,9 @@ LargeSizeString::LargeSizeString(const string& string_data)
 	// ˄
 {
 	// ˅
-    for (char char_data : string_data) {
-        large_size_chars.push_back(LargeSizeCharFactory::getInstance()->getLargeSizeChar(char_data));
-    }
+	for (char char_data : string_data) {
+		large_size_chars.push_back(LargeSizeCharFactory::getInstance()->getLargeSizeChar(char_data));
+	}
 	// ˄
 }
 

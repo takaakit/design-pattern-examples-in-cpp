@@ -10,7 +10,7 @@ File::File(const string& name, const int size)
 	: name(name)
 	, size(size)
 	// ˅
-    
+	
 	// ˄
 {
 	// ˅

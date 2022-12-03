@@ -15,13 +15,13 @@ Context::Context(const string& text)
 	// ˄
 {
 	// ˅
-    stringstream text_stream(text);
-    string node = "";
-    while (getline(text_stream, node, ' ') && node.empty() == false) {
-        tokens.push_back(node);
-    }
+	stringstream text_stream(text);
+	string node = "";
+	while (getline(text_stream, node, ' ') && node.empty() == false) {
+		tokens.push_back(node);
+	}
 	
-    iter = begin(tokens);
+	iter = begin(tokens);
 	// ˄
 }
 
@@ -35,7 +35,7 @@ Context::~Context()
 string Context::nextToken()
 {
 	// ˅
-    ++iter;
+	++iter;
 	return getToken();
 	// ˄
 }
@@ -43,20 +43,20 @@ string Context::nextToken()
 string Context::getToken()
 {
 	// ˅
-    if (iter != end(tokens)) {
-        return (*iter);
-    }
-    else {
-        return "";
-    }
+	if (iter != end(tokens)) {
+		return (*iter);
+	}
+	else {
+		return "";
+	}
 	// ˄
 }
 
 void Context::slideToken(const string& token)
 {
 	// ˅
-    if (token != getToken()) {
-        cerr << token << " is expected but " << getToken() << " was found." << endl;
+	if (token != getToken()) {
+		cerr << token << " is expected but " << getToken() << " was found." << endl;
 		exit(1);
 	}
 	nextToken();
@@ -66,20 +66,20 @@ void Context::slideToken(const string& token)
 const int Context::getNumber()
 {
 	// ˅
-    int ret = 0;
-    const string token = getToken();
-    try {
-        ret = stoi(token);
-    }
-    catch (invalid_argument e) {
-        cerr << e.what() << endl;
-        exit(1);
-    }
-    catch (out_of_range e) {
-        cerr << e.what() << endl;
-        exit(1);
+	int ret = 0;
+	const string token = getToken();
+	try {
+		ret = stoi(token);
 	}
-    return ret;
+	catch (invalid_argument e) {
+		cerr << e.what() << endl;
+		exit(1);
+	}
+	catch (out_of_range e) {
+		cerr << e.what() << endl;
+		exit(1);
+	}
+	return ret;
 	// ˄
 }
 
